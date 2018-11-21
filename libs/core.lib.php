@@ -843,7 +843,7 @@
 	{
 		$apcMemoryEntryKey = "$lang/$model/$modelKey/$entryKey";
 		
-		$res = apcu_store($apcMemoryEntryKey, $entryValue);
+		$res = apc_store($apcMemoryEntryKey, $entryValue);
 		
 		if ( $res===false)
 		{
@@ -855,7 +855,7 @@
 	
 	function updateModelData($key,$valueOrValueArr)
 	{
-		$res = apcu_store($key,$valueOrValueArr);
+		$res = apc_store($key,$valueOrValueArr);
 		
 	
 		
@@ -874,7 +874,7 @@
 		
 		//echon($apcMemoryEntryKey);
 		
-		return  apcu_fetch($apcMemoryEntryKey);
+		return  apc_fetch($apcMemoryEntryKey);
 	
 	
 	}
@@ -884,7 +884,7 @@
 	
 		$apcMemoryEntryKey = "$lang/$model/$modelKey/$entryKey";
 	
-		return  apcu_exists($apcMemoryEntryKey);
+		return  apc_exists($apcMemoryEntryKey);
 	
 	
 	}
@@ -893,9 +893,9 @@
 	{
 		$apcMemoryEntryKey = "$lang/$model/$modelKey/$entryKey";
 		
-		if (apcu_exists($apcMemoryEntryKey))
+		if (apc_exists($apcMemoryEntryKey))
 		{
-			$entryArr = apcu_fetch($apcMemoryEntryKey);
+			$entryArr = apc_fetch($apcMemoryEntryKey);
 			//$entryArr = array();
 		}
 		else
@@ -906,7 +906,7 @@
 		$entryArr[] = $entryValue;
 		
 	
-		$res = apcu_store($apcMemoryEntryKey, $entryArr);
+		$res = apc_store($apcMemoryEntryKey, $entryArr);
 	
 		if ( $res===false)
 		{
@@ -920,7 +920,7 @@
 	{
 
 	
-		$resArr = apcu_add($entryKeysValuesArr);
+		$resArr = apc_add($entryKeysValuesArr);
 	
 		if ($resArr===FALSE)
 		{
@@ -936,16 +936,9 @@
 	
 	}
 	
-	function getAPCUIterator($apcKeyRegExpPattern)
+	function getAPCIterator($apcKeyRegExpPattern)
 	{
-		if (class_exists('APCUIterator')) 
-		{
-			return new APCUIterator( "/$apcKeyRegExpPattern/");
-		}
-		else 
-		{
-			return new APCIterator('user', "/$apcKeyRegExpPattern/");
-		}
+		return new APCIterator('user', "/$apcKeyRegExpPattern/");
 		
 	}
 	
@@ -1181,7 +1174,7 @@
 	
 	function loadUthmaniDataModel()
 	{
-		return  apcu_fetch("MODEL_CORE[AR_UTH]");
+		return  apc_fetch("MODEL_CORE[AR_UTH]");
 	}
 	
 	
@@ -1190,12 +1183,12 @@
 	
 	function loadUthmaniToSimpleMappingTable()
 	{
-		return apcu_fetch("UTHMANI_TO_SIMPLE_WORD_MAP");
+		return apc_fetch("UTHMANI_TO_SIMPLE_WORD_MAP");
 	}
 	
 	function loadLemmaToSimpleMappingTable()
 	{
-		return apcu_fetch("LEMMA_TO_SIMPLE_WORD_MAP");
+		return apc_fetch("LEMMA_TO_SIMPLE_WORD_MAP");
 	}	
 
 	
@@ -2672,5 +2665,34 @@
 	{
 		return substr($key, strrpos($key, "/")+1);
 	}
-	
+        
+        function executeCommand($command){
+            $output = exec($command);
+            return $output;
+        }
+        /**
+         * write data to file line by line 
+         * @param $fileName
+         * @param array $lines contains strings to write
+         * 
+         *          
+         */
+
+function explodeCamelCase($concept){
+    $ccWord = $concept;
+    $re = '/(?#! splitCamelCase Rev:20140412)
+        # Split camelCase "words". Two global alternatives. Either g1of2:
+          (?<=[a-z])      # Position is after a lowercase,
+          (?=[A-Z])       # and before an uppercase letter.
+        | (?<=[A-Z])      # Or g2of2; Position is after uppercase,
+          (?=[A-Z][a-z])  # and before upper-then-lower case.
+        /x';
+    $a = preg_split($re, $ccWord);
+    $count = count($a);
+//    for ($i = 0; $i < $count; ++$i) {
+//        printf("##Word %d of %d = \"%s\"\n",
+//            $i + 1, $count, $a[$i]);
+//    }
+    return $a;
+}
 ?>

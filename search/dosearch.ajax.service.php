@@ -27,23 +27,24 @@ require_once("../global.settings.php");
 
 require_once("../libs/search.lib.php");
 require_once("../libs/graph.lib.php");
+require_once("../hadith.loader.php");
+
+//require_once("query.handling.common.php");
 
 
-require_once("query.handling.common.php");
+$query = $_GET['q'];
+$sparql = getSPARQLEngine();
 
-
-
-
-
+$result = getRelatedHadeeth($sparql, $query);
+$str ="";
+foreach ($result as $row)
+    $str = "$str \n $row->text ";
+//$result = $result[0] ->text;
+echo $str;
 
 ?>
 
-<?php require_once('search.result.statement.inc.php')?>
 
-<?php 
-//// PRINT RESULT VERSES
-printResultVerses($scoringTable,$lang,$direction,$query,$isPhraseSearch,$isQuestion,$script);
-?>
 
 
 

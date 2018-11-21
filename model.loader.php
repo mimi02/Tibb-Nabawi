@@ -42,15 +42,15 @@ require_once(dirname(__FILE__)."/libs/ontology.lib.php");
 
 
 
-//$MODEL_CORE = array();
-//$MODEL_CORE['LOADED']=0;
-//$MODEL_CORE['SUPPORTED_LANGUAGES']=$supportedLanguages;
+$MODEL_CORE = array();
+$MODEL_CORE['LOADED']=0;
+$MODEL_CORE['SUPPORTED_LANGUAGES']=$supportedLanguages;
 
 //$MODEL_SEARCH = array();
-$//MODEL_QAC = array();
-$MODEL_QURANA = array();
-
-$MODEL_WORDNET = array();
+//$MODEL_QAC = array();
+//$MODEL_QURANA = array();
+//
+//$MODEL_WORDNET = array();
 
 /*
 
@@ -72,16 +72,16 @@ foreach ($MODEL_CORE['SUPPORTED_LANGUAGES'] as $supportedLang)
 $META_DATA = array();
 $META_DATA['SURAS']=array();
 
-
-$UTHMANI_TO_SIMPLE_WORD_MAP = array();
-$UTHMANI_TO_SIMPLE_LOCATION_MAP = array();
-
-$TRANSLATION_MAP_EN_TO_AR = array();
-$TRANSLATION_MAP_AR_TO_EN = array();
-$TRANSLITERATION_WORDS_MAP = array();
-$TRANSLITERATION_VERSES_MAP = array();
-$TRANSLITERATION_WORDS_LOCATION_MAP = array();
-$TRANSLITERATION_WORDS_INDEX = array();
+//
+//$UTHMANI_TO_SIMPLE_WORD_MAP = array();
+//$UTHMANI_TO_SIMPLE_LOCATION_MAP = array();
+//
+//$TRANSLATION_MAP_EN_TO_AR = array();
+//$TRANSLATION_MAP_AR_TO_EN = array();
+//$TRANSLITERATION_WORDS_MAP = array();
+//$TRANSLITERATION_VERSES_MAP = array();
+//$TRANSLITERATION_WORDS_LOCATION_MAP = array();
+//$TRANSLITERATION_WORDS_INDEX = array();
 
 function loadModels($modelsToBeLoaded,$lang)
 {
@@ -99,7 +99,7 @@ function loadModels($modelsToBeLoaded,$lang)
 	//not working
 	gc_enable();
 	
-	if (!function_exists("apcu_exists"))
+	if (!function_exists("apc_exists"))
 	{
 		throw new Exception("APC not found!");
 	}
@@ -107,10 +107,10 @@ function loadModels($modelsToBeLoaded,$lang)
 
 
 	
-	//echoN("MODEL EXISTS IN CACHE?:".apcu_exists("EN/MODEL_CORE/TOTALS/"));
+	//echoN("MODEL EXISTS IN CACHE?:".apc_exists("EN/MODEL_CORE/TOTALS/"));
 	
 	##### CHECK MODEL IN CACHE ##### #####
-	if ( TRUE && apcu_exists("EN/MODEL_CORE/TOTALS/")!==false)
+	if ( TRUE && apc_exists("EN/MODEL_CORE/TOTALS/")!==false)
 	{
 		// split list by comma
 		$modelListArr = preg_split("/,/",trim($modelsToBeLoaded));
@@ -133,7 +133,7 @@ function loadModels($modelsToBeLoaded,$lang)
 			{
 			
 				
-				/*$MODEL_QA_ONTOLOGY =  apcu_fetch("MODEL_QA_ONTOLOGY");
+				/*$MODEL_QA_ONTOLOGY =  apc_fetch("MODEL_QA_ONTOLOGY");
 				
 				
 				
@@ -155,7 +155,7 @@ function loadModels($modelsToBeLoaded,$lang)
 				
 			
 				//$MODEL_CORE = json_decode((file_get_contents("$serializedModelFile.core")),TRUE);
-				/*$MODEL_CORE  = apcu_fetch("MODEL_CORE[$lang]");
+				/*$MODEL_CORE  = apc_fetch("MODEL_CORE[$lang]");
 				
 				
 				if ($MODEL_CORE===false )
@@ -169,7 +169,7 @@ function loadModels($modelsToBeLoaded,$lang)
 			{
 				//$MODEL_SEARCH = json_decode((file_get_contents("$serializedModelFile.search")),TRUE);
 				
-				//$MODEL_SEARCH  = apcu_fetch("MODEL_SEARCH[$lang]");
+				//$MODEL_SEARCH  = apc_fetch("MODEL_SEARCH[$lang]");
 				
 				
 				/*if ($MODEL_SEARCH===false )
@@ -183,7 +183,7 @@ function loadModels($modelsToBeLoaded,$lang)
 			{
 				//$MODEL_QAC = json_decode((file_get_contents("$serializedModelFile.qac")),TRUE);
 				
-				/*$MODEL_QAC  = apcu_fetch("MODEL_QAC");
+				/*$MODEL_QAC  = apc_fetch("MODEL_QAC");
 				
 				
 				if ($MODEL_QAC===false )
@@ -196,7 +196,7 @@ function loadModels($modelsToBeLoaded,$lang)
 		
 		}
 		
-		$MODEL_WORDNET['INDEX']  = apcu_fetch("WORDNET_INDEX");
+		$MODEL_WORDNET['INDEX']  = apc_fetch("WORDNET_INDEX");
 		
 		if ($MODEL_WORDNET['INDEX']===false )
 		{
@@ -204,7 +204,7 @@ function loadModels($modelsToBeLoaded,$lang)
 		}
 		
 		
-		$MODEL_WORDNET['LEXICO_SEMANTIC_CATEGORIES']= apcu_fetch("WORDNET_LEXICO_SEMANTIC_CATEGORIES");
+		$MODEL_WORDNET['LEXICO_SEMANTIC_CATEGORIES']= apc_fetch("WORDNET_LEXICO_SEMANTIC_CATEGORIES");
 		
 		if ($MODEL_WORDNET['LEXICO_SEMANTIC_CATEGORIES']===false )
 		{
@@ -212,7 +212,7 @@ function loadModels($modelsToBeLoaded,$lang)
 		}
 		
 		
-		$MODEL_WORDNET['DATA'] = apcu_fetch("WORDNET_DATA");
+		$MODEL_WORDNET['DATA'] = apc_fetch("WORDNET_DATA");
 		
 		if ($MODEL_WORDNET['DATA']===false )
 		{
@@ -224,7 +224,7 @@ function loadModels($modelsToBeLoaded,$lang)
 		//{
 		//$MODEL_QURANA = json_decode((file_get_contents("$serializedModelFile.qurana")),TRUE);
 		
-		$MODEL_QURANA  = apcu_fetch("MODEL_QURANA");
+		$MODEL_QURANA  = apc_fetch("MODEL_QURANA");
 		
 		
 		if ($MODEL_QURANA===false )
@@ -669,7 +669,7 @@ function loadModels($modelsToBeLoaded,$lang)
 	
 	//$MODEL_QA_ONTOLOGY['SYNONYMS_INDEX']  = $qaSynonymsIndex;
 	
-	//$res = apcu_store("MODEL_QA_ONTOLOGY",$MODEL_QA_ONTOLOGY);
+	//$res = apc_store("MODEL_QA_ONTOLOGY",$MODEL_QA_ONTOLOGY);
 	
 	//if ( $res===false){ throw new Exception("Can't cache MODEL_QA_ONTOLOGY"); }
 	
@@ -726,23 +726,23 @@ function loadModels($modelsToBeLoaded,$lang)
 	$WORD_SENSES_EN = array();
 	$WORD_SENSES_AR = array();
 	
-	$quranTextEntryFromapcu_AR = getModelEntryFromMemory("AR", "MODEL_CORE", "QURAN_TEXT", "");
-	$quranTextEntryFromapcu_UTH = getModelEntryFromMemory("AR_UTH", "MODEL_CORE", "QURAN_TEXT", "");
+	$quranTextEntryFromAPC_AR = getModelEntryFromMemory("AR", "MODEL_CORE", "QURAN_TEXT", "");
+	$quranTextEntryFromAPC_UTH = getModelEntryFromMemory("AR_UTH", "MODEL_CORE", "QURAN_TEXT", "");
 	
 	/* SURA'S LOOP **/
 	for ($s=0;$s<$numberOfSuras;$s++)
 	{
 			
 		 
-		$suraSize = count($quranTextEntryFromapcu_AR[$s]);
+		$suraSize = count($quranTextEntryFromAPC_AR[$s]);
 			
 		/* VERSES LOOP **/
 		for ($a=0;$a<$suraSize;$a++)
 		{
 		  $i++;
-		  $verseTextSimple = $quranTextEntryFromapcu_AR[$s][$a];
+		  $verseTextSimple = $quranTextEntryFromAPC_AR[$s][$a];
 		  $simpleWordsArr = preg_split("/ /", $verseTextSimple);
-		  $verseTextUthmani = $quranTextEntryFromapcu_UTH[$s][$a];
+		  $verseTextUthmani = $quranTextEntryFromAPC_UTH[$s][$a];
 		  $uthmaniWordsArr = preg_split("/ /", $verseTextUthmani);
 		  
 		  
@@ -919,39 +919,39 @@ function loadModels($modelsToBeLoaded,$lang)
 	
 	
 	// CAN'T BE ADDED IN THE CORE_MODEL since the mapping happens after loadModel
-	//$res = apcu_store("UTHMANI_TO_SIMPLE_WORD_MAP",$UTHMANI_TO_SIMPLE_WORD_MAP);
+	//$res = apc_store("UTHMANI_TO_SIMPLE_WORD_MAP",$UTHMANI_TO_SIMPLE_WORD_MAP);
 	
 	//if ( $res===false){ throw new Exception("Can't cache UTHMANI_TO_SIMPLE_WORD_MAP"); }
 
-	//$res = apcu_store("UTHMANI_TO_SIMPLE_LOCATION_MAP",$UTHMANI_TO_SIMPLE_LOCATION_MAP);
+	//$res = apc_store("UTHMANI_TO_SIMPLE_LOCATION_MAP",$UTHMANI_TO_SIMPLE_LOCATION_MAP);
 	
 	//if ( $res===false){ throw new Exception("Can't cache UTHMANI_TO_SIMPLE_LOCATION_MAP"); }
 	
-	$res = apcu_store("LEMMA_TO_SIMPLE_WORD_MAP",$LEMMA_TO_SIMPLE_WORD_MAP);
+	$res = apc_store("LEMMA_TO_SIMPLE_WORD_MAP",$LEMMA_TO_SIMPLE_WORD_MAP);
 	
 	if ( $res===false){ throw new Exception("Can't cache LEMMA_TO_SIMPLE_WORD_MAP"); }
 
-	$res = apcu_store("WORDS_TRANSLATIONS_EN_AR",$TRANSLATION_MAP_EN_TO_AR);
+	$res = apc_store("WORDS_TRANSLATIONS_EN_AR",$TRANSLATION_MAP_EN_TO_AR);
 	
 	if ( $res===false){ throw new Exception("Can't cache WORDS_TRANSLATIONS_EN_AR"); }
 	
-	$res = apcu_store("WORDS_TRANSLATIONS_AR_EN",$TRANSLATION_MAP_AR_TO_EN);
+	$res = apc_store("WORDS_TRANSLATIONS_AR_EN",$TRANSLATION_MAP_AR_TO_EN);
 	
 	if ( $res===false){ throw new Exception("Can't cache WORDS_TRANSLATIONS_AR_EN"); }
 	
-	$res = apcu_store("WORDS_TRANSLITERATION",$TRANSLITERATION_WORDS_MAP);
+	$res = apc_store("WORDS_TRANSLITERATION",$TRANSLITERATION_WORDS_MAP);
 	
 	if ( $res===false){ throw new Exception("Can't cache WORDS_TRANSLITERATION"); }
 	
-	$res = apcu_store("TRANSLITERATION_WORDS_LOCATION_MAP",$TRANSLITERATION_WORDS_LOCATION_MAP);
+	$res = apc_store("TRANSLITERATION_WORDS_LOCATION_MAP",$TRANSLITERATION_WORDS_LOCATION_MAP);
 	
 	if ( $res===false){ throw new Exception("Can't cache TRANSLITERATION_WORDS_LOCATION_MAP"); }
 	
-	$res = apcu_store("TRANSLITERATION_VERSES_MAP",$TRANSLITERATION_VERSES_MAP);
+	$res = apc_store("TRANSLITERATION_VERSES_MAP",$TRANSLITERATION_VERSES_MAP);
 	
 	if ( $res===false){ throw new Exception("Can't cache TRANSLITERATION_VERSES_MAP"); }
 		
-	$res = apcu_store("TRANSLITERATION_WORDS_INDEX",$TRANSLITERATION_WORDS_INDEX);
+	$res = apc_store("TRANSLITERATION_WORDS_INDEX",$TRANSLITERATION_WORDS_INDEX);
 	
 	if ( $res===false){ throw new Exception("Can't cache TRANSLITERATION_WORDS_INDEX"); }
 	
@@ -959,11 +959,11 @@ function loadModels($modelsToBeLoaded,$lang)
 	
 	
 
-	$res = apcu_store("WORD_SENSES_EN",$WORD_SENSES_EN);
+	$res = apc_store("WORD_SENSES_EN",$WORD_SENSES_EN);
 	
 	if ( $res===false){ throw new Exception("Can't cache WORD_SENSES_EN"); }
 	
-	$res = apcu_store("WORD_SENSES_AR",$WORD_SENSES_AR);
+	$res = apc_store("WORD_SENSES_AR",$WORD_SENSES_AR);
 	
 	if ( $res===false){ throw new Exception("Can't cache $WORD_SENSES_AR"); }
 	
@@ -973,7 +973,7 @@ function loadModels($modelsToBeLoaded,$lang)
 	
 
 	
-	foreach(getAPCUIterator("AR\/MODEL_SEARCH\/INVERTED_INDEX\/.*") as $invertedIndexCursor )
+	foreach(getAPCIterator("AR\/MODEL_SEARCH\/INVERTED_INDEX\/.*") as $invertedIndexCursor )
 	{
 		
 
@@ -1026,16 +1026,16 @@ function loadModels($modelsToBeLoaded,$lang)
 		updateModelData($key,$wordDataArr);
 	}
 	
-	//$res = apcu_store("MODEL_SEARCH[AR]",$MODEL_SEARCH['AR']);
+	//$res = apc_store("MODEL_SEARCH[AR]",$MODEL_SEARCH['AR']);
 	
 	//if ( $res===false){ throw new Exception("Can't cache MODEL_SEARCH[AR]"); }
 	
 	//preprint_r($TRANSLITERATION_WORDS_LOCATION_MAP);
 
-	/// ADD TRANSLITERATION TO INVERETD INDEX WITH ENGLISH WORDS
+	/// ADD TRANSLITERATION TO INVERETD INDEX WWITH ENGLISH WORDS
 	if ($lang=="EN")
 	{
-		//preprint_r($TRANSLITERATION_WORDS_LOCATION_MAP);
+		 
 		$invertedIndexBatchApcArr = array();
 	
 		foreach($TRANSLITERATION_WORDS_LOCATION_MAP as $location => $transliteratedWord )
@@ -1060,7 +1060,7 @@ function loadModels($modelsToBeLoaded,$lang)
 		
 		addToMemoryModelBatch($invertedIndexBatchApcArr);
 		
-		//$res = apcu_store("MODEL_SEARCH[EN]",$MODEL_SEARCH['EN']);
+		//$res = apc_store("MODEL_SEARCH[EN]",$MODEL_SEARCH['EN']);
 	
 	}
 	
@@ -2062,7 +2062,7 @@ function loadModel($lang,$type,$file)
 				  		//$MODEL_SEARCH[$lang]['INVERTED_INDEX'] = $INVERTED_INDEX;
 				  		
 				  		
-				  		/*$invertedIndexIterator = getAPCUIterator("MODEL_SEARCH.*");
+				  		/*$invertedIndexIterator = getAPCIterator("MODEL_SEARCH.*");
 				  			
 				  		foreach($invertedIndexIterator as $cursor)
 				  		{
@@ -2075,11 +2075,11 @@ function loadModel($lang,$type,$file)
 				  		
 
 				  		
-				  		//$res = apcu_store("MODEL_CORE[$lang]",$MODEL_CORE[$lang]);
+				  		//$res = apc_store("MODEL_CORE[$lang]",$MODEL_CORE[$lang]);
 				  		
 				  		//if ( $res===false){ throw new Exception("Can't cache MODEL_CORE[$lang]"); }
 				  		
-				  		//$res = apcu_store("MODEL_SEARCH[$lang]",$MODEL_SEARCH[$lang]);
+				  		//$res = apc_store("MODEL_SEARCH[$lang]",$MODEL_SEARCH[$lang]);
 				  		
 				  		//if ( $res===false){ throw new Exception("Can't cache MODEL_SEARCH[$lang]"); }
 				  		
@@ -2111,7 +2111,7 @@ function loadModel($lang,$type,$file)
 					  		
 					  		//file_put_contents("$serializedModelFile.qac", (json_encode($MODEL_QAC)));
 					  		
-					  		//$res = apcu_store("MODEL_QAC",$MODEL_QAC);
+					  		//$res = apc_store("MODEL_QAC",$MODEL_QAC);
 					  		
 					  		//if ( $res===false){ throw new Exception("Can't cache MODEL_QAC"); }
 					  		
@@ -2124,7 +2124,7 @@ function loadModel($lang,$type,$file)
 					  	
 					  		//file_put_contents("$serializedModelFile.qurana", (json_encode($MODEL_QURANA)));
 					  		
-					  		$res = apcu_store("MODEL_QURANA",$MODEL_QURANA);
+					  		$res = apc_store("MODEL_QURANA",$MODEL_QURANA);
 					  		
 					  		if ( $res===false){ throw new Exception("Can't cache MODEL_QURANA"); }
 					  		

@@ -24,37 +24,21 @@
 #
 #  ====================================================================
 require_once("../global.settings.php");
-
+require_once("../hadith.loader.php");
 
 require_once("../libs/search.lib.php");
 require_once("../libs/graph.lib.php");
 
+$sparql = getSPARQLEngine();// apc_fetch("sparql");
 $direction = "rtl";
-
 $lang = $_GET['lang'];
-
-
 if ( empty($lang))
 {
 	$lang = "EN";
 	$direction = "ltr";
 }
-
-
-
-
-
-
-
-
-//echoN(time());
-loadModels("core,search,ontology",$lang);
-//echoN(time());
-	
-
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -64,19 +48,16 @@ loadModels("core,search,ontology",$lang);
     <meta name="description" content="Exploratory search for the Quran, Explore the Quran by topics and find all relevant verses">
     <meta name="author" content="">
 
-	<script type="text/javascript" src="<?=$JQUERY_PATH?>" ></script>
-	<script type="text/javascript" src="<?=$MAIN_JS_PATH?>"></script>
-	<script type="text/javascript" src="<?=$D3_PATH?>"></script>
-
+	<script type="text/javascript" src="<?="".$JQUERY_PATH?>" ></script>
+	<script type="text/javascript" src="<?="".$MAIN_JS_PATH?>"></script>
+	<script type="text/javascript" src="<?="".$D3_PATH?>"></script>
 	
-	<link rel="stylesheet" href="/qe.style.css?bv=<?=$BUILD_VERSION?>" />
-	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="stylesheet" href="../qe.style.css?bv=<?=$BUILD_VERSION?>" />
+	<link rel="icon" type="image/png" href="../favicon.png">
 	<script type="text/javascript">
 	</script>
      
      <style>
-
-
 
 </style>
        
@@ -106,160 +87,29 @@ loadModels("core,search,ontology",$lang);
 			    </span>
 			  
 		    </div>
-			  		<?php 
-			
+<?php 
 
-
-
-
-	
-
-//$graphObj = ontologyToD3Graph($MODEL_QA_ONTOLOGY,0,$lang);
-
-$treeRootNodeObj = ontologyToD3TreemapHierarchical($MODEL_QA_ONTOLOGY,0,$lang);
-
-//echoN(count($treeRootNodeObj['children']));
-//preprint_r($treeRootNodeObj);
-
-
-/////// MOVE THING CLASS CLUSTER TO THE END OF ARRAY TO MAKE PRIORITY FOR NODE 
-/////// TO BE CLUSTERED WITH SPECIFIC CLASSES FIRST - EX: مؤمن is شيء AND  صفة
-$thingClassClusterCopy = null;
-foreach($treeRootNodeObj['children'] as $index => $nodeArr)
-{
-	
-	
-
-
-	if ( $nodeArr['name']==$thing_class_name_ar || $nodeArr['name']==$thing_class_name_en)
-	{
-		$thingClassClusterCopy = $treeRootNodeObj['children'][$index];
-		unset($treeRootNodeObj['children'][$index]);
-	}
-	
+function formatResult($name){
+    global $lang;
+    if($lang == "EN"){
+        return substr(strchr($name, "#") ,1);
+    }else{
+        if ( !isSimpleQuranWord($name)){
+             $name = convertUthamniQueryToSimple($name);
+       $name = cleanAndTrim($name);
+       return $name;
+      }
+        
+    }
 }
 
-$treeRootNodeObj['children'][] =  $thingClassClusterCopy;
-
-//////////////////////////////////////////////
-
-//preprint_r($treeRootNodeObj);exit;
-
-$handledBefore = array();
-//preprint_r($treeRootNodeObj);exit;
-
-
-
-function addChildrenToCluster(&$clusteredArr,$parentNodeArr,&$clusterSerialNumber,&$nodeSerialNumber,$level,&$handledBefore)
-{
-
-	
-	
-	foreach($parentNodeArr['children'] as $index => $nodeArr)
-	{
-		
-		//prevent repetition of same node
-		if ( isset($handledBefore[$nodeArr['name']]) ) continue;
-		
-		$clusteredArr[$nodeSerialNumber]['cluster']=$clusterSerialNumber;
-		$clusteredArr[$nodeSerialNumber]['size'] = $nodeArr['size'];
-		
-		$clusteredArr[$nodeSerialNumber]['word'] = $nodeArr['name'];
-		
-
-			$newRad = (($nodeArr['size']*100)/3000)*3;
-			if ( $newRad> 60)
-			{
-				$newRad = 60;
-			}
-			
-			if ( $newRad < 22 )
-			{
-				$newRad=22;
-			}
-			
-			$clusteredArr[$nodeSerialNumber]['radius']=$newRad;
-		
-		
-		$handledBefore[$nodeArr['name']]=1;
-		
-		
-		$nodeSerialNumber++;
-		
-		if ( count($nodeArr['children'])>0)
-		{
-			//preprint_r($nodeArr['children']);
-			addChildrenToCluster($clusteredArr,$nodeArr,$clusterSerialNumber,$nodeSerialNumber,$level+1,$handledBefore);
-		}
-		
-		//
-	
-	
-		if ($level==1) $clusterSerialNumber++;
-	}
-	
-	
+$result = getAllIllnesses($sparql,$lang);
+$clusteredArrJSON =  array();
+foreach ($result as $row) {
+    $str =  formatResult($row->word);
+    $clusteredArrJSON[] = (object)array("word" => $str);
 }
-
-$clusteredArr = array();
-
-$nodeSerialNumber = 0;
-$clusterSerialNumber =0;
-
-addChildrenToCluster($clusteredArr,$treeRootNodeObj,$clusterSerialNumber,$nodeSerialNumber,1,$handledBefore);
-
-
-//preprint_r($handledBefore);
-
-//preprint_r($clusteredArr);exit;
-
-//$graphNodesJSON = json_encode($graphObj['nodes']);
-//$graphLinksJSON = json_encode($graphObj['links']);
-
-//echoN($treeRootNodeJSON);
-//echoN($graphNodesJSON);
-//echoN($graphLinksJSON);
-//exit;
-
-$qaRelationsArr = getModelEntryFromMemory("ALL", "MODEL_QA_ONTOLOGY", "RELATIONS", "");
-
-
-
-$filteredClusteredArr = array();
-$index = 0;
-foreach($clusteredArr as $index => $clusterArrItem)
-{
-	
-	$conceptName = strtolower(convertConceptIDtoGraphLabel($clusterArrItem['word']));
-	
-	//$conceptNameAR  = $MODEL_QA_ONTOLOGY['CONCEPTS_EN_AR_NAME_MAP'][$conceptName];
-	
-	$conceptNameAR  = getModelEntryFromMemory("ALL", "MODEL_QA_ONTOLOGY", "CONCEPTS_EN_AR_NAME_MAP", $conceptName);
-	
-	
-	
-	// if not in index (then not qurana or word in quran)
-	// and does not have subclasses // then ignore
-	if ( !wordOrPhraseIsInIndex($lang,$conceptName) &&
-	!conceptHasSubclasses($qaRelationsArr, $conceptNameAR) )
-	{
-		
-		//echoN($conceptName);
-		continue;
-	
-	}
-	
-	$index++;
-	
-	$filteredClusteredArr[] = $clusterArrItem;
-	
-}
-
-//preprint_r($clusteredArr);
-
-//echoN(count($clusteredArr));
-
-$clusteredArrJSON = json_encode($filteredClusteredArr);
+$clusteredArrJSON = json_encode($clusteredArrJSON);
 
 ?>
 		  		
@@ -293,42 +143,29 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 
 		var jsonData = <?=$clusteredArrJSON?>;
 		
-			//alert(JSON.stringify(jsonData));
+//                alert(jsonData[0] /*JSON.stringify(jsonData)*/);
 
-
-
-		var width = ($(document).width()-100),
-		    height = 3000,
+		var width = ($(document).width()-500),
+		    height = 1000,
 		    padding = 1.5, // separation between same-color circles
 		    clusterPadding = 6, // separation between different-color circles
 		    maxRadius = -1;
 
 		var n = jsonData.length, // total number of circles
-		    m = 10; // number of distinct clusters
-
-
-
-		
-	
-
-
-
+		    m = n; // number of distinct clusters -> we have only 1 cluster
 		var clusters = new Array();
 		var clustersSizes = new Array();
 
 		//alert(jsonData.length);
 		var clusterId = 0;
-		jsonData.forEach(function(d)
+                //categorize clusters ->. we have only only 1 cluster
+/*		jsonData.forEach(function(d)
 				{
-					
 					clusterId = d.cluster; 
-
-					
 					if ( clustersSizes[clusterId]==null)
 					{
 						clustersSizes[clusterId]=0;
 					}
-					
 					clustersSizes[clusterId]++;
 					
 					if ( d.radius > maxRadius)
@@ -336,91 +173,54 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 						maxRadius = d.radius;
 						
 					}
-					
 					if ( !clusters[clusterId] || d.radius > clusters[clusterId].radius )
 					{
 						clusters[clusterId] = d;
-
-			
-						
 					}
-
-
-		
 				}
-		);
-
-
-		/*clusters.forEach(function(c)
-				{
-					if ( c.cluster == 335 )
-					alert(c.cluster+" "+clustersSizes[c.cluster]+" "+c.word+" "+clusters[clusterId].word+" "+JSON.stringify(c));
-				});*/
-
-
+		);*/
 
 		//alert(JSON.stringify(clustersSizes));
 
 		var clusterVerticalLocationFactor=100;
-		// set cluster nodes to random locations and set thier children to teh same
+		// set cluster nodes to random locations and set thier children to the same
 		jsonData.forEach(function(d)
 				{
-					
-					clusterId = d.cluster; 
-					clusterNode = clusters[clusterId];
 
+                        //clusterId = d.cluster; 
+//			clusterNode = d/*clusters[clusterId]*/;
+                            var clusterNodesCount = jsonData.length;
+                            clusterXLocation =(clusterNodesCount)%4;
 
-					var clusterNodesCount = parseInt(clustersSizes[clusterId]);
+                            if ( clusterXLocation > width )
+                            {
+                                    clusterXLocation = width/2;
+                            }
 
-					clusterXLocation =(clusterNodesCount)%600;;
+                            clusterYLocation = (parseInt(clusterNodesCount)*5);
+                            if ( clusterYLocation > height )
+                            {
 
-					if ( clusterXLocation > width )
-					{
-						clusterXLocation = width/2;
-					}
+                                    clusterYLocation = height -400;
+                            }
 
-					clusterYLocation = (parseInt(clusterNodesCount)*5);;
-					
+                            //alert(clusterYLocation);
 
+//                            d.x = clusterXLocation;
+//                            d.y =  clusterYLocation;
+                        d.radius =50;
+                        d.cluster = 1;//color
+			d.x = clusterXLocation+  (multiplyByRandomSign(Math.random()) )*450;
+			d.y =  clusterYLocation+ (multiplyByRandomSign(Math.random()) )*200;
 
-					
-					if ( clusterYLocation > height )
-					{
-
-						clusterYLocation = height -400;
-					}
-
-					//alert(clusterYLocation);
-					
-					clusterNode.x = clusterXLocation;
-					clusterNode.y =  clusterYLocation;
-
-				
-					d.x = clusterXLocation+  (multiplyByRandomSign(Math.random()) )*1;
-					d.y =  clusterYLocation+ (multiplyByRandomSign(Math.random()) )*200;
-
-					clusterVerticalLocationFactor++;
-				}
+                            clusterVerticalLocationFactor++;
+                    }
 		);
 
 
-		var color = d3.scale.category10().domain(d3.range(clusters.length));
+		var color = d3.scale.category10().domain(d3.range(n));
 
 		//alert(JSON.stringify(jsonData));
-	
-		
-		/*
-		// The largest node for each cluster.
-		var clusters = new Array(m);
-		
-		var nodes = d3.range(n).map(function() {
-		  var i = Math.floor(Math.random() * m),
-		      r = Math.sqrt((i + 1) / m * -Math.log(Math.random())) * maxRadius,
-		      d = {cluster: i, radius: r};
-		  if (!clusters[i] || (r > clusters[i].radius)) clusters[i] = d;
-		  return d;
-		});
-		*/
 		
 		var force = d3.layout.force()
 		    .nodes(jsonData)
@@ -431,7 +231,7 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 		    .on("tick", tick)
 		    .on("end", handleEndEvent)
 		   	.on("start", handleStartEvent);
-	    
+//	    
 
 
 		var svg = d3.select("#exploration-area").append("svg")
@@ -476,7 +276,7 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 		    .data(jsonData)
 		  .enter().append("g")
 		  .attr("class","explore-node")
-		  .on("click",function(d)
+		  .on("click",function(d) //onclick search with this concept to show related hadeeths
 		  {
 
 			   svg.selectAll("#explore-result-verses-container").remove();
@@ -486,7 +286,7 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 				.attr("id","explore-result-verses-container")
 				.attr("width","600px")
 				.attr("height","700px")
-				.attr("x",getAdjustedCornerPointX(d3.event.pageX-50) + "px")
+				.attr("x", getAdjustedCornerPointX(d3.event.pageX-50) + "px")
 				.attr("y",(d3.event.pageY-100) + "px");
 
 				
@@ -495,9 +295,9 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 			
 				
 				body.append("xhtml:img")
-			    .attr("src","/images/close-icon-black.png")
+			    .attr("src","http://localhost/qa/images/close-icon-black.png")
 			    .attr("class","explore-verses-close")
-				.on("click", function() {
+			    .on("click", function() {
 					
 					$("#explore-result-verses-container").css("display","none");
 
@@ -508,17 +308,9 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 				.attr("id","explore-result-verses")
 				//.attr("xmlns","http://www.w3.org/1999/xhtml")
 				.html("");
-				
-
-				// make it a phrase search // needed for qurana pron
-				//if ( word.indexOf(" ")>-1)
-				//{
-					//word = "\""+word+"\"";
-				//}
-
 		        	// one concept search
-		        	word = "CONCEPTSEARCH:"+word+"";
-
+//		        	word = "CONCEPTSEARCH:"+word+"";
+                                //update this method to load hadeeth
 				showResultsForQueryInSpecificDiv(word,"explore-result-verses");
 
 				
@@ -532,27 +324,30 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 		    .attr("cy", function(d) { return d.y; })
 		    .call(force.drag);
 
-		circle.append("text").text(
-				function(d) 
-				{
-					var word = d.word;
+		circle.append("text")
+//             .attr("x", function(d) { return d.x; })
+//	.attr("y", function(d) { return d.y; })            
+            .text(
+                function(d) 
+                {
+                        var word = d.word;//text to show
 
-					if ( word!=undefined && word.length > 5 )
-					{
-						word = word.substring(0,5)+"..";
-					}
-					
-					return word; 
+                        if ( word!=undefined && word.length > 10 )
+                        {
+                                word = word.substring(0,10)+"..";
+                        }
 
-					 
-				} );
+                        return word; 
+
+
+                } );
 
 		circle.append("title").text( function(d) { return (d.word); } );
 
 		function tick(e) {
 
 			
-			circle.each(cluster(10 * e.alpha * e.alpha)).each(collide(0.5));
+                circle.each(cluster(10 * e.alpha * e.alpha)).each(collide(0.5));
 
 		   circle.each(handleOutOfBoundry(e.alpha));
 
@@ -567,24 +362,8 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 		  
 		}
 
-
-	
-
-		
-
 		force.start();
 
-		/*for(var i=0;i<1000;i++) 
-			{
-				force.tick();
-				//circle.each(handleOutOfBoundry(0.5));
-				//circle.each(cluster(10 * e.alpha * e.alpha)).each(collide(0.5));
-			}
-			*/
-		//force.stop();
-
-		//force.resume();
-		
 		function handleEndEvent()
 		{
 			//circle.each(handleOutOfBoundry(0.5));
@@ -614,8 +393,8 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 					//alert(JSON.stringify(d)+" "+d.x+" "+d.y+" "+d.radius);
 					
 					dsClusterObj = clusters[d.cluster];
-					targetXPos = dsClusterObj.x;
-					targetYPos = dsClusterObj.y;
+					targetXPos = d.x;
+					targetYPos = d.y;
 
 					if ( targetXPos > width ||  targetXPos <0  )
 					{
@@ -633,7 +412,7 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 						}
 						
 
-						dsClusterObj.x = targetXPos;
+						d.x = targetXPos;
 					
 						
 					}
@@ -651,25 +430,13 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 							targetYPos -=diff;
 						}
 						
-						dsClusterObj.y = targetYPos;
+						d.y = targetYPos;
 					}
 			
-					d.x += (targetXPos-d.x)*(alpha);
-					d.y += (targetYPos-d.y)*alpha;
-
-					
-					//d.x = (Math.random() * (width - 100) ) + 100;
-					//d.y = (Math.random() * (3000 - 100) ) + 100;
-					
+//					d.x += (targetXPos-d.x)*(alpha);
+//					d.y += (targetYPos-d.y)*alpha;
 				}
 	
-				
-					
-					
-
-					
-					
-				
 			 }
 		}
 
@@ -686,19 +453,20 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 		// Move d to be adjacent to the cluster node.
 		function cluster(alpha) {
 		  return function(d) {
-		   var cluster = clusters[d.cluster];
-		    if (cluster === d) return;
-		    var x = d.x - cluster.x,
-		        y = d.y - cluster.y,
-		        l = Math.sqrt(x * x + y * y),
-		        r = d.radius + cluster.radius;
-		    if (l != r) {
-		      l = (l - r) / l * alpha;
-		      d.x -= x *= l;
-		      d.y -= y *= l;
-		      cluster.x += x;
-		      cluster.y += y;
-		    }
+                      return;
+//		   var cluster = clusters[d.cluster];
+//		    if (cluster === d) return;
+//		    var x = d.x - cluster.x,
+//		        y = d.y - cluster.y,
+//		        l = Math.sqrt(x * x + y * y),
+//		        r = d.radius + cluster.radius;
+//		    if (l != r) {
+//		      l = (l - r) / l * alpha;
+//		      d.x -= x *= l;
+//		      d.y -= y *= l;
+//		      cluster.x += x;
+//		      cluster.y += y;
+//		    }
 		  };
 		}
 
@@ -736,16 +504,10 @@ $clusteredArrJSON = json_encode($filteredClusteredArr);
 			
 			
 			var selectedLang = $("SELECT[id=language-selection] option:selected").val();
-		
-			
-
-			
 			var newURL ="";
 			if ( location.href.indexOf("?") >= 0 )
 			{
 				newURL=location.href.substring(0,location.href.indexOf("?"));
-			
-
 			}
 			
 				newURL=newURL+"?lang="+selectedLang;

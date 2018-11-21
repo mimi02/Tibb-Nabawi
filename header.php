@@ -63,46 +63,33 @@ if (  $_SERVER['REMOTE_ADDR']!="127.0.0.1" )
 	
 	
 	<table>
-		<tr>
-			<td>
-					<a href="javascript:showBETAWarning('homepage-important-messages-area')" id="home-beta-button"  >BETA!</a>
-			</td>
-			<td>
-					<a href="/" ><b>Home</b></a>
-			</td>
-			<td>
-					<a href="/info/index.php?page=about" >About</a>
-			</td>	
-			<td>
-					<a href="/info/index.php?page=contribute" style="color:red" >Contribute</a>
-			</td>
-			<td>
-					<a href="/info/index.php?page=feedback" style="color:red" >Feedback</a>
-			</td>
-			<td>
-					<a href="/info/index.php?page=faq" >Faq</a>
-			</td>
-			<td>
-					<a href="/info/index.php?page=resources" >Resources</a>
-			</td>
-			<td>
-					<a href="/info/index.php?page=credits" >Credits</a>
-			</td>	
-			<td>
-					<a href="/info/index.php?page=contact" >Contact</a>
-			</td>	
-			<!-- <td>
-					<a href="javascript:;" >
-						عربي
-					</a>
-			</td>
-			 -->
-			<td>
-					<div id='copyr-statement'>
-						© 2015
-					</div>
-			</td>
-		</tr>
+            <tr>
+                <td>
+                    <a href="javascript:showBETAWarning('homepage-important-messages-area')" id="home-beta-button"  >BETA!</a>
+                </td>
+                <td>
+                    <a href="http://localhost/teb/" ><b>Home</b></a>
+                </td>
+                <td>
+                    <a href="http://localhost/teb/info/index.php?page=about" >About</a>
+                </td>	
+
+                <td>
+                    <a href="http://localhost/teb/info/index.php?page=resources" >Resources</a>
+                </td>
+                <td>
+                    <a href="http://localhost/teb/info/index.php?page=credits" >Credits</a>
+                </td>	
+                <td>
+                    <a href="http://localhost/teb/info/index.php?page=contact" >Contact</a>
+                </td>	
+
+                <td>
+                    <div id='copyr-statement'>
+                            © 2018
+                    </div>
+                </td>
+            </tr>
 	</table>
 
 	

@@ -571,7 +571,7 @@ function ontologyToD3Graph($MODEL_QA_ONTOLOGY,$minFreq=0)
 	/** SHOULD BE ZERO BASED FOR D3 TO WORK - o.target.weight = NULL**/
 	$nodeSerialNumber = 0;
 
-	$qaOntologyConceptsIterator = getAPCUIterator("ALL\/MODEL_QA_ONTOLOGY\/CONCEPTS\/.*");
+	$qaOntologyConceptsIterator = getAPCIterator("ALL\/MODEL_QA_ONTOLOGY\/CONCEPTS\/.*");
 	
 	$conceptCount = $qaOntologyConceptsIterator->getTotalCount();
 
@@ -689,7 +689,7 @@ function ontologyToD3TreemapFlat($MODEL_QA_ONTOLOGY,$minFreq=0)
 	$nodeSerialNumber = 0;
 
 
-	$qaOntologyConceptsIterator = getAPCUIterator("ALL\/MODEL_QA_ONTOLOGY\/CONCEPTS\/.*");
+	$qaOntologyConceptsIterator = getAPCIterator("ALL\/MODEL_QA_ONTOLOGY\/CONCEPTS\/.*");
 
 	foreach($qaOntologyConceptsIterator as $conceptsCursor )
 	{
@@ -866,7 +866,7 @@ function ontologyToD3TreemapHierarchical($MODEL_QA_ONTOLOGY,$minFreq=0,$lang)
 	
 
 
-	$qaOntologyConceptsIterator = getAPCUIterator("ALL\/MODEL_QA_ONTOLOGY\/CONCEPTS\/.*");
+	$qaOntologyConceptsIterator = getAPCIterator("ALL\/MODEL_QA_ONTOLOGY\/CONCEPTS\/.*");
 	
 	foreach($qaOntologyConceptsIterator as $conceptsCursor )
 	{
@@ -918,49 +918,9 @@ function ontologyToD3TreemapHierarchical($MODEL_QA_ONTOLOGY,$minFreq=0,$lang)
 					"y"=>rand($startLocationYMin,$startLocationYMax));*/
 			$treeRootObj["children"][] = array("name"=>$conceptNameClean,"size"=>$conceptFrequency,
 					"children"=>getTreeNodeChildren($MODEL_QA_ONTOLOGY,$conceptNameID,$minFreq,$lang,1,$alreadyInLevel1));
-
-			
-			
 		}
-
-
 
 	}
-
-	
-	
-	/*
-	foreach($MODEL_QA_ONTOLOGY['RELATIONS'] as $index => $relArr)
-	{
-
-		$subject = $relArr['subject'];
-		$verbAR = $relArr['verb'];
-		$verbEN = $relArr['VERB_TRANSLATION_EN'];
-		$verbUthmani = $relArr['verb_uthmani'];
-		$relFreq = $relArr['frequency'];
-		$object = $relArr['object'];
-			
-
-		//$treeRootObj[$subject]["children"][]["name"]=$object;
-
-		$objectConceptArr = $MODEL_QA_ONTOLOGY['CONCEPTS'][$object];
-
-			
-		$index = search2DArrayForValue($currentArr,$subject);
-
-
-		$isObjectIncludedBefore = search2DArrayForValue($currentArr[$index]["children"],$object);
-
-		if ( $isObjectIncludedBefore===false)
-		{
-			//$currentArr[$index]["children"][] = array("name"=>$object,"size"=>$objectConceptArr['frequency'],"children"=>array());
-		}
-
-	}*/
-
-
-
-	//echoN(count($treeRootObj["children"]));
 
 	return $treeRootObj;
 }

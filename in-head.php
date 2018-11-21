@@ -7,7 +7,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="http://<?=$_SERVER['SERVER_NAME']?>/images/quran-analysis-logo.png">
 <meta name="twitter:creator" content="@qurananalysis">
-<meta name="twitter:description" content="Quran Analysis is a Smart Search and Question Answering System for the Quran" />
-<meta name="twitter:title" content="Quran Smart Semantic Search and Question Answering System - QA (BETA)" />
+<meta name="twitter:description" content="Tibb Annabwi is a Search a System for the prophet's medicine" />
+<meta name="twitter:title" content="Tibb Annabwi Semantic Search System (BETA)" />
 
 

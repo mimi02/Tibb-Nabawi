@@ -30,37 +30,30 @@
   				    
 		<div class='info-page-text'>
 	
-				QA would not have been possible if the following projects did not exist
-	   			
-	   			<ul>
-		   			<li><a target='_NEW' href='http://tanzil.net/wiki/'>Tanzil Project</a></li>
-		   			<li><a target='_NEW' href='http://corpus.quran.com/'>Quranic Arabic Corpus</a></li>
-		   			<li><a target='_NEW' href='http://www.textminingthequran.com/'>Text Mining The Quran</a></li>
-	   			</ul>
+                    Tibb Annabwi project is inspired by Karim Ouda's QA project 
+
+                    <ul>
+                            <li><a target='_NEW' href='http://www.qurananalysis.com'>Quran Analysis</a></li>
+
+                    </ul>
 
 		</div>
 		
 </fieldset>
 
-
-
-
-
-
 <fieldset class="credits-fs" >
 		  		 
-  		<legend>Libraries</legend>
-  				    
-		<div class='info-page-text'>
-	
-				External code libraries used in QA
-	   			
-	   			<ul>
-		   			<a href="https://github.com/karimouda/qurananalysis">https://github.com/karimouda/qurananalysis</a>
-		   		
-	   			</ul>
+    <legend>Libraries</legend>
 
-		</div>
+    <div class='info-page-text'>
+
+                     QA code 
+                    <ul>
+                            <a href="https://github.com/karimouda/qurananalysis">https://github.com/karimouda/qurananalysis</a>
+
+                    </ul>
+
+    </div>
 		
 </fieldset>
 
@@ -70,13 +63,9 @@
   		<legend>Contributers</legend>
   				    
 		<div class='info-page-text'>
-
-	   			
-	   			
-	   			<ul>
-		   		Soon
-		   		
-	   			</ul>
+	   			<ul> </ul>
+                                <ul> </ul>
+                                <ul> </ul>
 
 		</div>
 		

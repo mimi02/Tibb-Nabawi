@@ -312,7 +312,7 @@ function drawGraph(jsonNodesData,jsonLinksData,width,height,targetGraphDiv,lang,
     tooltip.append("div");
     
     tooltip.append("img")
-    .attr("src","/images/close-icon-white.png")
+    .attr("src","http://localhost/qa/images/close-icon-white.png")
     .attr("class","graph-tooltip-close")
 	.on("click", function() {
 		hideGraphTootip();
@@ -831,14 +831,14 @@ function drawGraph(jsonNodesData,jsonLinksData,width,height,targetGraphDiv,lang,
 		var imgObj = $("<IMG/>");
 		
 		//created by http://www.ajaxload.info/
-		imgObj.attr("src","/images/green-ajax-loader.gif");
+		imgObj.attr("src","http://localhost/qa/images/green-ajax-loader.gif");
 		
 		$("#"+divID).append(imgObj);
 		
 	}
 	
 	
-	function showResultsForQueryInSpecificDiv(query,divID,script)
+	function showResultsForQueryInSpecificDiv(query, divID, script)
 	{
 		
 		$("#"+divID).html("");
@@ -846,41 +846,35 @@ function drawGraph(jsonNodesData,jsonLinksData,width,height,targetGraphDiv,lang,
 		showAjaxLoaderIn(divID);
 
 			
-			$.ajaxSetup({
-				url:  "/search/dosearch.ajax.service.php?q="+encodeURIComponent(query)+"&script="+script,
-				global: false,
-				type: "GET"
-				
-			  });
+            $.ajaxSetup({
+                    url:  "http://localhost/teb/search/dosearch.ajax.service.php?q="+encodeURIComponent(query)+"&script="+script,
+                    global: false,
+                    type: "GET"
+
+              });
 
 
-			$.ajax({
-				
-				timeout: 60000,
-				success: function(retRes)
-						{
-							
-					  			$("#loading-layer").hide();
-					      	 	
-					  			$("#"+divID).html(retRes);
+            $.ajax({
 
-					  	
-					  			var selectedField = $("#qa-sort-select option:selected").val();
-								var currentOrder = $("#qa-sort-select option:selected").attr("sortorder");
+                timeout: 60000,
+                success: function(retRes)
+                    {
 
-								
-								
-								$('.result-aya-container').tsort({attr:selectedField, order: currentOrder});
+                        $("#loading-layer").hide();
 
+                        $("#"+divID).html(retRes);
 
-					 	 	
-					     },
-				      	 error: function (xhr, ajaxOptions, thrownError)
-				         {
-				      		$(divID).html("<center>Error occured !</center>");
-				      		$("#loading-layer").hide();
-				         }
-					});
+                        var selectedField = $("#qa-sort-select option:selected").val();
+                        var currentOrder = $("#qa-sort-select option:selected").attr("sortorder");
+
+                        $('.result-aya-container').tsort({attr:selectedField, order: currentOrder});
+                    },
+                    error: function (xhr, ajaxOptions, thrownError)
+                    {
+                           $(divID).html("<center>Error occured !</center>");
+                           $("#loading-layer").hide();
+                    }
+                            });
 						
 			
 			

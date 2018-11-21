@@ -45,7 +45,7 @@
 
  <div id="sharing-link-panel" >
  		<div id="sharing-link-panel-close-buttom" onclick="closeSharingPanel()">
-			<img src='/images/close-icon-black.png' />
+			<img src='http://localhost/qa/images/close-icon-black.png' />
 		</div>
 		
 		<h1 id="sharing-link-title">Share Result Link</h1>

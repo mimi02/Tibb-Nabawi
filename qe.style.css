@@ -38,6 +38,7 @@ body
 	background-attachment: scroll;
 	background-size:140%;*/
 	
+    text-align: left;
 }
 
 A
@@ -82,7 +83,7 @@ INPUT[type="button"]
   -webkit-font-smoothing: antialiased;
 }
 	
-}
+
 INPUT[type="button"]:HOVER
 {
 	cursor: pointer;
@@ -607,6 +608,7 @@ marked_for_initials
 	width: 100%;
 	margin:auto;
 	padding:2px;
+    text-align: left;
 }
 	
 .result-sura-info
@@ -855,8 +857,7 @@ margin: 20px 0px 0px 0px;;
     margin-top: 3px;
     max-width: 45%;
 }
-	
-}
+
 
 
 #results-stats-table table
@@ -1445,7 +1446,7 @@ background-color: #fff;
 #repeated-results-table
 {
 	margin:auto;
-	width:80%
+	width:80%;
 	margin-top:20px;
 }
 
@@ -1905,7 +1906,7 @@ font-size: 12px;
 
 .explore-node text 
 {
-	  fill: #fff;
+	  fill: #111;
 	  text-anchor:middle;
 	  font-size:12px;
 	  font-weight: bold;
@@ -2266,4 +2267,8 @@ DIV#sharing-link-panel IMG
 	top:0px;
 	cursor: pointer;
 	float: right;
+}
+
+#result-table {
+    border: 1px solid black;
 }

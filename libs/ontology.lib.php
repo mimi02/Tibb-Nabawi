@@ -25,6 +25,7 @@
 #  ====================================================================
 require_once(dirname(__FILE__)."/../libs/core.lib.php");
 require_once(dirname(__FILE__)."/custom.translation.table.lib.php");
+require_once(dirname(__FILE__)."/../libs/PorterStemmer.php");
 
 function mapQACPoSToWordnetPoS($qacPOS)
 {
@@ -50,7 +51,6 @@ function isNounPhrase($posPattern)
 	);
 	//REMOVED || $posPattern=="N PRON"  نصيبك
 }
-
 
 
 function generateEmptyConceptMetadata()
@@ -87,10 +87,6 @@ function getTermArrBySimpleWord($finalTerms, $sentSimpleWord)
 function addNewConcept(&$finalConceptsArr,$newConceptName,$coneptType,$exPhase,$freq,$engTranslation)
 {
 
-
-
-
-
 	if ( !isset($finalConceptsArr[$newConceptName]))
 	{
 		$conceptMetaDataArr = generateEmptyConceptMetadata();
@@ -106,7 +102,6 @@ function addNewConcept(&$finalConceptsArr,$newConceptName,$coneptType,$exPhase,$
 		$finalConceptsArr[$newConceptName]=array("CONCEPT_TYPE"=>$coneptType,"EXTRACTION_PHASE"=>$exPhase,"FREQ"=>$freq,"EXTRA"=>$conceptMetaDataArr);
 		
 		return true;
-	
 	}
 	else 
 	{
@@ -747,6 +742,20 @@ function stripOntologyNamespace($className)
 	return $className;
 }
 
+
+
+function getClassesNames($classesOntologyArray, $lang){
+    $names = [];
+    if($lang == "En")
+        foreach($classesOntologyArray as $key => $value){
+            $names[] = extractClassName($key);
+        }
+    else{
+
+    }
+    return $names;
+}
+        
 function conceptHasSubclasses($relationsArr,$concept)
 {
 	global $is_a_relation_name_ar;
@@ -803,7 +812,7 @@ function isWordPartOfAVerbInVerbIndex($word,$lang)
 {
 
 	
-	$verbIndexIterator = getAPCUIterator("ALL\/MODEL_QA_ONTOLOGY\/VERB_INDEX\/.*");
+	$verbIndexIterator = getAPCIterator("ALL\/MODEL_QA_ONTOLOGY\/VERB_INDEX\/.*");
 	
 	foreach($verbIndexIterator as $verbIndexCursor )
 	{
@@ -1030,6 +1039,140 @@ function getConceptsFoundInText($text,$lang)
 
 	return $conceptsInTextArr;
 
+}
+
+ function findConceptAnnotaionValue($ontology, $concept, $annotation_key){
+        $annotations = $ontology->{'owl_data'}{'annotations'};
+        $concept_annotations = $annotations{$concept};
+//        print_r($concept_annotations);  
+        if(count($concept_annotations) > 0)
+            foreach ($concept_annotations as $key => $value){
+                if($value['KEY'] == $annotation_key ){
+                    return $value['VAL'];
+                }
+        }
+        return '';
+    }
+
+function addAnnotationValueToClass(&$ontology, $class, $annot_key, $annot_value){
+        $annotations = &$ontology->{'owl_data'}{'annotations'};
+        $count = count($annotations{$class});
+        if($count == 0){
+            $annotations{$class} = [];
+        }
+        $concept_annotations = &$annotations{$class};
+        $new_array = [];
+        foreach ($annot_value as $value) {
+           $new_array['KEY'] = $annot_key;
+            $new_array['VAL'] = $value;   
+        }
+      
+        $concept_annotations[$count] = $new_array;
+//        echoN('inside addAnnotationValueToClass');
+//        print_r($concept_annotations);
+}
+
+function getWordStemEn($concept){
+    $concepts = explodeCamelCase($concept);
+    $stems = [];
+//    echoN(" ---- En stem of: ". $concept);
+    if( count($concepts) > 0 ){
+        foreach ($concepts as $value) {
+            $stems[] = PorterStemmer::Stem($value);
+        }
+    }
+    else{
+         $stems[] = PorterStemmer::Stem($concept);
+    }
+    return $stems;
+}
+function writeLineByLineToFile($lines, $fileName, $mode){
+    $file = fopen($fileName , $mode);
+    if($file == false){
+        echoN("Cannot open file");
+        return ;
+    }
+    foreach($lines as $line){
+//        echoN($line);
+        if($line !='')
+         fwrite($file, $line.PHP_EOL);
+    }
+    fclose($file);
+}
+
+/**
+ * read text from file line by line 
+ * @param $fileName
+ * @return array of lines
+ *          
+ */
+function readLineByLineFromFile($fileName){
+
+    $lines = [];
+    foreach(file($fileName) as $line){
+        $lines[] = $line;
+    }
+    return $lines;
+}
+
+function getWordStemAr($concept){
+    $concepts = explode(" ", $concept);
+    if( count($concepts) == 0 ){
+        $concepts[] = $concept;
+    }
+//    print_r($concepts);
+//    echoN("");echoN("");echoN("");
+    writeLineByLineToFile($concepts, "farasa_tmp_in", "w");
+
+//    $command = "java -jar farasa/Farasa.jar"
+//            . " -l true"
+//            . " -i farasa_tmp_in"
+//            . " -o farasa_tmp_out"
+//            ;
+    
+    $command = "java -jar /home/sarah/Downloads/FarasaSegmenter/FarasaSegmenterJar.jar -l true "
+            . "-i /home/sarah/php_dir/teb/farasa_tmp_in -o /home/sarah/php_dir/teb/farasa_tmp_out";
+    
+    executeCommand($command);
+    $stems = readLineByLineFromFile("farasa_tmp_out");
+    
+//    print_r($stems);
+//    foreach($stems as $tok)
+//        echo($tok . " ---- Ar stem of: ". $concept);
+    return $stems;
+}
+    
+
+/***
+ * add stem for each concept {ar, en} in the ontology
+ * @param &$ontology
+ */
+function addStemToOntology(&$ontology){
+    $ontologyClassesArray = $ontology->{'owl_data'}['classes'];
+    $label_key_En = "STEM_EN";
+    $label_key_Ar = "STEM_Ar";
+     
+//    foreach ($ontology->{'owl_data'} as $class => $value) {
+//            preprint_r($class);
+//    }
+//    
+    foreach($ontologyClassesArray as $class => $value){
+        // for English
+        $name_En = stripOntologyNamespace($class);
+        $stem_En = getWordStemEn($name_En);
+        addAnnotationValueToClass($ontology,$class, $label_key_En, $stem_En);
+        
+        //for Arabic
+        $annotation_key = 'Arabic_Name';
+//      echoN("+" .$name_Ar) ;
+        $name_Ar = findConceptAnnotaionValue($ontology, $class, $annotation_key);
+        $stem_Ar = getWordStemAr($name_Ar);
+        addAnnotationValueToClass($ontology, $class, $label_key_Ar, $stem_Ar);
+        
+    }
+    
+//    print_r($ontology->{'owl_data'}{'annotations'});
+ 
 }
 
 ?>

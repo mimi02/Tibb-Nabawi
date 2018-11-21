@@ -1,0 +1,1967 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15">
+    <Prefix name="" IRI="http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.6</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The aim of this ontology is to link Tibb Nabawi with modern practice medical.  It will be interesting to see what are those morden practice.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#illness"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#prophet_time_material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#bleeding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#wearing_golden_nose_implant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#?ModernMedicine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sahih_Muslim_2207"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nuclear_Radiology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_6802"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#participatesIn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#lost_of_nose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cupping"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#stomach_Gastric_ulcers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Laser_irradiation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#honeyDietSupplemente"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_5707"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sahih_Muslim_2217a"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TibbNabawi_Islamic_Illegal_Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Camel_urine_extract"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#Web_Link"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBeenTreated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#variety_Of_Diseases_except_death"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hadith_282"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#illness_at_prophet_time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#infections"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hadith_3449"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#?SpiritualProphetPractice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diabetes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nigella_seed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sunan_Abi_Dawud_4232"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#rheumaticFever"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#rifampicin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAbout"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#coldWater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Radiological_Cauterization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#antibiotics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wearing_Silk_for_Men"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diarrhea"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#ArabicName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#?YellowDisease"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sahih_Muslim_2215c"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nose_cut_off"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TibbNabawi_of_Climate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fever"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PM701CancerDrug"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_2920"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#illness_related_to_changing_residence_to_Medina"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TibbNabawi_of_cauteriazaion?"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confused_Hadeeth"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWeaklyVerifiedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#treatment_using_camel_urine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_participant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#liver_Cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#lung_Cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cauterization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#brain_Cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hadeeth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#powder_Nigella_seed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TibbNabawi_of_BowelsLoose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pig_Insulin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electric_Cauterization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CamelsUrine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#?TibbNabawi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Treatment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#breast_Cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#leukemia_Cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Honey"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#treat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TibbNabawi_of_fever"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bowels_loose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#gentamicin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#modern_time_material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Insulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModernTimeDrugs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_5730"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#??TibbNabawi_seed_of_blessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thermal_Ironing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Infection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ibuprofen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#golden_nose_implant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#feverReducers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#leprosy_Infection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lice_infection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Quarantine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drink_honey_severalTimes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Authentic_Hadeeth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#skin_Cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#plague_Infection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_5725"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVerifiedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#X-ray"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LowerTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#illness_at_Modern_Time"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hadith_3544"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#communicable_Diseases"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#epidemic_(of_plague)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_5683"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#illness_at_Modern_Time"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#illness"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasBeenTreated"/>
+                    <Class IRI="#ModernMedicicalTreatment"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasBeenTreated"/>
+                    <Class IRI="#modern_time_material"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#illness_at_prophet_time"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#illness"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasBeenTreated"/>
+                    <Class IRI="#Prophet_timeTreatment"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasBeenTreated"/>
+                    <Class IRI="#prophet_time_material"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#?TibbNabawi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <Class IRI="#Authentic_Hadeeth"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Authentic_Hadeeth"/>
+        <Class IRI="#Hadeeth"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowels_loose"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowels_loose"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#Drink_honey_severalTimes"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowels_loose"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2217a"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Camel_urine_extract"/>
+        <Class IRI="#ModernTimeDrugs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CamelsUrine"/>
+        <Class IRI="#prophet_time_material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CamelsUrine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#cancer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CamelsUrine"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_6802"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cauterization"/>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cauterization"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#bleeding"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cauterization"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5683"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confused_Hadeeth"/>
+        <Class IRI="#Hadeeth"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diabetes"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diabetes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#Pig_Insulin"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diabetes"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_2920"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diabetes"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sunan_Abi_Dawud_4232"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diarrhea"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diarrhea"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#honeyDietSupplemente"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diarrhea"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2217a"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Drink_honey_severalTimes"/>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electric_Cauterization"/>
+        <Class IRI="#Cauterization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electric_Cauterization"/>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electric_Cauterization"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#bleeding"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Honey"/>
+        <Class IRI="#prophet_time_material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Honey"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#Bowels_loose"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Honey"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2217a"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Infection"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insulation"/>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insulation"/>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insulation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#rifampicin"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insulation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#leprosy_Infection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insulation"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_3544"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insulation"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5707"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Laser_irradiation"/>
+        <Class IRI="#Radiological_Cauterization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lice_infection"/>
+        <Class IRI="#Infection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lice_infection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#Wearing_Silk_for_Men"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lice_infection"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_2920"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LowerTemperature"/>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LowerTemperature"/>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LowerTemperature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#fever"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModernMedicicalTreatment"/>
+        <Class IRI="#Treatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModernMedicicalTreatment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#illness"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModernTimeDrugs"/>
+        <Class IRI="#modern_time_material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModernTimeDrugs"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#participatesIn"/>
+            <Class IRI="#ModernMedicicalTreatment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nigella_seed"/>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nigella_seed"/>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nigella_seed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_participant"/>
+            <Class IRI="#powder_Nigella_seed"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nigella_seed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#variety_Of_Diseases_except_death"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nigella_seed"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_3449"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nigella_seed"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2215c"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nose_cut_off"/>
+        <Class IRI="#TibbNabawi_Islamic_Illegal_Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nose_cut_off"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sunan_Abi_Dawud_4232"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nuclear_Radiology"/>
+        <Class IRI="#Radiological_Cauterization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PM701CancerDrug"/>
+        <Class IRI="#ModernTimeDrugs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PM701CancerDrug"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#CamelsUrine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PM701CancerDrug"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#cancer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PM701CancerDrug"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_6802"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pig_Insulin"/>
+        <Class IRI="#ModernTimeDrugs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pig_Insulin"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#Diabetes"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pig_Insulin"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_2920"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pig_Insulin"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sunan_Abi_Dawud_4232"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prophet_timeTreatment"/>
+        <Class IRI="#Treatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quarantine"/>
+        <Class IRI="#ModernTimeDrugs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quarantine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#communicable_Diseases"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quarantine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#plague_Infection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quarantine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#epidemic_(of_plague)"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quarantine"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_282"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radiological_Cauterization"/>
+        <Class IRI="#Cauterization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radiological_Cauterization"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#bleeding"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thermal_Ironing"/>
+        <Class IRI="#Cauterization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thermal_Ironing"/>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thermal_Ironing"/>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thermal_Ironing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#bleeding"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thermal_Ironing"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5683"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_Islamic_Illegal_Material"/>
+        <Class IRI="#?TibbNabawi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_Islamic_Illegal_Material"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#participatesIn"/>
+            <Class IRI="#Pig_Insulin"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_BowelsLoose"/>
+        <Class IRI="#?TibbNabawi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_BowelsLoose"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2217a"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_Climate"/>
+        <Class IRI="#?TibbNabawi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_Climate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#CamelsUrine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_Climate"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_6802"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_fever"/>
+        <Class IRI="#?TibbNabawi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_fever"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#coldWater"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_fever"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5725"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wearing_Silk_for_Men"/>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wearing_Silk_for_Men"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#Lice_infection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wearing_Silk_for_Men"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_2920"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#X-ray"/>
+        <Class IRI="#Radiological_Cauterization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#antibiotics"/>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#antibiotics"/>
+        <Class IRI="#ModernTimeDrugs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#bleeding"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#bleeding"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#Cauterization"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#bleeding"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5683"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#brain_Cancer"/>
+        <Class IRI="#cancer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#breast_Cancer"/>
+        <Class IRI="#cancer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cancer"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cancer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#Camel_urine_extract"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cancer"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_6802"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#coldWater"/>
+        <Class IRI="#ModernTimeDrugs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#coldWater"/>
+        <Class IRI="#prophet_time_material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#coldWater"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#Infection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#coldWater"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5725"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#communicable_Diseases"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#communicable_Diseases"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#Quarantine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#communicable_Diseases"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5730"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cupping"/>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cupping"/>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fever"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fever"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#coldWater"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fever"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5725"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#feverReducers"/>
+        <Class IRI="#LowerTemperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#feverReducers"/>
+        <Class IRI="#ModernMedicicalTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#feverReducers"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5725"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#gentamicin"/>
+        <Class IRI="#antibiotics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#gentamicin"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#plague_Infection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#gentamicin"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_282"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#golden_nose_implant"/>
+        <Class IRI="#prophet_time_material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#golden_nose_implant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#lost_of_nose"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#golden_nose_implant"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sunan_Abi_Dawud_4232"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#honeyDietSupplemente"/>
+        <Class IRI="#ModernTimeDrugs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#honeyDietSupplemente"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#Diarrhea"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#honeyDietSupplemente"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2217a"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ibuprofen"/>
+        <Class IRI="#ModernTimeDrugs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ibuprofen"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#rheumaticFever"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ibuprofen"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5725"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#illness_at_Modern_Time"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#illness_at_prophet_time"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#illness_related_to_changing_residence_to_Medina"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#illness_related_to_changing_residence_to_Medina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#CamelsUrine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#illness_related_to_changing_residence_to_Medina"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_6802"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#infections"/>
+        <Class IRI="#fever"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#leprosy_Infection"/>
+        <Class IRI="#Infection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#leprosy_Infection"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#leprosy_Infection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#Insulation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#leprosy_Infection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#rifampicin"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#leprosy_Infection"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_3544"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#leprosy_Infection"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5707"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#leukemia_Cancer"/>
+        <Class IRI="#cancer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#liver_Cancer"/>
+        <Class IRI="#cancer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#lost_of_nose"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#lost_of_nose"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#wearing_golden_nose_implant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#lost_of_nose"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sunan_Abi_Dawud_4232"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#lung_Cancer"/>
+        <Class IRI="#cancer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#modern_time_material"/>
+        <Class IRI="#material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#plague_Infection"/>
+        <Class IRI="#Infection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#plague_Infection"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#plague_Infection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#Quarantine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#plague_Infection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#gentamicin"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#plague_Infection"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_282"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#powder_Nigella_seed"/>
+        <Class IRI="#ModernTimeDrugs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#powder_Nigella_seed"/>
+        <Class IRI="#prophet_time_material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#powder_Nigella_seed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#Nigella_seed"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#powder_Nigella_seed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#stomach_Gastric_ulcers"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#powder_Nigella_seed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#variety_Of_Diseases_except_death"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#powder_Nigella_seed"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_3449"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#powder_Nigella_seed"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2215c"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#prophet_time_material"/>
+        <Class IRI="#material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#prophet_time_material"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#participatesIn"/>
+            <Class IRI="#Prophet_timeTreatment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#rheumaticFever"/>
+        <Class IRI="#fever"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#rheumaticFever"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#antibiotics"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#rheumaticFever"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#coldWater"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#rheumaticFever"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#ibuprofen"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#rifampicin"/>
+        <Class IRI="#antibiotics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#rifampicin"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#leprosy_Infection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#rifampicin"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_3544"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#skin_Cancer"/>
+        <Class IRI="#cancer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stomach_Gastric_ulcers"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stomach_Gastric_ulcers"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#powder_Nigella_seed"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stomach_Gastric_ulcers"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_3449"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stomach_Gastric_ulcers"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2215c"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#treatment_using_camel_urine"/>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#treatment_using_camel_urine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_participant"/>
+            <Class IRI="#CamelsUrine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#treatment_using_camel_urine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#illness_related_to_changing_residence_to_Medina"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#treatment_using_camel_urine"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_6802"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#variety_Of_Diseases_except_death"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#variety_Of_Diseases_except_death"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Hadith_3449"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#variety_Of_Diseases_except_death"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2215c"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#wearing_golden_nose_implant"/>
+        <Class IRI="#Prophet_timeTreatment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#wearing_golden_nose_implant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_participant"/>
+            <Class IRI="#golden_nose_implant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#wearing_golden_nose_implant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#treat"/>
+            <Class IRI="#lost_of_nose"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#wearing_golden_nose_implant"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sunan_Abi_Dawud_4232"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#?ModernMedicine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#ModernMedicicalTreatment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#?ModernMedicine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#ModernTimeDrugs"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#?TibbNabawi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Prophet_timeTreatment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#?YellowDisease"/>
+        <Class IRI="#Infection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#??TibbNabawi_seed_of_blessing"/>
+        <Class IRI="#?TibbNabawi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_cauteriazaion?"/>
+        <Class IRI="#?TibbNabawi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_cauteriazaion?"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_Muslim_2207"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TibbNabawi_of_cauteriazaion?"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5683"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#epidemic_(of_plague)"/>
+        <Class IRI="#illness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#epidemic_(of_plague)"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeenTreated"/>
+            <Class IRI="#Quarantine"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#epidemic_(of_plague)"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+            <NamedIndividual IRI="#Sahih_al-Bukhari_5730"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#antibiotics"/>
+        <Class IRI="#coldWater"/>
+        <Class IRI="#feverReducers"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#brain_Cancer"/>
+        <Class IRI="#breast_Cancer"/>
+        <Class IRI="#leukemia_Cancer"/>
+        <Class IRI="#liver_Cancer"/>
+        <Class IRI="#lung_Cancer"/>
+        <Class IRI="#skin_Cancer"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#infections"/>
+        <Class IRI="#rheumaticFever"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Authentic_Hadeeth"/>
+        <NamedIndividual IRI="#Sahih_Muslim_2207"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Authentic_Hadeeth"/>
+        <NamedIndividual IRI="#Sahih_Muslim_2215c"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Authentic_Hadeeth"/>
+        <NamedIndividual IRI="#Sahih_Muslim_2217a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Authentic_Hadeeth"/>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_2920"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Authentic_Hadeeth"/>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_5683"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Authentic_Hadeeth"/>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_5725"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Authentic_Hadeeth"/>
+        <NamedIndividual IRI="#Sahih_al-Bukhari_6802"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Authentic_Hadeeth"/>
+        <NamedIndividual IRI="#Sunan_Abi_Dawud_4232"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isStronglyVerifiedBy"/>
+        <ObjectProperty IRI="#isVerifiedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isWeaklyVerifiedBy"/>
+        <ObjectProperty IRI="#isVerifiedBy"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasBeenTreated"/>
+        <ObjectProperty IRI="#treat"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty IRI="#isPartOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_participant"/>
+        <ObjectProperty IRI="#participatesIn"/>
+    </InverseObjectProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Authentic_Hadeeth</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Abu Huraira reported that he heard Allah&apos;s Messenger (ﷺ) as saying: Nigella seed is a remedy for every disease except death.
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#Bowels_loose</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">استطلاق البطن</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#CamelsUrine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5701391/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CamelsUrine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gastroprotective and Ulcer Healing Effects of Camel Milk and Urine in HCl/EtOH, Non-steroidal Anti-inflammatory Drugs (Indomethacin), and Water-Restraint Stress-induced Ulcer in Rats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cauterization</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ironing in the language: that the burning of the skin with a very iron heated and so on. Ironing in its traditional sense is to expose a certain area of the human skin to a short period of fire flame or to a piece of metal heated to the degree of redness&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#Diarrhea</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">استطلاق البطن</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Hadith_282</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Usamah bin Zaid (May Allah be pleased with him) said:
+The Prophet (ﷺ) said, &quot;If you get wind of the outbreak of plague in a land, do not enter it; and if it breaks out in a land in which you are, do not leave it.&quot;
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Hadith_3449</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It was narrated that Khalid bin Sa’d said:
+“We went out and with us was Ghalib bin Abjar. He fell sick along the way, and when we came to Al-Madinah he was sick. Ibn Abu ‘Atiq came to visit him and said to us: ‘You should use this black seed. Take five or seven (seeds) and grind them to a powder, then drop them into his nose with drops of olive oil, on this side and on this side. For ‘Aishah narrated to them that she heard the Messenger of Allah (ﷺ) say: “This black seed is a healing for every disease, except the Sam.” I said: “What is the Sam?” He said: “Death.”
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Hadith_3544</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It was narrated from a man from the family of Sharid whose name was ‘Amr, that his father said:
+“There was a leper among the delegation of Thaqif. The Prophet (ﷺ) sent word to him: ‘Go back, for we have accepted your oath of allegiance.’”</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Infection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Infection is a disease from one to another, or is the transmission of a contagious disease directly to the patient, or indirectly by any means of discharge of the patient or persons or anything that has infected the patient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#Insulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">العزل الصحي</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#Insulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.who.int/lep/transmission/en/index4.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#Insulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.medicinenet.com/leprosy/article.htm#leprosy_hansen#39s_disease_facts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Insulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">All that we know at present is that individuals who are in close association or proximity with leprosy patients have a greater chance of acquiring the disease. 
+http://www.who.int/lep/transmission/en/index4.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Insulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Leprosy 
+The infection is thought to be spread person to person by nasal secretions or droplets.
+https://www.medicinenet.com/leprosy/article.htm#leprosy_hansen#39s_disease_facts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#Nigella_seed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">الْحَبَّةِ السَّوْدَاءِ </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nigella_seed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A review on therapeutic potential of Nigella sativa: A miracle herb
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nigella_seed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gastroprotective Effect of an Aqueous Suspension of Black Cumin Nigella sativa on Necrotizing Agents-Induced Gastric Injury in Experimental Animals
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nigella_seed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nigella Sativa Seeds: Folklore Treatment in Modern Day Medicine
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702918/#CIT15</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#PM701CancerDrug</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.researchgate.net/profile/Faten_Khorshid/publication/273776196_The_Mechanism_of_PMF_Nanoparticles_in_Invading_A549_cells_A_New_Selective_Drug_Delivery_for_Cancer/links/5566e99f08aeab77721cd9a8/The-Mechanism-of-PMF-Nanoparticles-in-Invading-A549-cells-A-New-Selective-Drug-Delivery-for-Cancer.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PM701CancerDrug</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The effect of PMF Camel Urine Nanoparticles on A549 Cells: The Mechanism of Action and Drug Delivery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#Pig_Insulin</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.fatawah.net/Fatawah/596.aspx</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Pig_Insulin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Pig_Insulin</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Eighth medical jurisprudence symposium of the Islamic Organization for Medical Sciences held in Kuwait from 22-24-5-1995, The treatment of pig insulin is the origin of diabetes is legal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Prophet_timeTreatment</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Any kind of practice, treatment, material and spiritual practice that can be strongly verified by at least one authentic hadeeth will be considered as a TibbNabawi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#Quarantine</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">الحجر الصحي</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Quarantine</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A quarantine is used to separate and restrict the movement of people; it is &apos;a restraint upon the activities or communication of persons or the transport of goods designed to prevent the spread of disease or pests&apos;, for a certain period of time. The term is often erroneously used to mean medical isolation, which is &quot;to separate ill persons who have a communicable disease from those who are healthy&quot;. The word comes from an Italian variant (seventeenth-century Venetian) of &apos;quaranta giorni&apos;, meaning forty days, the period that all ships were required to be isolated before passengers and crew could go ashore during the Black Death plague epidemic.
+https://en.wikipedia.org/wiki/Quarantine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Quarantine</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">medical isolation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Sahih_Muslim_2207</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Jabir reported that Allah&apos;s Messenger (ﷺ) sent a phystian to Ubayy b. Ka&apos;b. He cut the vein and then cauterized it</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Sahih_Muslim_2217a</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Abu Sa&apos;id Khudri reported that a person came to Allah&apos;s Apostle (ﷺ) and told him that his brother&apos;s bowels were loose. Thereupon Allah&apos;s Messenger (ﷺ) said: Give him honey. So he gave him that and then came and said: I gave him honey but it has only made his bowels more loose. He said these three times; and then he came the fourth time, and he (the Holy Prophet) said: Give him honey. He said: I did give him, but it has only made his bowels looser, whereupon Allah&apos;s Messenger (ﷺ) said: Allah has spoken the truth and your brother&apos;s bowels are in the wrong. So he made him drink (honey) and he was recovered.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Sahih_al-Bukhari_2920</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Narrated Anas:`Abdur Rahman bin `Auf and Az-Zubair complained to the Prophet, i.e. about the lice (that caused itching) so he allowed them to wear silken clothes. I saw them wearing such clothes in a holy battle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Sahih_al-Bukhari_5683</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Narrated Jabir bin `Abdullah:
+I heard the Prophet (ﷺ) saying, &quot;If there is any healing in your medicines, then it is in cupping, a gulp of honey or branding with fire (cauterization) that suits the ailment, but I don&apos;t like to be (cauterized) branded with fire.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Sahih_al-Bukhari_5707</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Narrated Abu Huraira:
+Allah&apos;s Messenger (ﷺ) said, &apos;(There is) no &apos;Adwa (no contagious disease is conveyed without Allah&apos;s permission). nor is there any bad omen (from birds), nor is there any Hamah, nor is there any bad omen in the month of Safar, and one should run away from the leper as one runs away from a lion.&apos;&apos;
+
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Sahih_al-Bukhari_5725</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Narrated `Aisha:
+The Prophet (ﷺ) said, &quot;Fever is from the heat of Hell, so abate fever with water.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Sahih_al-Bukhari_5730</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Narrated `Abdullah bin &apos;Amir:
+`Umar went to Sham and when he reached Sargh, he got the news that an epidemic (of plague) had broken out in Sham. `Abdur-Rahman bin `Auf told him that Allah&apos;s Messenger (ﷺ) said, &quot;If you hear that it (plague) has broken out in a land, do not go to it; but if it breaks out in a land where you are present, do not go out escaping from it.&quot;
+
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Sahih_al-Bukhari_6802</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Narrated Anas:
+Some people from the tribe of `Ukl came to the Prophet (ﷺ) and embraced Islam. The climate of Medina did not suit them, so the Prophet (ﷺ) ordered them to go to the (herd of milch) camels of charity and to drink, their milk and urine (as a medicine). They did so, and after they had recovered from their ailment (became healthy) they turned renegades (reverted from Islam) and killed the shepherd of the camels and took the camels away. The Prophet (ﷺ) sent (some people) in their pursuit and so they were (caught and) brought, and the Prophets ordered that their hands and legs should be cut off and that their eyes should be branded with heated pieces of iron, and that their cut hands and legs should not be cauterized, till they die.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#desrcirption_of_Hadeeth"/>
+        <IRI>#Sunan_Abi_Dawud_4232</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AbdurRahman ibn Tarafah said that his grandfather Arfajah ibn As&apos;ad who had his nose cut off at the battle of al-Kilab got a silver nose, but it developed a stench, so the Prophet (ﷺ) ordered him to get a gold nose.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TibbNabawi_Islamic_Illegal_Material</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">التداوي بالمحرمات</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TibbNabawi_of_BowelsLoose</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">التداوي بالعسل للمبطون</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TibbNabawi_of_Climate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">وَاسْتَوْخَمُوا الْمَدِينَةَ,
+التداوي بأبوال الإبل</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TibbNabawi_of_fever</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">الحرارة</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Treatment</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Some modern time medical treatment can be a tibnabawi. It will be interesting to see what are those morden practice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#cancer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.researchgate.net/profile/Salem_Godah/publication/280529305_The_effect_of_PMF_Camel_Urine_Nanoparticles_on_A549_Cells_The_Mechanism_of_Action_and_Drug_Delivery/links/561fad3408aea35f267df5c0.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cancer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The effect of PMF Camel Urine Nanoparticles on A549 Cells: The Mechanism of Action and Drug Delivery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#communicable_Diseases</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">أمراض معدية</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#communicable_Diseases</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"> https://www.hhs.gov/answers/public-health-and-safety/what-diseases-are-subject-to-federal-isolation-and-quarantine-law/index.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#communicable_Diseases</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cholera
+Diphtheria
+Infectious tuberculosis
+Plague
+Smallpox
+Yellow fever
+Viral hemorrhagic fevers (like Ebola)
+Severe Acute Respiratory Syndrome (SARS)
+Flu that can cause a pandemic
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#communicable_Diseases</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">medical Definition of communicable disease. : an infectious disease transmissible (as from person to person) by direct contact with an affected individual or the individual&apos;s discharges or by indirect means (as by a vector) — compare contagious disease.
+https://www.merriam-webster.com/medical/communicable%20disease</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cupping</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cupping therapy is a form of alternative medicine in which a local suction is created on the skin. Cupping has been characterized as a pseudoscience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#fever</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">الْحُمَّى </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#honeyDietSupplemente</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1431562/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#honeyDietSupplemente</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Effect of dietary honey on intestinal microflora and toxicity of mycotoxins in mice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isStronglyVerifiedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">the hadith scholars will verify with a degree of strong hadith.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isVerifiedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">either directly mentioned in a hadith or verified by a scholar.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#leprosy_Infection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">جذام</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#leprosy_Infection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a contagious disease that affects the skin, mucous membranes, and nerves, causing discoloration and lumps on the skin and, in severe cases, disfigurement and deformities. Leprosy is now mainly confined to tropical Africa and Asia.
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#lung_Cancer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://s3.amazonaws.com/academia.edu.documents/33411286/Cytotoxicity_of_the_Urine_of_Different_Camel_Breeds_on_the_Proliferation_of_Lung_Cancer_Cells__A549___.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&amp;Expires=1528374444&amp;Signature=4KxgyDgWaKWQDFOXX0ugSH1rYME%3D&amp;response-content-disposition=inline%3B%20filename%3DCytotoxicity_of_the_Urine_of_Different_C.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#lung_Cancer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cytotoxicity of the Urine of Different Camel Breeds on the Proliferation of Lung Cancer Cells, A549</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#plague_Infection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">الطاعون</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#plague_Infection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Plague is an infectious disease caused by the bacterium Yersinia pestis.[2] Symptoms include fever, weakness and headache.[1] Usually this begins one to seven days after exposure.[2] In the bubonic form there is also swelling of lymph nodes, while in the septicemic form tissues may turn black and die, and in the pneumonic form shortness of breath, cough and chest pain may occur.[1]
+https://en.wikipedia.org/wiki/Plague_(disease)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#powder_Nigella_seed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">الْحَبَّةِ السَّوْدَاءِ </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#powder_Nigella_seed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A review on therapeutic potential of Nigella sativa: A miracle herb
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#powder_Nigella_seed</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gastroprotective Effect of an Aqueous Suspension of Black Cumin Nigella sativa on Necrotizing Agents-Induced Gastric Injury in Experimental Animals
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#prophet_time_material</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Any kind of practice, treatment, material and spiritual practice that can be strongly verified by at least one authentic hadeeth will be considered as a TibbNabawi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#rifampicin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Treatment of leprosy
+rifampicin (600 mg), ofloxacin (400 mg), and minocycline (100 mg). 
+http://apps.who.int/medicinedocs/en/d/Jh2988e/5.html#Jh2988e.5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Arabic_Name"/>
+        <IRI>#stomach_Gastric_ulcers</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">قرحة المعدة </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#stomach_Gastric_ulcers</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702918/#CIT15</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stomach_Gastric_ulcers</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A review on therapeutic potential of Nigella sativa: A miracle herb
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stomach_Gastric_ulcers</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gastroprotective Effect of an Aqueous Suspension of Black Cumin Nigella sativa on Necrotizing Agents-Induced Gastric Injury in Experimental Animals
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stomach_Gastric_ulcers</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nigella Sativa Seeds: Folklore Treatment in Modern Day Medicine
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702918/#CIT15</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#variety_Of_Diseases_except_death</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A review on therapeutic potential of Nigella sativa: A miracle herb
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#variety_Of_Diseases_except_death</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gastroprotective Effect of an Aqueous Suspension of Black Cumin Nigella sativa on Necrotizing Agents-Induced Gastric Injury in Experimental Animals
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#?YellowDisease</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The disease takes the abdomen yellowing of the face, and it was said: the month</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#Web_Link"/>
+        <IRI>#??TibbNabawi_seed_of_blessing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#??TibbNabawi_seed_of_blessing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A review on therapeutic potential of Nigella sativa: A miracle herb</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#ArabicName"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </SubAnnotationPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
