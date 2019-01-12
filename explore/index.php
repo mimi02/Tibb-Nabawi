@@ -24,14 +24,16 @@
 #
 #  ====================================================================
 require_once("../global.settings.php");
-require_once("../hadith.loader.php");
+require_once("../libs/sparql.queries.lib.php");
 
 require_once("../libs/search.lib.php");
 require_once("../libs/graph.lib.php");
 
 $sparql = getSPARQLEngine();// apc_fetch("sparql");
 $direction = "rtl";
-$lang = $_GET['lang'];
+$lang = '';
+if(isset($_GET['lang']))
+        $lang = $_GET['lang'];
 if ( empty($lang))
 {
 	$lang = "EN";
@@ -43,9 +45,9 @@ if ( empty($lang))
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Explore the Quran | Quran Analysis </title>
+    <title>Explore Tib Annabwi </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Exploratory search for the Quran, Explore the Quran by topics and find all relevant verses">
+    <meta name="description" content="Exploratory search for the Tibb Ontology, Explore Al Tib Annabwi by Illnesses">
     <meta name="author" content="">
 
 	<script type="text/javascript" src="<?="".$JQUERY_PATH?>" ></script>
@@ -83,31 +85,35 @@ if ( empty($lang))
 	   				<option value='AR' <?php if ($lang=="AR") echo 'selected'?>>AR</option>
 	   			</select>	  		
 	   			<span id='explore-guide-msg' style='float:none'>
-			  	&nbsp;Click on any topic to find relevant verses. Topics are grouped by color.
+			  	&nbsp;Click on any medical condition to compare treatments and materials used in prophet an modern time.
 			    </span>
 			  
 		    </div>
 <?php 
 
-function formatResult($name){
-    global $lang;
-    if($lang == "EN"){
+function formatResultEn($name){
+    
         return substr(strchr($name, "#") ,1);
-    }else{
-        if ( !isSimpleQuranWord($name)){
-             $name = convertUthamniQueryToSimple($name);
-       $name = cleanAndTrim($name);
-       return $name;
-      }
-        
-    }
+    
 }
 
-$result = getAllIllnesses($sparql,$lang);
+function formatResultAr($name){
+    if ( !isSimpleQuranWord($name)){
+             $name = convertUthamniQueryToSimple($name);
+    }
+       $name = cleanAndTrim($name);
+       return $name;
+}
+
+//$result = getAllIllnessesFromCache();
+$result = getAllIllnesses($sparql);
+//print_r($result->{'owl_data'}{'annotations'});
 $clusteredArrJSON =  array();
 foreach ($result as $row) {
-    $str =  formatResult($row->word);
-    $clusteredArrJSON[] = (object)array("word" => $str);
+    $str =  formatResultEn($row->word);
+    $ar_str =  formatResultAr($row->ar_word);
+    $clusteredArrJSON[] = (object)array("word" => $str, "ar_word" => $ar_str);
+  
 }
 $clusteredArrJSON = json_encode($clusteredArrJSON);
 
@@ -146,7 +152,7 @@ $clusteredArrJSON = json_encode($clusteredArrJSON);
 //                alert(jsonData[0] /*JSON.stringify(jsonData)*/);
 
 		var width = ($(document).width()-500),
-		    height = 1000,
+		    height = 700,
 		    padding = 1.5, // separation between same-color circles
 		    clusterPadding = 6, // separation between different-color circles
 		    maxRadius = -1;
@@ -183,13 +189,14 @@ $clusteredArrJSON = json_encode($clusteredArrJSON);
 		//alert(JSON.stringify(clustersSizes));
 
 		var clusterVerticalLocationFactor=100;
+                var clusterNodesCount = jsonData.length;
 		// set cluster nodes to random locations and set thier children to the same
 		jsonData.forEach(function(d)
 				{
 
                         //clusterId = d.cluster; 
 //			clusterNode = d/*clusters[clusterId]*/;
-                            var clusterNodesCount = jsonData.length;
+                            
                             clusterXLocation =(clusterNodesCount)%4;
 
                             if ( clusterXLocation > width )
@@ -242,20 +249,21 @@ $clusteredArrJSON = json_encode($clusteredArrJSON);
 
 		function getAdjustedCornerPointX(currentPageX)
 		{
+                    var layerWidth = 400;
 
-			//alert(currentPageX+"+"+layerWidth +">"+ width);
+//			alert(currentPageX+"+"+layerWidth +">"+ width);
 			var finalX = 0;
 			
-			var layerWidth = 600;
+			
 			if ( currentPageX+layerWidth > width )
 			{
 				
-				finalX =  currentPageX-(layerWidth);;
+				finalX =  currentPageX-(layerWidth);
 			}
 
 				if ( finalX < 0 )
 				{
-					finalX = 10;
+					finalX = 50;
 				}
 
 			return finalX;
@@ -263,10 +271,11 @@ $clusteredArrJSON = json_encode($clusteredArrJSON);
 		
 		function getAdjustedCornerPointY(currentPageY)
 		{
-			var layerHeight= 700;
+			var layerHeight= 400;
+//                        alert(currentPageY+"+"+layerHeight +">"+ height);
 			if ( currentPageY+layerHeight > height )
 			{
-				return currentPageY-(height-currentPageY)/2;
+				return (height-currentPageY)/2;
 			}
 
 			return currentPageY;
@@ -280,22 +289,21 @@ $clusteredArrJSON = json_encode($clusteredArrJSON);
 		  {
 
 			   svg.selectAll("#explore-result-verses-container").remove();
-			   
+                                
 				var word = d.word;
+                                var label = "<?=$lang?>" == "EN" ? d.word : d.ar_word;
 				var foreignObject = svg.append("foreignObject")
 				.attr("id","explore-result-verses-container")
-				.attr("width","600px")
-				.attr("height","700px")
-				.attr("x", getAdjustedCornerPointX(d3.event.pageX-50) + "px")
-				.attr("y",(d3.event.pageY-100) + "px");
+				.attr("width","400px")
+				.attr("height","400px")
+				.attr("x", /*(d3.event.pageX-100)*/ getAdjustedCornerPointX(d3.event.pageX-50) + "px")
+				.attr("y",/*(d3.event.pageY-100)*/ getAdjustedCornerPointY(d3.event.pageY-100) + "px");
 
 				
 				var body = foreignObject.append("xhtml:body");
-				
-			
-				
-				body.append("xhtml:img")
-			    .attr("src","http://localhost/qa/images/close-icon-black.png")
+	
+                            body.append("xhtml:img")
+			    .attr("src", SERVER_NAME+"/images/close-icon-black.png")
 			    .attr("class","explore-verses-close")
 			    .on("click", function() {
 					
@@ -309,9 +317,10 @@ $clusteredArrJSON = json_encode($clusteredArrJSON);
 				//.attr("xmlns","http://www.w3.org/1999/xhtml")
 				.html("");
 		        	// one concept search
+                                
 //		        	word = "CONCEPTSEARCH:"+word+"";
                                 //update this method to load hadeeth
-				showResultsForQueryInSpecificDiv(word,"explore-result-verses");
+				showResultsForQueryInSpecificDiv(word, label,"true", "explore-result-verses", "<?=$lang?>");
 
 				
 				
@@ -327,10 +336,10 @@ $clusteredArrJSON = json_encode($clusteredArrJSON);
 		circle.append("text")
 //             .attr("x", function(d) { return d.x; })
 //	.attr("y", function(d) { return d.y; })            
-            .text(
+                 .text(
                 function(d) 
-                {
-                        var word = d.word;//text to show
+                {                   
+                        var word =  "<?=$lang?>" == "EN" ? d.word : d.ar_word;//text to show
 
                         if ( word!=undefined && word.length > 10 )
                         {
@@ -342,7 +351,7 @@ $clusteredArrJSON = json_encode($clusteredArrJSON);
 
                 } );
 
-		circle.append("title").text( function(d) { return (d.word); } );
+		circle.append("title").text( function(d) { return ("<?=$lang?>" == "EN" ? d.word : d.ar_word); } );
 
 		function tick(e) {
 

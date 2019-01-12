@@ -312,7 +312,7 @@ function drawGraph(jsonNodesData,jsonLinksData,width,height,targetGraphDiv,lang,
     tooltip.append("div");
     
     tooltip.append("img")
-    .attr("src","http://localhost/qa/images/close-icon-white.png")
+    .attr("src", SERVER_NAME+"/images/close-icon-white.png")
     .attr("class","graph-tooltip-close")
 	.on("click", function() {
 		hideGraphTootip();
@@ -402,7 +402,7 @@ function drawGraph(jsonNodesData,jsonLinksData,width,height,targetGraphDiv,lang,
 				verbQueryStr = verbQueryStr.trim();
 				
 			//TODO: rethink if it should be handled as CONCEPTSEARCH:
-	  		showResultsForQueryInSpecificDiv(l.source.word+" "+verbQueryStr+" "+l.target.word+" CONSTRAINT:NODERIVATION CONSTRAINT:NOEXTENTIONFROMONTOLOGY",showResultsDivID);
+	  		showResultsForQueryInSpecificDiv(l.source.word+" "+verbQueryStr+" "+l.target.word+" CONSTRAINT:NODERIVATION CONSTRAINT:NOEXTENTIONFROMONTOLOGY","","false",showResultsDivID);
 	  	
 	  	})
 	    .append("line")
@@ -536,7 +536,7 @@ function drawGraph(jsonNodesData,jsonLinksData,width,height,targetGraphDiv,lang,
 	        	// one concept search
 	        	word = "CONCEPTSEARCH:"+d.word+"";
 	        	
-	        	showResultsForQueryInSpecificDiv(word,showResultsDivID);
+	        	showResultsForQueryInSpecificDiv(word,word,"false",showResultsDivID);
 	        
 	        	  
 	          })
@@ -831,31 +831,29 @@ function drawGraph(jsonNodesData,jsonLinksData,width,height,targetGraphDiv,lang,
 		var imgObj = $("<IMG/>");
 		
 		//created by http://www.ajaxload.info/
-		imgObj.attr("src","http://localhost/qa/images/green-ajax-loader.gif");
+		imgObj.attr("src", SERVER_NAME+"/images/green-ajax-loader.gif");
 		
 		$("#"+divID).append(imgObj);
 		
 	}
 	
 	
-	function showResultsForQueryInSpecificDiv(query, divID, script)
+	function showResultsForQueryInSpecificDiv(query, label, exact, divID, lang)
 	{
-		
 		$("#"+divID).html("");
-			
+                console.log('edited at 5:25 pm 7 Jan')
 		showAjaxLoaderIn(divID);
-
-			
-            $.ajaxSetup({
-                    url:  "http://localhost/teb/search/dosearch.ajax.service.php?q="+encodeURIComponent(query)+"&script="+script,
-                    global: false,
-                    type: "GET"
-
+                $.ajaxSetup({
+                        url: SERVER_NAME+"/search/dosearch.ajax.service.php?q="+encodeURIComponent(query)+"&label="+label+"&exact="+exact+"&lang="+lang,
+                   headers: {  'Access-Control-Allow-Origin': '*' },   
+                 global: false,
+                    type: "GET",
+//                    dataType: 'jsonp',
+//                     crossOrigin: true,
               });
 
 
             $.ajax({
-
                 timeout: 60000,
                 success: function(retRes)
                     {
@@ -867,7 +865,7 @@ function drawGraph(jsonNodesData,jsonLinksData,width,height,targetGraphDiv,lang,
                         var selectedField = $("#qa-sort-select option:selected").val();
                         var currentOrder = $("#qa-sort-select option:selected").attr("sortorder");
 
-                        $('.result-aya-container').tsort({attr:selectedField, order: currentOrder});
+//                        $('.result-aya-container').tsort({attr:selectedField, order: currentOrder});
                     },
                     error: function (xhr, ajaxOptions, thrownError)
                     {

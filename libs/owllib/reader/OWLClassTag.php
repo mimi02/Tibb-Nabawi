@@ -16,39 +16,39 @@ class OWLClassTag extends OWLTag
 	 * create tag
 	 */
 	function create(&$model, $name, $attributes, $base)
-  {
-  	OWLTag::create($model, $name, $attributes, $base);
+        {
+            OWLTag::create($model, $name, $attributes, $base);
 
-  	
-  	if(array_key_exists($this->RDF_ID, $attributes)){
-			$this->id = $model->getNamespace() . $attributes[$this->RDF_ID];
-			$this->cls = $model->createClass($this->id);
-			
-			
-  	}
-  	else if(array_key_exists($this->RDF_ABOUT, $attributes)){
-			$this->id = $this->addBaseToURI($attributes[$this->RDF_ABOUT]);
-			$this->cls = $model->createClass($this->id);
-			
-		}
-  }
+
+            if(array_key_exists($this->RDF_ID, $attributes)){
+                            $this->id = $model->getNamespace() . $attributes[$this->RDF_ID];
+                            $this->cls = $model->createClass($this->id);
+
+
+            }
+            else if(array_key_exists($this->RDF_ABOUT, $attributes)){
+                            $this->id = $this->addBaseToURI($attributes[$this->RDF_ABOUT]);
+                            $this->cls = $model->createClass($this->id);
+
+                    }
+        }
 
   //---------------------------------------------------------------------------
-  /**
-   * end tag
-   */
-   function endTag($parser, $tag)
-   {
-	   OWLTag::endTag($parser, $tag);
-	  
-	  //echoN("ENDTAG1:$tag");
-	   
-	  if(!$this->wantsMore())
-	  {
-		   //echoN("ENDTAG2");
-		   $this->model->addProperty($this->id,$this->properties,"CLASS");
-	   }
-   }
+        /**
+         * end tag
+         */
+         function endTag($parser, $tag)
+         {
+                 OWLTag::endTag($parser, $tag);
+
+                //echoN("ENDTAG1:$tag");
+
+                if(!$this->wantsMore())
+                {
+                         //echoN("ENDTAG2");
+                         $this->model->addProperty($this->id,$this->properties,"CLASS");
+                 }
+         }
 
 	//---------------------------------------------------------------------------
 	/**
@@ -57,57 +57,43 @@ class OWLClassTag extends OWLTag
 	 * OWLSubclassOfTag add super class information 
 	 */
 	function processChild($child)
-  {
+        {
   	
- 		$name = get_class($child); 
+            $name = get_class($child); 
  		
- 		//echoN("HERE4:$name");
+//            echoN("HERE4:$name");
+            
+            if($name == "OWLPropInstanceTag"){
+            	//echoN("PROCESSING CLASS OWLPropInstanceTag");
  	
- 		if($name == "OWLPropInstanceTag"){
+            	$property_id = preg_replace("/#:/", "#", $child->getName());
+                
+ 		$propArr = $child->getResources();
+ 		$objectID = $propArr[0];
+ 		$relationMetaData  = $propArr[1];
+ 		
+ 		$properties = array($property_id=>array($objectID),"RELATION_META"=>$relationMetaData);
  			
+ 		$this->properties[] = $properties;
  		
- 			//echoN("PROCESSING CLASS OWLPropInstanceTag");
- 			
- 			$property_id = preg_replace("/#:/", "#", $child->getName());
- 		
- 			$propArr = $child->getResources();
- 		
- 			$objectID = $propArr[0];
- 			$relationMetaData  = $propArr[1];
- 		
- 			$properties = array($property_id=>array($objectID),"RELATION_META"=>$relationMetaData);
- 			
- 			
- 		
- 			$this->properties[] = $properties;
- 		
- 			//echoN("HERE5:");
- 			
- 			
- 			
- 			//echoN($child->getName());
- 			
- 		
- 			//preprint_r($this->properties);
- 			
- 		
- 		
- 		
+ 		//echoN("HERE5:");
+ 		//echoN($child->getName());
+ 		//preprint_r($this->properties);
  		}
-  	 else if($name == "OWLSubClassOfTag"){
+            else if($name == "OWLSubClassOfTag"){
   		$parent = $child->getID();
-			$this->cls->addSuperclass($parent);
-  	}
-  	else if($name == "OWLIntersectionOfTag"){
-  		$parent = $child->getID();
-			$this->cls->addSuperclass($parent);
-  	}
-  	else if($name == "OWLLabelTag"){
+                $this->cls->addSuperclass($parent);
+            }
+//            else if($name == "OWLIntersectionOfTag"){
+//  		$parent = $child->getID();
+//                $this->cls->addSuperclass($parent);
+//            }
+            else if($name == "OWLLabelTag"){
   		$language = $child->getLanguage();
   		$label = $child->getLabel();
-			$this->model->addLabel($this->id, $language, $label);
-  	}
-  	else if($name == "OWLTag"){
+		$this->model->addLabel($this->id, $language, $label);
+            }
+            else if($name == "OWLTag"){
   		$language = $child->getLanguage();
   		$label = $child->getLabel();
   		$tagName = $child->getName();
@@ -115,12 +101,11 @@ class OWLClassTag extends OWLTag
   		
   	}	
   	
-  }
+    }
 
 	//---------------------------------------------------------------------------
 	var $cls;	
-	
-	var	$properties;
+	var $properties;
 }
 
 ?>

@@ -1,0 +1,1401 @@
+<?xml version="1.0" ?>
+<rdf:RDF
+  xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl = "http://www.w3.org/2002/07/owl#"
+  xmlns:xsd = "http://www.w3.org/2001/XMLSchema#"
+  xmlns = "http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15"
+  xml:base = "http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15"
+  xmlns:objpro = "http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15/objectproperties#"
+  xmlns:annot = "http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15/annotations#"
+>
+<owl:Ontology rdf:about="">
+<owl:versionInfo></owl:versionInfo>
+<rdfs:comment></rdfs:comment>
+</owl:Ontology>
+
+
+
+
+<owl:Class rdf:ID="#Ailment_or_Skin_injury">
+  <rdfs:label xml:lang="arabic">الطين او التربة لعلاج التهاب المفاصل الروماتويدي، علاج أمراض جلدية</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">قَرْحَةٌ أَوْ جَرْحٌ</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Ailment_or_Skin_injuri</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">جرح</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Ajwa_dates">
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">تمر العجوة</annot:Arabic_Name>
+  <annot:comment xml:lang="arabic">غرسه النبي صلى الله عليه وسلم بيده بالمدينة. 
+وقال السيوطي :(وهي أجود التمر وألينه وألذه هناك ولها منافع كثيرة</annot:comment>
+  <annot:comment xml:lang="arabic">كما إن العلم التجريبي اليوم يشهد أن التمر غني جدا بكثير من العناصر التي يحتاجها جسم الإنسان.
+ بل هناك أكثر من أربعة وتسعين (94) بحثا علميا منشورا بمجلات علمية أجنبية عالمية محكمة حول التمر
+وقد أثبتت تلك الأبحاث أن من خصائص التمر الغذائية أنه يحتوى على نسبة قليلة من البروتين والدسم إلى جانب غناه بالسكريات وكل مئة (100) جرام تعطي الجسم ثلاث مئة وأربعة عشر(314) كيلوكالوري
+كما أثبتت غناه أيضا بالمعادن حيث يحتوي على عشرة معادن من أهمها السيلنيوم والنحاس والبوتاسيوم والألمنيوم, والعديد من الفيتامينات أيضا أهمها فيتامين(B) وفيتامين (C) كما يوجد به ألياف 8جرام /100 جرام تمر, والألياف الغير قابلة للذوبان تؤلف النسبة الكبرى , كما أن التمر هو مصدر جيد لمضادات الأكسدة (الكاروتينات)  الفينولات, مما يجعلنا نفسر إطلاق لفظة السموم الواردة في الحديث , فالتمر مضاد لجميع أنواع السموم بلا استثناء</annot:comment>
+  <annot:seeAlso xml:lang="en">Abrogation of carbon tetrachloride-induced hepatotoxicity in Sprague-Dawley rats by Ajwa date fruit extract through ameliorating oxidative stress and apoptosis. (New 2017)
+https://www.ncbi.nlm.nih.gov/pubmed/29175788</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Antioxidant and anti-inflammatory assays confirm bioactive compounds in Ajwa date fruit.
+https://www.ncbi.nlm.nih.gov/pubmed/23713661</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Effect of cultivar type and ripening on the polyphenol content of date palm fruit.
+https://www.ncbi.nlm.nih.gov/pubmed/23406291?fbclid=IwAR3vEiq1z2Fb02jcaYk_wHOJBBXh3_rhrCWUl0MracGVzupeYK3WqkAx13Q</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Master Thesis
+Histological and ultrastructural studies on liver and lung changes of male mice induced by a new car fuel (benzene 91) in Saudi Arabia and the protection effect of Alajwa dates (2015)
+
+Abstract:
+https://docs.google.com/viewer?url=https%3A%2F%2Fceccr.kau.edu.sa%2FFiles%2F363%2FResearches%2F66217_37750.pdf</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">دراسات نسيجية وتركيبية دقيقة على التغيرات المستحثة في كبد ورئة ذكور الفئران بوقود
+السيارات الجديد )بنزين19 )في المملكة العربية السعودية والتأثير الوقائي لتمر العجوة .
+
+https://docs.google.com/viewer?url=https%3A%2F%2Fgce.njb.kau.edu.sa%2FFiles%2F363%2FResearches%2F66217_37749.pdf</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Ajwa_date</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">عجوة</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Ajwa_dates_treating_prostate_cancer_cells">
+  <rdfs:label xml:lang="arabic">خلايا سرطان البروستاتا، علاج السم</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">تمر العجوة</annot:Arabic_Name>
+  <annot:seeAlso xml:lang="en">Induction of apoptosis and cell cycle arrest by ethyl acetate fraction of Phoenix dactylifera L. (Ajwa dates) in prostate cancer cells.
+https://www.ncbi.nlm.nih.gov/pubmed/29476962</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Ajwa_dates_treating_prostate_cancer_cel</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">عجوة</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Al-Kamaa">
+  <rdfs:label xml:lang="arabic">علاج  مرض التراخوما، علاج بعض أمراض العيون</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="arabic">الكمأة من النباتات الفطرية النادرة , اشتهرت بقيمتها الغذائية العالية, وقد وصفها الرسول صلى الله عليه و سلم كدواء للعين
+
+والكمأة نوع من الدرنيات, والجذور التي لا ورق لها ولا ساق, تخرج في الأرض بدون زرع, وصفه ابن سينا فقال:( هو أصل مستدير لا ساق له ولا عرق, لونه إلى الغبرة, يوجد في الربيع تحت الأرض).وقال أيضا:( أجوده الرملي الأبيض, ليس فيه رائحة رديئة, ويابسه أردأ من رطبه ) ( ) تكثر أيام الخصب, وكثرة المطر والرعد</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:Arabic_Name xml:lang="arabic">الكمأة</annot:Arabic_Name>
+  <annot:comment xml:lang="arabic">يقول أ.د. جابر القحطاني( ):( ينمو تحت سطح الأرض على أعماق متفاوتة تصل ما بين 2 سم إلى 50 سم ولا تظهر له أجزاء فوق سطح الأرض... تنمو في الصحاري وتحت أشجار البلوط)( )تحتوي الكمأة 73/ من الماء, وتحتوي على العديد من المعادن فتحتوي على الفسفور والبوتاسيوم، والصوديوم والكالسيوم، كما أنَّها غنية بالفيتامين (ب1) أو الريبوفلافين
+
+http://www.eajaz.org/index.php/component/content/article/66-Issue-VIII/541-Alkme-of-aphids-and-discharged-healing-of-the-eye</annot:comment>
+  <annot:STEM_EN xml:lang="">Al-Kamaa</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">كمأ</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#AntiArthritic">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">مكافحة التهاب المفاصل</annot:Arabic_Name>
+  <annot:seeAlso xml:lang="en">Evaluation of anti-arthritic potential of the methanolic extract of the aerial parts of Costus speciosus
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3545241/</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Arthritic</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">مفصل</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Authentic_Hadith">
+  <rdfs:subClassOf rdf:resource="#Hadith"/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">Ibn al-Salah, defines a Sahih hadith more precisely by saying:
+"A Sahih hadith is the one which has a continuous isnad, made up of reporters of trustworthy memory from similar authorities, and which is found to be free from any irregularities (i.e. in the text) or defects (i.e. in the isnad)."</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000119 xml:lang="">https://www.islamic-awareness.org/hadith/ulum/asb7.html</annot:http://purl.obolibrary.org/obo/:IAO_0000119>
+  <annot:Arabic_Name xml:lang="arabic">الأحاديث الصحيحة والحسنة فقط</annot:Arabic_Name>
+  <annot:desrcirption_of_Hadeeth xml:lang=""></annot:desrcirption_of_Hadeeth>
+  <annot:STEM_EN xml:lang="">Authentic_Hadith</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">فقط</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Bleeding">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">A general symptom that is characterized as an act, instance, or result of being bled or the process by which something is bled: as a the escape of blood from vessels.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/SYMP_0000007</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">فَقَطَعَ مِنْهُ عِرْقًا</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Bleed</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">عرق</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#BodyLiceInfestation">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">A lice infestation that is a cutaneous condition caused by parasitic infestation of body lice Pediculus humanus corporis, which feed on the human blood. Body lice can spread epidemic typhus, trench fever, and louse-borne relapsing fever.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Body lice are tiny insects, about the size of a sesame seed. Body lice live in your clothing and bedding and travel to your skin several times a day to feed on blood. The most common sites for bites are around the neck, shoulders, armpits, waist and groin — places where clothing seams are most likely to touch skin.
+https://www.mayoclinic.org/diseases-conditions/body-lice/symptoms-causes/syc-20350310</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">Pediculus humanus corporis infestation</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/DOID_5513</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">التداوي بالمحرمات</annot:Arabic_Name>
+  <annot:Arabic_Name xml:lang="arabic">قمل الجسم</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Infestat</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">محرم</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#BowelsLoose">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">استطلاق البطن</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Loos</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">بطن</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#CamelUrineExtract">
+  <rdfs:label xml:lang="arabic">أبوال الابل، السرطان، أمراض الجهاز الهضمي، أمراض معوية</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#modern_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:comment xml:lang="">Cytotoxicity of the Urine of Different Camel Breeds on the Proliferation of Lung Cancer Cells, A549 https://bengreenfieldfitness.com/wp-content/uploads/2017/02/Cytotoxicity-of-the-Urine-of-Different-Camel-Breeds-on-the-Proliferation-of-Lung-Cancer-Cells-A549.pdf
+
+The effect of PMF Camel Urine Nanoparticles on A549 Cells: The Mechanism of Action and Drug Delivery
+https://www.researchgate.net/profile/Salem_Godah/publication/280529305_The_effect_of_PMF_Camel_Urine_Nanoparticles_on_A549_Cells_The_Mechanism_of_Action_and_Drug_Delivery/links/561fad3408aea35f267df5c0.pdf</annot:comment>
+  <annot:STEM_EN xml:lang="">Extract</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#CamelsMilkAndUrine">
+  <rdfs:label xml:lang="arabic">أبوال الابل، السرطان، أمراض الجهاز الهضمي، أمراض معوية</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">البان و ابوال الابل</annot:Arabic_Name>
+  <annot:Web_Link xml:lang="en">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5701391/</annot:Web_Link>
+  <annot:comment xml:lang="en">Gastroprotective and Ulcer Healing Effects of Camel Milk and Urine in HCl/EtOH, Non-steroidal Anti-inflammatory Drugs (Indomethacin), and Water-Restraint Stress-induced Ulcer in Rats</annot:comment>
+  <annot:STEM_EN xml:lang="">Urine</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">ابل</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Cancer">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">Malignant Neoplasm (NCI Thesaurus Code C9305)</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/DOID_162</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">السرطان</annot:Arabic_Name>
+  <annot:comment xml:lang="">Brain Cancer
+Breast Cancer
+Leukemia Cancer
+Lung Cancer
+Skin Cancer</annot:comment>
+  <annot:STEM_EN xml:lang="">Cancer</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">سرطان</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Cauterization">
+  <rdfs:subClassOf rdf:resource="#ModernMedicalTreatments"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C15199</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="arabic">عملية استعمال الحرارة أو المكواة في حرق جزء من الجسم لغرض التداوي</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:seeAlso xml:lang="">To destroy tissue using a hot or cold instrument, an electrical current, or a chemical that burns or dissolves the tissue. This process may be used to kill certain types of small tumors or to seal off blood vessels to stop bleeding.</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Cauter</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Communicable_Diseases">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">medical Definition of communicable disease. : an infectious disease transmissible (as from person to person) by direct contact with an affected individual or the individual's discharges or by indirect means (as by a vector) — compare contagious disease.
+https://www.merriam-webster.com/medical/communicable%20disease
+ https://www.hhs.gov/answers/public-health-and-safety/what-diseases-are-subject-to-federal-isolation-and-quarantine-law/index.html</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/OMIT_0004449</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">أمراض معدية</annot:Arabic_Name>
+  <annot:comment xml:lang="">Cholera
+Diphtheria
+Infectious tuberculosis
+Plague
+Smallpox
+Yellow fever
+Viral hemorrhagic fevers (like Ebola)
+Severe Acute Respiratory Syndrome (SARS)
+Flu that can cause a pandemic
+</annot:comment>
+  <annot:STEM_EN xml:lang="">Communicable_Diseas</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">معدي</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#CostusSpeciosus_treating_anti_arthritic">
+  <rdfs:label xml:lang="arabic">الْقُسْطُ الْبَحْرِيُّ, الكست, الكشط, علاج لذات الجنب, علاج التهابات  الروماتزيوم</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">العود الهندي أو القسط</annot:Arabic_Name>
+  <annot:seeAlso xml:lang="en">Evaluation of anti-arthritic potential of the methanolic extract of the aerial parts of Costus speciosus
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3545241/</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Speciosus_treating_anti_arthrit</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">قسط</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#CostusSpeciosus_treating_tuberculosis_H37Rv">
+  <rdfs:label xml:lang="arabic">الْقُسْطُ الْبَحْرِيُّ, الكست, الكشط, علاج لذات الجنب, علاج التهابات الصدر،
+علاج مرض السل, الزنجبيل</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/NCBITaxon_49577</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">العود الهندي أو القسط</annot:Arabic_Name>
+  <annot:seeAlso xml:lang="en">Antituberculosis potential of some ethnobotanically selected Malaysian plants.
+https://www.ncbi.nlm.nih.gov/pubmed/21094237</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Evaluation of anti-arthritic potential of the methanolic extract of the aerial parts of Costus speciosus
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3545241/</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Speciosus_treating_tuberculosis_H37Rv</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">قسط</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Costus_speciosus_extract">
+  <rdfs:label xml:lang="arabic">الْقُسْطُ الْبَحْرِيُّ, الكست, الكشط, علاج لذات الجنب, علاج التهابات الصدر،
+علاج مرض السل, الزنجبيل</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#modern_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="arabic">العود الهندي أو القسط, وهو من الأعشاب الطبية التي كانت معروفة عند العرب
+وهو عبارة عن نبات شجيري يصل ارتفاعه إلى ثلاثة أمتار, وهو خشب طيب الرائحة يؤتى به من الهند قابض فيه مرارة يسيرة وقشره كأنه جلد موشى, من فصيلة الزنجبيليات, ويستعمل غالبا في الطب مخلوطا مع غيره</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:Arabic_Name xml:lang="arabic">العود الهندي أو القسط</annot:Arabic_Name>
+  <annot:comment xml:lang="arabic">وتذكر المراجع الطبية الحديثة ثمانية وأربعين نوعا من القسط. و أفضلها هو نبات القسط الموصوف في السنة، وهو الذي يعيش في الهند, و كشمير,والصين, وتستعمل قشور جذوره التي قد تكون بيضاء أو سوداء، وكان التجار العرب يجلبونها إلى الجزيرة العربية عن طريق البحر لذا سميت القسط البحري، كما كان يسمى بالقسط الهندي. 
+وقد يدعى الأبيض بالقسط البحري, والأسود بالهندي كما ورد في السنة باسم العود الهندي كمترادفات، إلا أنه من غير شك غير العود الهندي الذي يتخذ في البخور وله نفس الاسم فهما نباتان مختلفان</annot:comment>
+  <annot:STEM_EN xml:lang="">Costus_speciosus_extract</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">قسط</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Cow_Milk">
+  <rdfs:label xml:lang="arabic">الوقاية من مرض السكري</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">ألبان البقر</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Cow_Milk</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">بقر</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Cow_milk_lower_insulin_resistance">
+  <rdfs:label xml:lang="arabic">الوقاية من مرض السكري</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">ألبان البقر</annot:Arabic_Name>
+  <annot:seeAlso xml:lang="en">The Role of the Novel Lipokine Palmitoleic Acid in Health and Disease.
+https://www.ncbi.nlm.nih.gov/pubmed/28096141
+
+trans-palmitoleate is mainly found as an exogenous source in ruminant fat and dairy products shows
+significant amelioration or prevention of insulin resistance and diabetes. Finally, the induction of palmitoleate release from adipose tissue, dietary intake, and its supplementation are all interventions with a potential impact on certain metabolic diseases.</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Trans-palmitoleic acid, metabolic risk factors, and new-onset diabetes in U.S. adults: a cohort study.
+
+https://www.ncbi.nlm.nih.gov/pubmed/21173413
+
+CONCLUSION
+Circulating trans-palmitoleate is associated with lower insulin resistance, presence of atherogenic dyslipidemia, and incident diabetes</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Cow_milk_lower_insulin_resist</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">بقر</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Cupping">
+  <rdfs:subClassOf rdf:resource="#ModernMedicalTreatments"/>
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Metaphyseal cupping refers to an inward bulging of the metaphyseal profile giving the metaphysis a cup-like appearance.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:Arabic_Name xml:lang="arabic">والحجامة هي: سحب (الدم الفاسد من الجسم وتختلف عن الفصد بأن الفصد هو شق العرق لإخراج الدم منه فهو غير الاحتجام</annot:Arabic_Name>
+  <annot:Arabic_Name xml:lang="arabic">وفي الطب: الحجامة هي عملية سحب الدم بعد عمل عدة شرطات على سطح الجلد في أماكن معينة, و يتم سحب الدم باستخدام كؤوس خاصة لذلك</annot:Arabic_Name>
+  <annot:comment xml:lang="en">Cupping therapy is a form of alternative medicine in which a local suction is created on the skin. Cupping has been characterized as a pseudoscience</annot:comment>
+  <annot:comment xml:lang="en">Some rules for cupping:
+
+1) That the practice of cupping must be done by the experience individual to avoid the harm on the person requesting the cupping. In the sense, that the Prophet peace be upon him did not do it himself, but asked for an experienced person to do it for him. 
+
+2) Skill in determining the position for cupping, not knowing the correct positions is what leads to harm. It will benefit from specialists and people of anatomy and experts in this field.It is necessary to differentiate between the linguistic meaning of the infidels and the medical meaning, the linguistic meaning requires the stripping on the sides of the neck and this is a serious risk, but the medical meaning requires the placement of the strip on the back side of the neck, (as the viewer in the dissection of the neck there is a large internal vein and blood takes the blood from The head intersects with a small vein, and the ligament on both sides of the neck is feared by the internal jugular injury.)
+
+3) A suitable hygiene cupping environment for cupping should be chosen, in which the safety requirements and the use of clean sterile instruments are met.</annot:comment>
+  <annot:comment xml:lang="en">Wet cupping 
+retained cupping, 
+moving cupping, 
+medicinal cupping</annot:comment>
+  <annot:comment xml:lang="arabic">إلا أن آلية عمل الحجامة لا زالت تحت البحث والدراسة لمعرفة أسرار ودلائل النبوة للكشف عنها.
+و ماورد في هذه الأحاديث النبوية من تفضيل للحجامة حق وأن الحجامة من خير الدواء وأمثله و لا يمنع ذلك وجود حالات تحتاج أكثر من الحجامة سواء دوائيا من الطب الغربي أو علاجيا من الطب النبوي, فالأمراض المعاصرة مركبة ومتعددة( ).
+يكون غيرها أفضل منها,  فقد تقوم بالمحجوم موانع تمنع هذا النفع أو تحد منه. ومهما بلغ الدواء من النفع والمنزلة لابد أن توجد له حالات واستطبابات</annot:comment>
+  <annot:comment xml:lang="arabic">ومن المواضع الهامة للحجامة والتي وردت في السنة منطقة الرأس والأخدعين والكاهل, ولا ريب أن هذه المواضع مواضع حساسة جدا في جسم الإنسان وربما كان الخطأ فيها ثمنه فقده لحياته, لذلك فلا يمكن أن يتصور أن يترك الشرع  أمرا كهذا للمارسات العشوائية البدائية بأيدي غير المؤهلين, لذلك وضع الشروط والضوابط التي تضمن عدم حصول الضرر والأذى وإزهاق الإرواح , وحارب الممارسات العابثة بأيدي غير المؤهلين مما يشوه صورة الحجامة في طابعها الحقيقي الذي وضع أصوله وحدد بعض مواضعه.
+
+أ) أن ممارسة الحجامة لا بد أن تتم على أيدي أهل الخبرة والاختصاص حتى لا يحصل الأذى للمحجوم, بدلالة أنه  صلى الله عليه وسلم لم يحتجم بنفسه بل دعا حجاما ليحجمه وذلك لدقته وخبرته في هذا المجال.
+
+ب) المهارة في تحديد الموضع المراد حجمه , فعدم معرفة  المواضع الصحيحة هو ما يؤدي إلى الضرر. فيستفاد من المختصين وأهل التشريح والخبراء في هذا المجال.
+
+فلا بد من التفريق مثلا بين المعنى اللغوي للأخدعين والمعنى الطبي، فالمعنى اللغوي يقتضي القيام بالتشريط على جانبي الرقبة وهذا محل خطورة شديد أما المعنى الطبي فيقتضي وضع التشريط في الجانب الخلفي للعنق, حيث إن الناظر في تشريح العنق يجد هناك عرق وداجي داخلي كبير يأخذ الدم من 
+الرأس يتقاطع معه عرق وداجي صغير, و التشريط على جانبي العنق يخشى منه إصابة الوداجي الداخلي
+
+ج) أن تمارس الحجامة في ظروف صحية عالية، واختيار بيئة مناسبة للحجامة، تتوفر فيها اشتراطات السلامة والحرص على استخدام الأدوات النظيفة المعقمة.</annot:comment>
+  <annot:seeAlso xml:lang="en">An updated review of the efficacy of cupping therapy.
+https://www.ncbi.nlm.nih.gov/pubmed/22389674</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Clinical research evidence of cupping therapy in China: a systematic literature review.
+https://www.ncbi.nlm.nih.gov/pubmed/21078197</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Cup</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">احتجام</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Cutaneous_pathologies">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">A skin condition, also known as cutaneous condition, is any medical condition that affects the integumentary system—the organ system that encloses the body and includes skin, hair, nails, and related muscle and glands.[1] The major function of this system is as a barrier against the external environment.[2]
+
+https://en.wikipedia.org/wiki/Skin_condition</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C13316</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">علم الأمراض الجلدية</annot:Arabic_Name>
+  <annot:isDefinedBy xml:lang="en">Having to do with the skin.
+http://www.ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C13316</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">Cutaneous_patholog</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">جلدي</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Desert_Truffle">
+  <rdfs:subClassOf rdf:resource="#modern_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">The Terfeziaceae, or desert truffles, is a family of truffles (Berber: Tirfas, Arabic: كمأ Kamā') endemic to arid and semi-arid areas of the Mediterranean Region, North Africa, and the Middle East, where they live in ectomycorrhizal association with Helianthemum species and other ectomycorrhizal plants (including Cistus, oaks, and pines). This group consists of three genera: Terfezia, Tirmania, and Mattirolomyces. They are a few centimetres across and weigh from 30 to 300 grams (1-10 oz). Desert truffles are often used as a culinary ingredient.
+
+https://en.wikipedia.org/wiki/Terfeziaceae</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:Arabic_Name xml:lang="arabic">الْكَمْأَةُ</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Desert_Truffl</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">كمأ</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Desert_Truffle_to_Cure_Trachoma_Disease">
+  <rdfs:label xml:lang="arabic">علاج مرض مرض التراخوما، علاج بعض أمراض العيون</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:seeAlso xml:lang="en">Efficacy of the Desert Truffle Terfezia claveryi to Cure Trachoma Disease with Special Emphasis on its Antibacterial Bioactivity
+https://scialert.net/fulltext/?doi=tmr.2016.28.34</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">The Medicinal Value of Desert Truffles
+https://link.springer.com/chapter/10.1007/978-3-642-40096-4_20</annot:seeAlso>
+  <annot:seeAlso xml:lang="arabic">الكمأة من المن وماؤها شفاء للعين
+http://www.eajaz.org/index.php/component/content/article/66-Issue-VIII/541-Alkme-of-aphids-and-discharged-healing-of-the-eye</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Desert_Truffle_to_Cure_Trachoma_Diseas</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Diabetes">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">A metabolic disorder characterized by abnormally high blood sugar levels due to diminished production of insulin or insulin resistance/desensitization. [database_cross_reference: NCIT:P378]
+http://www.ontobee.org/ontology/MONDO?iri=http://purl.obolibrary.org/obo/MONDO_0005015</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">diabetes mellitus</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/MONDO_0005015</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">التداوي بالمحرمات</annot:Arabic_Name>
+  <annot:Arabic_Name xml:lang="arabic">مرض السكر</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Diabet</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">محرم</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Diarrhea">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Abnormally increased frequency of loose or watery bowel movements. [database_cross_reference: HPO:probinson][database_cross_reference: HPO:probinson]
+http://www.ontobee.org/ontology/HP?iri=http://purl.obolibrary.org/obo/HP_0002014</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/HP_0002014</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">استطلاق البطن</annot:Arabic_Name>
+  <annot:Arabic_Name xml:lang="arabic">الاسهال</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Diarrhea</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">بطن</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#DrinkHoneySeveralTimes">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:STEM_EN xml:lang="">Tim</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#DrinkSheepTailFatDaily">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:comment xml:lang="arabic">فالذي يترجح لنا أن الحديث في ثبوته نظر _ولله أعلم_  بل هو إلى الضعف أقرب, وربما كان سبب إعراض أصحاب الصحاح عن إخراج هذا الحديث هذه العلة في سنده. 
+
+ولعل غرابة هذه الطريقة هي التي دفعت ابن القيم والكحال لإضفاء أحكام الخصوصية على دلالة هذا الحديث.
+
+ولم يصل إلينا بطريق تطمئن النفس إليه بل هو إلى الضعف أقرب
+
+لذا فإن من أراد أن يأخذ بهذه الوصفة العلاجية في معالجة عرق النسا لا بد أن يلتزم بالقيووالضوابط التي رسمها شراح الحديث. والمستخلصة من منطوق ومفهوم النص النبوي الكريم, ومنها:  
+
+1_أن هذا الخطاب خاص بالعرب وأهل الحجاز ومن جاورهم فالرسول صلى الله عليه وسلم قد يكون خطابه عاما وقد يكون خاصا, وذلك بحسب الأماكن والأحوال والأزمان والأشخاص.
+خطاب للعرب، وأهل الحجاز، ومن جاورهم، لا سيما أعراب البوادي، فإن هذا العلاج من أنفع العلاج لهم، وإن هذا المرض يحدث من يبس، وقد يحدث من مادة غليظة لزجة، فعلاجها بالإسهال و"الألية" فيها الخاصيتان: الإنضاج، والتليين، وهذا المرض يحتاج علاجه إلى هذين الأمرين.
+
+2- أن هذا العلاج أيضا علاج مخصوص (ألية كبش عربي) لأن غالب مرعاها من الأعشاب البرية ومن المعلوم أن الغذاء يؤثر فيمن يتغذى به فيؤثر في لحمها ودهنها( ) و الشاة الأعرابية موصوفة بقلة فضولها، ولطف جوهرها، وطيب مرعاها
+
+3_ أن العلاج لابد أن يتم بالطريقة المقررة في الحديث (يجزأ ثلاثة أجزاء فيذاب فيشرب كل يوم جزء) فتذاب الألية, ويشرب منها في اليوم الأول, والثاني, والثالث مع ملاحظة أنه عبر بلفظ ( تذاب) حتى لا تفقد خواصها
+
+وتجدر الإشارة إلى أن مصطلح عرق النسا مصطلح واسع, يضم تحته أنواعا كما يشخصه أهل الطب, والأولى أن نبدأ في معالجته بالأدوية المفردة فإن لم تجد فعندها نلجأ للأدوية المركبة, فالنبي صلى الله عليه وسلم أرشد الصحابي إلى أن يبدأ باستخدام الأخف والأسهل والمتوفر في ذلك الوقت, وهو ألية الكبش العربي, وهو المناسب لهذه الحالات, وهو لا ينطبق بالضرورة على جميع الحالات</annot:comment>
+  <annot:seeAlso xml:lang="en">الإعجاز في علاج عرق النسا
+https://www.facebook.com/1329974193735557/posts/d41d8cd9/1500252180041090/</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Daili</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#DrinkingCamelMilkAndUrine">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">فَيَشْرَبُوا مِنْ أَلْبَانِهَا وَأَبْوَالِهَا</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Urine</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">بول</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Drinking_Cows_Milk">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">ألبان البقر شفاء من كل داء</annot:Arabic_Name>
+  <annot:comment xml:lang="arabic">ويقول الدكتور عبد الرزاق الكيلاني:(ألبان البقر تستعمل في أنحاء العالم كلها,غذاء للكبار والصغار, وكانت خيرا وبركة على الجميع وبخاصة بعد أن أمكن تحويلها إلى مسحوق, يمكن حفظه من الفساد مدة طويلة, ولبن البقر أقل دسما وأسهل هضما من لبن الغنم, وكذلك سمن البقر أقل دسما وأسهل هضما وأقل ضررا من سمن الغنم</annot:comment>
+  <annot:STEM_EN xml:lang="">Drinking_Cows_Milk</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">داء</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Electric_Cauterization">
+  <rdfs:subClassOf rdf:resource="#Cauterization"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">To destroy tissue using an electrical current. This process may be used to kill certain types of small tumors or to seal off blood vessels to stop bleeding.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C111192</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:Arabic_Name xml:lang="">الكي الكهربائيي</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Electric_Cauter</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">كهربائيي</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#EyeDiseases">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">An eye and adnexa disease that is located in the eye.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/DOID_5614</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">أمراض العين</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Diseas</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">عين</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Fever">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Elevated body temperature due to failed thermoregulation. [database_cross_reference: HPO:sdoelken][database_cross_reference: HPO:sdoelken]
+http://www.ontobee.org/ontology/HP?iri=http://purl.obolibrary.org/obo/HP_0001945</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/HP_0001945</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">الْحُمَّى</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Fever</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">حمى</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Fly_poison_prevention">
+  <rdfs:label xml:lang="arabic"> محتاجا لأكله أو شربه.</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#medical_prevention"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:comment xml:lang="en">The search resulted in a high numerical density of many types of bacteria on both wings.
+The most common types of human pathogenic bacteria cause many diseases such as: eye infections, abscesses, hemorrhagic disease, cystitis, gastroenteritis, osteoporosis, central nervous system, food spoilage,</annot:comment>
+  <annot:comment xml:lang="arabic">أسفر البحث عن وجود كثافة عددية عالية من أنواع عديدة من البكتيريا على جناحي
+الذباب
+
+أكثر أنواع البكتريا الممرضة للإنسان وتسبب العديد من الأمراض مثل : التهابات العين ، خراج أو دمامل ، الحصف (داء جلدي) ، التهاب المثانة ، التهاب المعدة والقولون ، التهاب العظام ، إصابة الجهاز البولي التناسلي ، الجهاز العصبي المركزي وفساد الأطعمة وغيرها
+
+الرسول صلى الله عليه وسلم أوصى</annot:comment>
+  <annot:seeAlso xml:lang="en">Microbiological Studies on Fly Wings (Musca domestica) Where Disease and Treat
+https://www.idosi.org/wjms/11(4)14/9.pdf</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Fly_poison_prevent</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#GastricUlcers">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Gastric ulcers, one of the most widespread diseases, is believed to be due to an imbalance between aggressive and protective factors.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:Arabic_Name xml:lang="arabic">تجربة الحبة السوداء على قرحة المعدة للفئران</annot:Arabic_Name>
+  <annot:comment xml:lang="">A review on therapeutic potential of Nigella sativa: A miracle herb
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/</annot:comment>
+  <annot:comment xml:lang="">Gastroprotective Effect of an Aqueous Suspension of Black Cumin Nigella sativa on Necrotizing Agents-Induced Gastric Injury in Experimental Animals
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</annot:comment>
+  <annot:comment xml:lang="">Nigella Sativa Seeds: Folklore Treatment in Modern Day Medicine
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702918/#CIT15</annot:comment>
+  <annot:seeAlso xml:lang="">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702918/#CIT15</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Ulcer</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">فأر</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Hadith">
+  <annot:Arabic_Name xml:lang="arabic">الاحاديث النبوية الشريفة</annot:Arabic_Name>
+  <annot:isDefinedBy xml:lang="en">a collection of traditions containing sayings of the prophet Muhammad which, with accounts of his daily practice (the Sunna), constitute the major source of guidance for Muslims apart from the Koran.</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">Hadith</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">شريف</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Honey">
+  <rdfs:label xml:lang="arabic">علاج إستطلاق البطن، علاج الاسهال</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">A sweet and viscous fluid produced by honey bees from flower nectar and other plant fluids. [def-source: NCI]</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C65859</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">عسل</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Honei</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">عسل</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#IllnessRelatedToChangingResidenceToMedina">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">نَفَرٌ مِنْ عُكْلٍ، فَأَسْلَمُوا فَاجْتَوَوُا الْمَدِينَةَ</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Medina</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">مدينة</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Infection">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">A disorder resulting from the presence and activity of a microbial, viral, fungal, or parasitic agent. It can be transmitted by direct or indirect contact. [def-source: NCI]
+http://www.ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C26726</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Infection is a disease from one to another, or is the transmission of a contagious disease directly to the patient, or indirectly by any means of discharge of the patient or persons or anything that has infected the patient</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C26726
+</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">إلتهاب</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Infection</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">إلتهاب</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Insulation">
+  <rdfs:subClassOf rdf:resource="#ModernMedicalTreatments"/>
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">العزل الصحي لعلاج الجذام</annot:Arabic_Name>
+  <annot:comment xml:lang="">All that we know at present is that individuals who are in close association or proximity with leprosy patients have a greater chance of acquiring the disease. 
+http://www.who.int/lep/transmission/en/index4.html</annot:comment>
+  <annot:comment xml:lang="">Leprosy 
+The infection is thought to be spread person to person by nasal secretions or droplets.
+https://www.medicinenet.com/leprosy/article.htm#leprosy_hansen#39s_disease_facts</annot:comment>
+  <annot:STEM_EN xml:lang="">Insulat</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">جذام</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Laser_radiation">
+  <rdfs:subClassOf rdf:resource="#Radiological_Cauterization"/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation. [def-source: NCI]</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">laser: a device that transfers light of various frequencies into an extremely intense, small, and nearly nondivergent beam of monochromatic radiation in the visible or invisible spectrum, with all the waves in phase; capable of mobilizing immense heat and power when focused at close range, lasers act on tissues by photocoagulation and photodisruption and are used in surgery, in diagnosis, and in physiological studies.
+https://medical-dictionary.thefreedictionary.com/Laser+Radiation</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C15313</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:STEM_EN xml:lang="">Laser_radi</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#LeprosyInfection">
+  <rdfs:subClassOf rdf:resource="#Infection"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">A primary bacterial infectious disease that results_in infection located_in superficial peripheral nerves, located_in skin, located_in mucous membranes of the upper respiratory tract, located_in anterior chamber of the eyes, or located_in testes, has_material_basis_in Mycobacterium leprae, which is transmitted_by aerosol spread from infected nasal secretions to exposed nasal and oral mucosa. The infection has_symptom skin lesions, has_symptom sensory loss, has_symptom motor loss and has_symptom eye damage. 
+http://www.ontobee.org/ontology/DOID?iri=http://purl.obolibrary.org/obo/DOID_1024</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">a contagious disease that affects the skin, mucous membranes, and nerves, causing discoloration and lumps on the skin and, in severe cases, disfigurement and deformities. Leprosy is now mainly confined to tropical Africa and Asia.
+https://en.oxforddictionaries.com/definition/leprosy</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/DOID_1024
+</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">الجذام</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Infection</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">جذام</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#LostOfNose">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">التداوي بالمحرمات</annot:Arabic_Name>
+  <annot:Arabic_Name xml:lang="arabic">فقدان الانف</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Nos</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">محرم</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#LowerTemperature">
+  <rdfs:subClassOf rdf:resource="#ModernMedicalTreatments"/>
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">أفضل طريقة لتخفيف حرارة الحمى هي وضع كمادات الماء كما ذكر صلى الله عليه و سلم قبل أكثر من ألف وأربعمائة سنة</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Temperatur</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">سنة</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Microbiological_Studies_on_Fly_Wings">
+  <rdfs:label xml:lang="arabic">يه من الأذى بوقوع الذباب فيه لمن كان محتاجا لأكله أو شربه.
+
+رسالة الدكتوراه د.نوره الغملاس</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:seeAlso xml:lang="en">Microbiological Studies on Fly Wings (Musca domestica) Where Disease and Treat
+https://www.idosi.org/wjms/11(4)14/9.pdf</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Protein in Fly Saliva Speeds Healing of Incisions Wound
+http://bio-medicine.net/protein-in-fly-saliva-speeds-healing-of-incisions-wounds-medical-news/article_194347.html</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">The fly effect: Russian Scientists Invent new medicine with the help
+of flies.
+http://www.pravdareport.com/science/tech/20-01-2006/9535-fly-0/</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">The new buzz on antibiotics
+http://www.abc.net.au/science/articles/2002/10/01/689400.htm</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">The ointment in the fly: antibiotics. (new antibiotic derived from a common fly)
+https://www.highbeam.com/doc/1G1-15938416.html</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Microbiological_Studies_on_Fly_W</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Migraine">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">Migraine is a chronic neurological disorder characterized by episodic attacks of headache and associated symptoms.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/HP_0002076</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">صداع الشقيقة</annot:Arabic_Name>
+  <annot:comment xml:lang="arabic">الحجامة تعالج
+بعض الأمراض بشكل خاص كالربو والضغط وآلام الرقبة وآلام الظهر, وأفضليتها في التداوي من بعض الأمراض كالشقيقة وحالات عديدة من الصداع</annot:comment>
+  <annot:STEM_EN xml:lang="">Migrain</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">شقيق</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Miswak">
+  <rdfs:label xml:lang="arabic">الوقاية في صحة الفم</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">مسواك</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Miswak</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">مسواك</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#ModernMedicalTreatments">
+  <rdfs:subClassOf rdf:resource="#Treatment"/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">The name of the therapy that is currently being administered.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C85582</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:isDefinedBy xml:lang="">the application of medicines, surgery, psychotherapy, etc, to a patient or to a disease or symptom
+https://www.collinsdictionary.com/dictionary/english/treatment</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">Treatment</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#ModernTimeDrugs">
+  <rdfs:subClassOf rdf:resource="#modern_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">A drug product that contains one or more active and/or inactive ingredients; it is intended to treat, prevent or alleviate the symptoms of disease. This term does not refer to the individual ingredients that make up the product. [</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C459
+</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:STEM_EN xml:lang="">Drug</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Morden_biomedical_research">
+  <annot:STEM_EN xml:lang="">Morden_biomedical_research</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Mud_pack_or_thermal">
+  <rdfs:label xml:lang="arabic">علاج التهاب المفاصل الروماتويدي، علاج أمراض جلدية</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#modern_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">الطين او التربة</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Mud_pack_or_therm</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">تربة</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Mud_pack_treating_rheumatoid_arthritis">
+  <rdfs:label xml:lang="arabic">علاج التهاب المفاصل الروماتويدي، علاج أمراض جلدية</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">التهاب المفاصل الروماتويدي</annot:Arabic_Name>
+  <annot:seeAlso xml:lang="en">Clinical effectiveness of mud pack therapy in knee osteoarthritis 
+https://academic.oup.com/rheumatology/article/52/4/659/1796343#</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Fangotherapy
+http://www.fcs.uner.edu.ar/libros/archivos/Termalismo/Peloides/Fangos.pdf</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Mud pack therapy in rheumatoid arthritis.
+https://www.ncbi.nlm.nih.gov/pubmed/1617901</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Mud_pack_treating_rheumatoid_arthr</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">الروماتويدي</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#NigellaSeed_treating_GastricUlcers">
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Spices from the seeds of the plant classified under the species Nigella sativa L., commonly known as Nigella seed or Fennel flower or nutmeg flower or Roman coriander or blackseed or black caraway or black onion seed or nigella kalonji or black cumin or onion seed. The part consumed/analysed is not specified. When relevant, information on the part consumed/analysed has to be reported with additional facet descriptors. In case of data collections related to legislations, the default part consumed/analysed is the one defined in the applicable legislation.[https://en.wikipedia.org/wiki/Nigella_seed] and [https://www.google.co.uk/search?tbm=isch&q=Nigella seed]</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/FOODON_03541295</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">الْحَبَّةِ السَّوْدَاءِ</annot:Arabic_Name>
+  <annot:comment xml:lang="">Gastroprotective Effect of an Aqueous Suspension of Black Cumin Nigella sativa on Necrotizing Agents-Induced Gastric Injury in Experimental Animals
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</annot:comment>
+  <annot:seeAlso xml:lang="en">https://www.mskcc.org/cancer-care/integrative-medicine/herbs/nigella-sativa</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Ulcer</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">أسود</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Nuclear_Radiology">
+  <rdfs:subClassOf rdf:resource="#Radiological_Cauterization"/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Definition: The branch of medical science dealing with the medical use of X-rays or other penetrating radiation. [def-source: NCI]</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">the branch of radiology that uses radioactive materials in the diagnosis and treatment of health disorders.
+https://medical-dictionary.thefreedictionary.com/Nuclear+Radiology</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C17059</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:STEM_EN xml:lang="">Nuclear_Radiolog</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Oral_Care">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">صحة الفم</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Oral_Car</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">فم</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#PM701">
+  <rdfs:subClassOf rdf:resource="#CamelUrineExtract"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">PMF is fraction extracted from camel urine (PM701) that proved to be selective anticancer agent for many types of cancer cells.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000119 xml:lang="en">The effect of PMF Camel Urine Nanoparticles on A549 Cells: The Mechanism of Action and Drug Delivery
+https://www.researchgate.net/profile/Faten_Khorshid/publication/273776196_The_Mechanism_of_PMF_Nanoparticles_in_Invading_A549_cells_A_New_Selective_Drug_Delivery_for_Cancer/links/5566e99f08aeab77721cd9a8/The-Mechanism-of-PMF-Nanoparticles-in-Invading-A549-cells-A-New-Selective-Drug-Delivery-for-Cancer.pdf</annot:http://purl.obolibrary.org/obo/:IAO_0000119>
+  <annot:STEM_EN xml:lang="">PM701</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#PM701_treating_human_cancer_cell_line_A549">
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">بحث منشور عن علاج السرطان مستخلص من أبوال الابل</annot:Arabic_Name>
+  <annot:seeAlso xml:lang="en">Cytotoxicity of the Urine of Different Camel Breeds on the Proliferation of Lung Cancer Cells, A549 https://bengreenfieldfitness.com/wp-content/uploads/2017/02/Cytotoxicity-of-the-Urine-of-Different-Camel-Breeds-on-the-Proliferation-of-Lung-Cancer-Cells-A549.pdf
+
+The effect of PMF Camel Urine Nanoparticles on A549 Cells: The Mechanism of Action and Drug Delivery
+https://www.researchgate.net/profile/Salem_Godah/publication/280529305_The_effect_of_PMF_Camel_Urine_Nanoparticles_on_A549_Cells_The_Mechanism_of_Action_and_Drug_Delivery/links/561fad3408aea35f267df5c0.pdf</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">PM701_treating_human_cancer_cell_line_A549</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">ابل</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Pig_Insulin">
+  <rdfs:subClassOf rdf:resource="#ModernTimeDrugs"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C65923</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">التداوي بالمحرمات، أبر الانسولين التي تحتوي على الخنزير, مرض السكري</annot:Arabic_Name>
+  <annot:comment xml:lang="en">Eighth medical jurisprudence symposium of the Islamic Organization for Medical Sciences held in Kuwait from 22-24-5-1995, The treatment of pig insulin is the origin of diabetes is legal.
+http://www.fatawah.net/Fatawah/596.aspx</annot:comment>
+  <annot:seeAlso xml:lang="">Animal insulin was the first type of insulin to be administered to humans to control diabetes. Animal insulin is derived from cows and pigs.
+https://www.diabetes.co.uk/insulin/animal-insulin.html</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Pig_Insulin</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">سكري</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Placed_forefinger_upon_ground">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">وَوَضَعَ  سَبَّابَتَهُ بِالأَرْضِ ثُمَّ رَفَعَهَا</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Placed_forefinger_upon_ground</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">رفع</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#PlagueInfection">
+  <rdfs:subClassOf rdf:resource="#Infection"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">An acute infectious disease caused by yersinia pestis that affects humans, wild rodents, and their ectoparasites. This condition persists due to its firm entrenchment in sylvatic rodent-flea ecosystems throughout the world. Bubonic plague is the most common form.
+http://www.ontobee.org/ontology/MONDO?iri=http://purl.obolibrary.org/obo/MONDO_0001024</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Plague is an infectious disease caused by the bacterium Yersinia pestis.[2] Symptoms include fever, weakness and headache.[1] Usually this begins one to seven days after exposure.[2] In the bubonic form there is also swelling of lymph nodes, while in the septicemic form tissues may turn black and die, and in the pneumonic form shortness of breath, cough and chest pain may occur.[1]
+https://en.wikipedia.org/wiki/Plague_(disease)</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/MONDO_0001024</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">pneumonic plague</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">الطاعون</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Infection</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">طاعون</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Pleurisy">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">Inflammation of the pleura. It is usually caused by infections. Chest pain while breathing or coughing is the presenting symptom. [def-source: NCI]
+http://www.ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C26860</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C26860</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">ذات الجنب</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Pleurisi</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">جنب</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Poisoning">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">Injury to the body or interference of normal body functions by a substance that is swallowed, inhaled, injected, or absorbed. [def-source: NCI]
+http://www.ontobee.org/ontology/NCIT?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FNCIT_C34933</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C34933</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">السم</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Poison</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">سم</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#PowderNigellaSeed">
+  <rdfs:label xml:lang="arabic">لام, مضادة للبكتيريا والأمراض الجلدية</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Spices from the seeds of the plant classified under the species Nigella sativa L., commonly known as Nigella seed or Fennel flower or nutmeg flower or Roman coriander or blackseed or black caraway or black onion seed or nigella kalonji or black cumin or onion seed. The part consumed/analysed is not specified. When relevant, information on the part consumed/analysed has to be reported with additional facet descriptors. In case of data collections related to legislations, the default part consumed/analysed is the one defined in the applicable legislation.[https://en.wikipedia.org/wiki/Nigella_seed] and [https://www.google.co.uk/search?tbm=isch&q=Nigella seed]</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/FOODON_03541295</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">الْحَبَّةِ السَّوْدَاءِ</annot:Arabic_Name>
+  <annot:comment xml:lang="">A review on therapeutic potential of Nigella sativa: A miracle herb
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/</annot:comment>
+  <annot:comment xml:lang="">Gastroprotective Effect of an Aqueous Suspension of Black Cumin Nigella sativa on Necrotizing Agents-Induced Gastric Injury in Experimental Animals
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</annot:comment>
+  <annot:seeAlso xml:lang="arabic">ألف الدكتور حسان شمسي باشا كتابا بعنوان (الشفاء بالحبة السوداء بين الإعجاز النبوي والطب الحديث) جمع فيه الأبحاث المنشورة في المجلات والكتب الطبية مع ما هو مذكور في كتب الطب النبوي والكتب الطبية القديمة</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Seed</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">أسود</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Prophet_timeTreatment">
+  <rdfs:subClassOf rdf:resource="#Treatment"/>
+  <annot:Web_Link xml:lang="">https://www.evidencebased.net/files/trad&mod_med.pdf</annot:Web_Link>
+  <annot:comment xml:lang="">Any kind of practice, treatment, material and spiritual practice that can be strongly verified by at least one authentic hadeeth will be considered as a TibbNabawi.</annot:comment>
+  <annot:isDefinedBy xml:lang="">Traditional medicine is the ancient and culture–bound medical practice which existed in human societies before the application of
+modern science to health.</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">Treatment</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Quarantine">
+  <rdfs:subClassOf rdf:resource="#ModernMedicalTreatments"/>
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">A quarantine is used to separate and restrict the movement of people; it is 'a restraint upon the activities or communication of persons or the transport of goods designed to prevent the spread of disease or pests', for a certain period of time. The term is often erroneously used to mean medical isolation, which is "to separate ill persons who have a communicable disease from those who are healthy". The word comes from an Italian variant (seventeenth-century Venetian) of 'quaranta giorni', meaning forty days, the period that all ships were required to be isolated before passengers and crew could go ashore during the Black Death plague epidemic.
+https://en.wikipedia.org/wiki/Quarantine</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Restriction of movement of individuals who have been exposed to infectious or communicable disease in order to prevent its spread (From Dorland, 28th ed & Black's Veterinary Dictionary, 17th ed).</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/IDO_0100646</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">medical isolation</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">الحجر الصحي لعلاج مرض الطاعون</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Quarantin</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">طاعون</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Radiological_Cauterization">
+  <rdfs:subClassOf rdf:resource="#Cauterization"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="">الكي الشعاعي</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Radiological_Cauter</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">شعاعي</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Rheumatoid_arthritis">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">A chronic, systemic autoimmune disorder characterized by inflammation in the synovial membranes and articular surfaces. It manifests primarily as a symmetric, erosive polyarthritis that spares the axial skeleton and is typically associated with the presence in the serum of rheumatoid factor. [def-source: NCI]
+https://www.ncbi.nlm.nih.gov/pubmed/1617901</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C2884</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">التهاب المفاصل الروماتويدي</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Rheumatoid_arthr</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">الروماتويدي</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Salvadora_persica_use_in_oral_care">
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">مسواك</annot:Arabic_Name>
+  <annot:isDefinedBy xml:lang="en">Nature's little toothbrush</annot:isDefinedBy>
+  <annot:seeAlso xml:lang="en">A review of the traditional and modern uses of Salvadora persica L. (Miswak): Toothbrush tree of Prophet Muhammad.
+https://www.ncbi.nlm.nih.gov/pubmed/29196134</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Chemical effects of chewing sticks made of Salvadora persica.
+https://www.ncbi.nlm.nih.gov/pubmed/30117638</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Miswak in oral cavity - An update.
+https://www.ncbi.nlm.nih.gov/pubmed/25737893</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Salvadora persica
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3249923/</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Salvadora_persica_use_in_oral_car</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">مسواك</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Sciatica">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">Pain in the lower back and hip radiating in the distribution of the sciatic nerve</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">The term sciatica describes the symptoms of leg pain—and possibly tingling, numbness, or weakness—that originate in the lower back and travel through the buttock and down the large sciatic nerve in the back of each leg.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/HP_0011868</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">عرق النسا</annot:Arabic_Name>
+  <annot:comment xml:lang="arabic">عرق النسا:
+وعرفه ابن سينا في القانون بقوله:(وجع يبتدئ من مفصل الورك وينزّل من خلف على الفخذ وربما امتد إلى الركبة وإلى الكعب وكلما طالت مدته زاد نزوله بحسب المادة في قلتها أو كثرتها وربما امتد إلى الأصابع وتهزل منه الرجل والفخذ
+
+وفي الطب الحديث:( وجع من أوجاع الأعصاب يبتدىء من مفصل الورك ويمتد إلى الركبة أو إلى القدم على طول العصب الوركي ناجم عن التهاب في العصب</annot:comment>
+  <annot:seeAlso xml:lang="en">https://www.spine-health.com/video/sciatica-interactive-video</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Sciatica</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">نسا</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Sheep-tail-fat">
+  <rdfs:label xml:lang="arabic">علاج عرق النسا</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">أَلْيَةُ شَاةٍ أَعْرَابِيَّةٍ تُذَابُ ثُمَّ تُجَزَّأُ ثَلاَثَةَ أَجْزَاءٍ ثُمَّ يُشْرَبُ عَلَى الرِّيقِ فِي كُلِّ يَوْمٍ جُزْءٌ</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Sheep-tail-fat</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">جزء</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#SheepTailFat_treating_knee_joint_cartilage_injury">
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:seeAlso xml:lang="en">Effect of sheep tail fat on the knee joint cartilage injury induced in rats with formalin
+http://www.ijcem.com/files/ijcem0047046.pdf</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">Fractionation and Characterization of Tail Fats from Morkaraman Lambs Fed With Diets Containing Rosa Canina L. Seed At Different Levels
+https://www.tandfonline.com/doi/abs/10.1081/JFP-200060230</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">الإعجاز في علاج عرق النسا
+http://www.jameataleman.org/main/articles.aspx?article_no=1665
+https://www.facebook.com/1329974193735557/posts/d41d8cd9/1500252180041090/</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Fat_treating_knee_joint_cartilage_injuri</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#ThermalIroning">
+  <rdfs:subClassOf rdf:resource="#ModernMedicalTreatments"/>
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:isDefinedBy xml:lang="en">Ironing in the language: that the burning of the skin with a very iron heated and so on. Ironing in its traditional sense is to expose a certain area of the human skin to a short period of fire flame or to a piece of metal heated to the degree of redness"</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">Irone</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Thermal_mud_treating_cutaneous_pathologies">
+  <rdfs:subClassOf rdf:resource="#Morden_biomedical_research"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">علم الأمراض الجلدية</annot:Arabic_Name>
+  <annot:seeAlso xml:lang="">A single mud treatment induces normalization of stratum corneum hydration, transepidermal water loss, skin surface pH and sebum content in patients with seborrhoeic dermatitis.
+
+paper is not found
+https://www.unboundmedicine.com/medline/citation/15096162/A_single_mud_treatment_induces_normalization_of_stratum_corneum_hydration_transepidermal_water_loss_skin_surface_pH_and_sebum_content_in_patients_with_seborrhoeic_dermatitis_</annot:seeAlso>
+  <annot:seeAlso xml:lang="en">[Effect of thermal mud baths on normal, dry and seborrheic skin].
+https://www.ncbi.nlm.nih.gov/pubmed/9866888</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Thermal_mud_treating_cutaneous_patholog</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">جلدي</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#TibbNabawi">
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:equivalentClass xml:lang="">
+        </annot:equivalentClass>
+  <annot:isDefinedBy xml:lang="en">Any kind of practice, treatment, material and spiritual practice that can be strongly verified by at least one authentic hadeeth will be considered as a TibbNabawi.</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">Nabawi</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Trachoma_Disease">
+  <rdfs:subClassOf rdf:resource="#EyeDiseases"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">A commensal bacterial infectious disease that results_in infection located_in eye, has_material_basis_in Chlamydia trachomatis (A, B, Ba and C serovars), which is transmitted_by contact with eye discharge from the infected person and transmitted_by congenital method. The infection causes eyelid to turn inward which makes eyelashes to scratch the cornea. [database_cross_reference: url:http://en.wikipedia.org/wiki/Trachoma]
+http://www.ontobee.org/ontology/DOID?iri=http://purl.obolibrary.org/obo/DOID_11265</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/DOID_11265</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:seeAlso xml:lang="en">Efficacy of the Desert Truffle Terfezia claveryi to Cure Trachoma Disease with Special Emphasis on its Antibacterial Bioactivity
+https://scialert.net/fulltext/?doi=tmr.2016.28.34</annot:seeAlso>
+  <annot:seeAlso xml:lang="arabic">الكمأة من المن وماؤها شفاء للعين
+http://www.eajaz.org/index.php/component/content/article/66-Issue-VIII/541-Alkme-of-aphids-and-discharged-healing-of-the-eye</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Trachoma_Diseas</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Treatment">
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">A processual entity whose completion is hypothesized (by a healthcare provider) to alleviate the signs and symptoms associated with a disorder</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/OGMS_0000090</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">العلاج</annot:Arabic_Name>
+  <annot:comment xml:lang="">Some modern time medical treatment can be a tibnabawi. It will be interesting to see what are those morden practice.</annot:comment>
+  <annot:isDefinedBy xml:lang="">The use of an agent, procedure, or regimen, such as a drug, surgery, or exercise, in an attempt to cure or mitigate a disease, condition, or injury.
+https://medical-dictionary.thefreedictionary.com/treatment</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">Treatment</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">علاج</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Tuberculosis">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C3423</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">مرض السل</annot:Arabic_Name>
+  <annot:isDefinedBy xml:lang="en">A chronic, recurrent infection caused by the bacterium Mycobacterium tuberculosis. Tuberculosis (TB) may affect almost any tissue or organ of the body with the lungs being the most common site of infection. The clinical stages of TB are primary or initial infection, latent or dormant infection, and recrudescent or adult-type TB. Ninety to 95% of primary TB infections may go unrecognized. Histopathologically, tissue lesions consist of granulomas which usually undergo central caseation necrosis. Local symptoms of TB vary according to the part affected; acute symptoms include hectic fever, sweats, and emaciation; serious complications include granulomatous erosion of pulmonary bronchi associated with hemoptysis. If untreated, progressive TB may be associated with a high degree of mortality. This infection is frequently observed in immunocompromised individuals with AIDS or a history of illicit IV drug use.
+
+http://www.ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C3423</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">Tuberculosi</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">سل</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#VarietyOfillnesses">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="">إِنَّ فِي الْحَبَّةِ السَّوْدَاءِ شِفَاءً مِنْ كُلِّ دَاءٍ إِلاَّ السَّامَ ‏</annot:Arabic_Name>
+  <annot:comment xml:lang="">A review on therapeutic potential of Nigella sativa: A miracle herb
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/</annot:comment>
+  <annot:comment xml:lang="">Gastroprotective Effect of an Aqueous Suspension of Black Cumin Nigella sativa on Necrotizing Agents-Induced Gastric Injury in Experimental Animals
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</annot:comment>
+  <annot:STEM_EN xml:lang="">Ofill</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang=""></annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#Vitamin_D_deficiency_prevention">
+  <rdfs:label xml:lang="arabic">فيتامين دال، فيتامين د، آلبان البقر تحتوي على فيتامين د</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#medical_prevention"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="en">ألبان البقر</annot:Arabic_Name>
+  <annot:comment xml:lang="arabic">كما تشير الدراسات إلى أن قلة استهلاك الحليب يؤدي إلى نقص في الكالسيوم وفيتامين ظهور تشوهات الهيكل العظمي ولين العظام عند الأطفال وهشاشة العظام عند الكبار. 
+وتشير دراسات سابقة إلى أن مستويات فيتامين D) )في المصل كافية من أجل تعزيز النمو و تمعدن العظام. والأدلة الناشئة تدعم وجود ارتباط بين 25 هيدروكسي فيتامين D  ومستويات و ظائف المناعة، و أمراض الجهاز التنفسي ، والسمنة ، ومتلازمة التمثيل الغذائي ، ومقاومة الأنسولين ، والعدوى ، والحساسية ، وأمراض السرطان ، و أمراض القلب والأوعية الدموية في  الأطفال و المراهقين</annot:comment>
+  <annot:seeAlso xml:lang="en">Vitamin D status and childhood health.
+https://www.ncbi.nlm.nih.gov/pubmed/24244209
+
+Vitamin D is an essential component of bone and mineral metabolism; its deficiency causes growth retardation and skeletal deformities in children and osteomalacia and osteoporosis in adults. Hypovitaminosis D (vitamin D insufficiency or deficiency) is observed not only in adults but also in infants, children, and adolescents.</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">Vitamin_D_deficiency_prevent</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">بقر</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#WeaklyVerified_Hadith">
+  <rdfs:subClassOf rdf:resource="#Hadith"/>
+  <annot:Arabic_Name xml:lang="arabic">الأحاديث المشكلة
+
+هو الحديث المقبول الذي خفيت دلالته أو تعارض ظاهره مع نص أو قاعدة ثابتة أو حقيقة تاريخية</annot:Arabic_Name>
+  <annot:isDefinedBy xml:lang="">Is the accepted Hadith, whose meaning or apparent contradiction is concealed with: a text, a fixed rule, or a historical fact</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">Verified_Hadith</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">تاريخي</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#WearingGoldenNoseImplant">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="">التداوي بالمحرمات</annot:Arabic_Name>
+  <annot:Arabic_Name xml:lang="arabic">فأمره النبي صلى الله عليه وسلم فاتخذ أنفا من ذهب</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Implant</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">محرم</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#WearingSilkForMen">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="">التداوي بالمحرمات</annot:Arabic_Name>
+  <annot:Arabic_Name xml:lang="arabic">فَأَرْخَصَ لَهُمَا فِي الْحَرِيرِ</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Men</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">محرم</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#X-ray">
+  <rdfs:subClassOf rdf:resource="#Radiological_Cauterization"/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Definition: Ionizing electromagnetic radiation having a wavelength that is shorter than ultraviolet radiation and longer than gamma radiation. [def-source: NCI]</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">The ionizing electromagnetic radiation emitted from a highly evacuated tube, resulting from the excitation of the inner orbital electrons by the bombardment of the target anode with a stream of electrons from a heated cathode.
+https://medical-dictionary.thefreedictionary.com/X-ray</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C17262</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:seeAlso xml:lang="">ALT_DEFINITION: A type of high-energy radiation. In low doses, x-rays are used to diagnose diseases by making pictures of the inside of the body. In high doses, x-rays are used to treat cancer.</annot:seeAlso>
+  <annot:STEM_EN xml:lang="">X-rai</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#antibiotics">
+  <rdfs:subClassOf rdf:resource="#ModernTimeDrugs"/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">Substances naturally produced by microorganisms or their derivatives that selectively target microorganisms not humans. Antibiotics kill or inhibit the growth of microorganisms by targeting components of the microbial cell absent from human cells, including bacterial cell walls, cell membrane, and 30S or 50S ribosomal subunits. These substances are used in the treatment of bacterial and other microbial infections.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C258</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:STEM_EN xml:lang="">antibiot</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#coldWater">
+  <rdfs:label xml:lang="arabic">الماء البارد، علاج الحرارة، خفض درجة حرارة الجسم</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#modern_time_material"/>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">علاج الْحُمَّى</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">Water</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">حمى</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#crepe_ginger">
+  <rdfs:label xml:lang="arabic">الْقُسْطُ الْبَحْرِيُّ, الكست, الكشط, علاج لذات الجنب, علاج التهابات الصدر،
+علاج مرض السل, الزنجبيل</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCBITaxon_49577</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">العود الهندي أو القسط</annot:Arabic_Name>
+  <annot:Arabic_Name xml:lang="arabic">وهو عبارة عن نبات شجيري يصل ارتفاعه إلى ثلاثة أمتار, وهو خشب طيب الرائحة يؤتى به من الهند قابض فيه مرارة يسيرة وقشره كأنه جلد موشى, من فصيلة الزنجبيليات, ويستعمل غالبا في الطب مخلوطا مع غيره</annot:Arabic_Name>
+  <annot:comment xml:lang="arabic">وقد أثبتت بعض الأبحاث المخبرية على عصيات السل فاعلية القسط كدواء للسل
+
+
+والذي يظهر قوله صلى الله عليه وسلم (ذات الجنب) ليس تحديدا لذات المرض, بل هو  تحديد لجهة المرض , فيشمل الأمراض التي يشعر بها الإنسان في جنبه</annot:comment>
+  <annot:STEM_EN xml:lang="">crepe_ging</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">قسط</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#droppedInNoiseMixed_OliveOilNS">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="">الْحَبَّةِ السَّوْدَاءِ </annot:Arabic_Name>
+  <annot:comment xml:lang="">A review on therapeutic potential of Nigella sativa: A miracle herb
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/</annot:comment>
+  <annot:comment xml:lang="">Gastroprotective Effect of an Aqueous Suspension of Black Cumin Nigella sativa on Necrotizing Agents-Induced Gastric Injury in Experimental Animals
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702910/</annot:comment>
+  <annot:comment xml:lang="">Nigella Sativa Seeds: Folklore Treatment in Modern Day Medicine
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2702918/#CIT15</annot:comment>
+  <annot:STEM_EN xml:lang="">NS</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">أسود</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#drown_fly_remove_ifNeeded">
+  <rdfs:subClassOf rdf:resource="#Prophet_timeTreatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:STEM_EN xml:lang="">Need</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#gentamicin">
+  <rdfs:subClassOf rdf:resource="#antibiotics"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="">A broad-spectrum aminoglycoside antibiotic produced by fermentation of Micromonospora purpurea or M. echinospora. Gentamicin is an antibiotic complex consisting of four major (C1, C1a, C2, and C2a) and several minor components. This agent irreversibly binds to the bacterial 30S ribosomal subunit. Specifically, this antibiotic is lodged between 16S rRNA and S12 protein within the 30S subunit. This leads to interference with translational initiation complex, misreading of mRNA, thereby hampering protein synthesis and resulting in bactericidal effect. Aminoglycosides are mostly ineffective against anaerobic bacteria, fungi and viruses.[def-source: NCI]</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="">http://purl.obolibrary.org/obo/NCIT_C519</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:Arabic_Name xml:lang="arabic">مضاد لعلاج الطاعون</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">gentamicin</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">طاعون</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#golden_nose_implant">
+  <rdfs:label xml:lang="arabic">العلاج بالمحرمات مثال  الذهب للرجل، أنزيمات الخنزير في أبر الانسولين لعلاج مرض السكري</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">أَنْفًا مِنْ ذَهَبٍ</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">golden_nose_impl</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">ذهب</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#honeyDietSupplemente">
+  <rdfs:label xml:lang="en">Honey</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#modern_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:comment xml:lang="en">Effect of dietary honey on intestinal microflora and toxicity of mycotoxins in mice
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1431562/</annot:comment>
+  <annot:STEM_EN xml:lang="">Supplement</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#ibuprofen">
+  <rdfs:subClassOf rdf:resource="#ModernTimeDrugs"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="arabic">A propionic acid derivate and nonsteroidal anti-inflammatory drug (NSAID) with anti-inflammatory, analgesic, and antipyretic effects. Ibuprofen inhibits the activity of cyclo-oxygenase I and II, resulting in a decreased formation of precursors of prostaglandins and thromboxanes. This leads to decreased prostaglandin synthesis, by prostaglandin synthase, the main physiologic effect of ibuprofen. Ibuprofen also causes a decrease in the formation of thromboxane A2 synthesis, by thromboxane synthase, thereby inhibiting platelet aggregation. (NCI05) [def-source: NCI]</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000118 xml:lang="arabic">http://purl.obolibrary.org/obo/NCIT_C561</annot:http://purl.obolibrary.org/obo/:IAO_0000118>
+  <annot:STEM_EN xml:lang="">ibuprofen</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#illness_at_Modern_Time">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <annot:equivalentClass xml:lang="">
+        </annot:equivalentClass>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">Illness … is a feeling, an experience of unhealth which is entirely personal, interior to the person of the patient. Often it accompanies disease, but the disease may be undeclared, as in the early stages of cancer or tuberculosis or diabetes.
+https://mh.bmj.com/content/26/1/9</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:STEM_EN xml:lang="">illness_at_Modern_Tim</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="">
+  <annot:unionOf xml:lang="">
+                        </annot:unionOf>
+  <annot:unionOf xml:lang="">
+                        </annot:unionOf>
+  <annot:STEM_EN xml:lang=""></annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+  <objpro: rdf:resource=""  />
+  <objpro: rdf:resource=""  />
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#illness_at_prophet_time">
+  <rdfs:subClassOf rdf:resource="#medical_condition"/>
+  <annot:equivalentClass xml:lang="">
+        </annot:equivalentClass>
+  <annot:STEM_EN xml:lang="">illness_at_prophet_tim</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#insulin_resistance_diabetes_prevention">
+  <rdfs:label xml:lang="arabic">الوقاية من مرض السكري</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#medical_prevention"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:comment xml:lang="arabic">وقد أثبتت الأبحاث الطبية أن وجود الأحماض الدهنية (البالميتوليت) (palmioleae)تسبب انخفاضا في مقاومة الأنسولين وبالتالي يتحسن مريض السكري</annot:comment>
+  <annot:comment xml:lang="arabic">ويقول الدكتور عبد الرزاق الكيلاني:(ألبان البقر تستعمل في أنحاء العالم كلها,غذاء للكبار والصغار, وكانت خيرا وبركة على الجميع وبخاصة بعد أن أمكن تحويلها إلى مسحوق, يمكن حفظه من الفساد مدة طويلة, ولبن البقر أقل دسما وأسهل هضما من لبن الغنم, وكذلك سمن البقر أقل دسما وأسهل هضما وأقل ضررا من سمن الغنم</annot:comment>
+  <annot:STEM_EN xml:lang="">insulin_resistance_diabetes_prevent</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#material">
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">The physical substance or substances of which a thing is made or composed. (dictionary.com)</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:STEM_EN xml:lang="">materi</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#medical_condition">
+  <rdfs:label xml:lang="arabic">الأمراض</rdfs:label>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000115 xml:lang="en">A medical condition is a broad term that includes all diseases, lesions, disorders, or nonpathologic condition that normally receives medical treatment, such as pregnancy or childbirth.</annot:http://purl.obolibrary.org/obo/:IAO_0000115>
+  <annot:http://purl.obolibrary.org/obo/:IAO_0000119 xml:lang="en">Wikipedia</annot:http://purl.obolibrary.org/obo/:IAO_0000119>
+  <annot:Arabic_Name xml:lang="arabic">الامراض</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">medical_condit</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">مرض</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#medical_prevention">
+  <annot:STEM_EN xml:lang="">medical_prevent</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#modern_time_material">
+  <rdfs:subClassOf rdf:resource="#material"/>
+  <annot:STEM_EN xml:lang="">modern_time_materi</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#oral_health_prevention">
+  <rdfs:label xml:lang="arabic">الوقاية في صحة الفم</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#medical_prevention"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">وقاية للفم</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">oral_health_prevent</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">فم</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#part_of_treatment">
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:STEM_EN xml:lang="">part_of_treat</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#prophet_time_material">
+  <rdfs:subClassOf rdf:resource="#material"/>
+  <annot:isDefinedBy xml:lang="en">Any kind of practice, treatment, material and spiritual practice that can be strongly verified by at least one authentic hadeeth will be considered as a TibbNabawi.</annot:isDefinedBy>
+  <annot:STEM_EN xml:lang="">prophet_time_materi</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#rifampicin">
+  <rdfs:subClassOf rdf:resource="#antibiotics"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">مضاد لعلاج الجذام</annot:Arabic_Name>
+  <annot:comment xml:lang="">Treatment of leprosy
+rifampicin (600 mg), ofloxacin (400 mg), and minocycline (100 mg). 
+http://apps.who.int/medicinedocs/en/d/Jh2988e/5.html#Jh2988e.5</annot:comment>
+  <annot:STEM_EN xml:lang="">rifampicin</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">جذام</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#soil_mixed_saliva">
+  <rdfs:label xml:lang="arabic">علاج التهاب المفاصل الروماتويدي، علاج أمراض جلدية</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#prophet_time_material"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">بِاسْمِ اللَّهِ تُرْبَةُ أَرْضِنَا بِرِيقَةِ بَعْضِنَا</annot:Arabic_Name>
+  <annot:STEM_EN xml:lang="">soil_mixed_saliva</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">بعض</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#timing_of_cupping">
+  <rdfs:subClassOf rdf:resource="#part_of_treatment"/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:Arabic_Name xml:lang="arabic">إن تحديد أيام خاصة للحجامة أمر مشكل , فقد يعرض للإنسان أوقات يحتاج فيها للحجامة سوى ما ذكر, فهل يقتصر في ممارستها على الأيام المحددة أم تمارس متى احتيج إليها</annot:Arabic_Name>
+  <annot:comment xml:lang="arabic">رأي من ثبتت عنده هذه الأحاديث فإننا لا نجد فيه ما يدل على حصر الحجامة في هذه الأيام فقط من الشهر بل المقصود به حث السليم  لو أراد التحري على هذه الأيام وأنها أفضل من غيرها، وأما المريض فلم يرد في حقه التحري بل المسارعة و عدم الانتظار لأن حاجة دمه و جسمه تجعل التعجل في الحجامة أنفع له فلا يشق على نفسه بانتظار هذه الأيام لاعتقاده بوجود نص صحيح في تحديدها، لذا فلا مانع أن يقال إن ماورد في الحديث على فرض صحته فالمقصود به الصحيح الذي يريد أن يتخذ الحجامة وقاية يستحب له توخي هذه الأيام</annot:comment>
+  <annot:comment xml:lang="arabic">لذا فإن تتبع أحاديث الحجامة في السنة النبوية, واستقصاء أقوال أهل العلم, والمختصين بمعالجة مثل هذا الخلاف, يجعلنا نعيد النظر في تحديد أيام خاصة للحجامة.
+فالأحاديث الواردة في هذا الشأن_ وإن تعددت طرقها_ فهي لم تصلنا بطريق نطمئن إليه, بل كلها معلولة, لا تقبل التقوية  فأقوى ما في الباب حديث أنس رضي الله عنه , و الوجه المحفوظ عن قتادة أنه مرسل, وقتادة من صغار التابعين, ومراسيل قتادة لا تقبل التقوية فالغالب فيها أنها معضلة
+
+فقد سئل مالك عن الحجامة فى خمس وسبع عشرة وثلاث وعشرين ، فكره أن يكون لذلك يوم محدود
+
+وجود عدة طرق للحديث إلا أنها لم تعط غلبة الظن بصحة الحديث بل إن هذه الطرق أعطت غلبة للظن للقول بضعفها والله أعلم</annot:comment>
+  <annot:STEM_EN xml:lang="">timing_of_cup</annot:STEM_EN>
+  <annot:STEM_Ar xml:lang="">إلى</annot:STEM_Ar>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#?ModernMedicine">
+  <rdfs:subClassOf rdf:resource=""/>
+  <rdfs:subClassOf rdf:resource=""/>
+  <annot:comment xml:lang=""></annot:comment>
+  <annot:comment xml:lang="">will be reviewed later</annot:comment>
+  <annot:STEM_EN xml:lang="">Medicin</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+<owl:Class rdf:ID="#?SpiritualProphetPractice">
+  <annot:comment xml:lang="">will be addressed in the future in'shuAllah</annot:comment>
+  <annot:STEM_EN xml:lang="">Practic</annot:STEM_EN>
+  <annot: xml:lang=""></annot:>
+  <objpro: rdf:resource=""  />
+</owl:Class>
+
+
+</rdf:RDF>

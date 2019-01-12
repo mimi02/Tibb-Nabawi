@@ -55,8 +55,11 @@ class OWLReader
 	function readFromFile($owl_file, &$ontology)
   {
 		$filehandler = @fopen($owl_file, 'r');
-		if($filehandler == false)
-			return '';
+		if($filehandler == false){
+                    echo '@@ Failed to open OWL file @@'."\n";
+                    return '';
+                }
+			
 
 	
 		$this->root_tag->create($ontology, "", array(), $owl_file);

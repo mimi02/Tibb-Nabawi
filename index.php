@@ -26,6 +26,8 @@
 require("global.settings.php");
 require_once("hadith.loader.php");
 ?>
+<?php header('Access-Control-Allow-Origin: http://alteb-alnabawi.com'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,7 +37,6 @@ require_once("hadith.loader.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tibb Annabwi is a Smart Search, Exploration, System for the prophet medicine ">
 <!--    <meta name="google-site-verification" content="LhSFFAyvZMENLI3xCG4OcpU_db2avxyZiBaq72zLX7A" />-->
-    
 	<script type="text/javascript" src="<?=$JQUERY_PATH?>" ></script>
 	<script type="text/javascript" src="<?=$MAIN_JS_PATH?>"></script>
 	<script type="text/javascript" src="<?=$D3_PATH?>"></script>
@@ -44,7 +45,7 @@ require_once("hadith.loader.php");
 	<script type="text/javascript" src="<?=$JQUERY_TAGCLOUD_PATH?>" ></script> 
 
 
-	<link rel="stylesheet" href="./qe.style.css?bv=<?=$BUILD_VERSION?>" />
+	<link rel="stylesheet" href="<?=$QE_STYLE_PATH."?bv=".$BUILD_VERSION?>" />
 	<link rel="icon" type="image/png" href="./favicon.png">
       	 
 	<script type="text/javascript">
@@ -67,8 +68,6 @@ require_once("hadith.loader.php");
   		
   
   <div id='mainpage-maincontainer'>
-			  	
-
 
         <div id='options-area'>
 
@@ -77,7 +76,6 @@ require_once("hadith.loader.php");
         ?>
 
                 <table>
-
                         <tr>
                                 <td>
                                         <input id="search-field" type="text" value="" ></input>
@@ -197,7 +195,7 @@ require_once("hadith.loader.php");
 		{
                     var query = $("#search-field").val();
                     var script = $("#qa-script-select option:selected").val();
-                    showResultsForQueryInSpecificDiv(query,"result-verses-area",script);
+                    showResultsForQueryInSpecificDiv(query,"","true","result-verses-area",script);
 		}
 	
         /**

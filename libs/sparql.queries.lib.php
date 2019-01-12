@@ -1,7 +1,7 @@
 <?php
-require_once("global.settings.php");
-require_once(dirname(__FILE__)."/libs/core.lib.php");
-require_once dirname(__FILE__)."/libs/EasyRdf.php";
+require_once("../global.settings.php");
+require_once(dirname(__FILE__)."/core.lib.php");
+require_once dirname(__FILE__)."/EasyRdf.php";
 // Setup namespaces
 EasyRdf_Namespace::set('rdfs', 'http://www.w3.org/2000/01/rdf-schema#');
 EasyRdf_Namespace::set('uni', 'http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15#');
@@ -16,7 +16,7 @@ function getSPARQLEngine(){
     return $sparql;
 }
 
-function getAllIllnesses($sparql,$lang){
+function getAllIllnessesWithLang($sparql,$lang){
     if($lang == 'AR'){
         return getAllIllnessesAr($sparql);
     }else{
@@ -24,13 +24,17 @@ function getAllIllnesses($sparql,$lang){
     }
 }
 
+function getAllIllnesses($sparql){
+    return getAllIllnessesAr($sparql);
+}
+
 function getAllIllnessesAr($sparql){
      global $illness_class_name;
      $result = $sparql->query(
         'SELECT * '.
         'WHERE {'.
-            "?class rdfs:subClassOf uni:$illness_class_name .".
-             "?class uni:Arabic_Name ?word".
+            "?word rdfs:subClassOf uni:$illness_class_name .".
+             "?word uni:Arabic_Name ?ar_word".
 //             '?class rdfs:label ?word '.
         '}'
     );
@@ -99,27 +103,106 @@ function searchIllnesses($sparql,$keyword){
     );
      return $result;
 }
-function getIllnessTreatment($sparql, $illness, $modernOrProphet){
-      $result = $sparql->query(
+function getIllnessTreatmentByClassName($sparql, $illness, $modernOrProphet){
+    global $is_strongly_verified,$is_weakly_verified;
+    $result = $sparql->query(
             ##gentamicin SubClassOf treat some plague_Infection
-           ' SELECT distinct ?x ?y ?treatment '.
+           ' SELECT distinct * '.
              "WHERE { uni:$illness rdfs:subClassOf ?x.".
                  '?x owl:onProperty uni:hasBeenTreated.'.
                  "?treatment rdfs:subClassOf* uni:$modernOrProphet .".
-                 ' ?x ?y ?treatment'.
+                 ' ?x ?y ?treatment .'.
+//            "FILTER (contains(LCASE(str(?class)) ,'') )".
+                 "  optional { " .
+                         "  ?treatment rdfs:subClassOf ?s. ".
+                          "?s owl:onProperty uni:$is_strongly_verified.".
+//                             "?s owl:onProperty uni:$is_weakly_verified .".
+//                         ' ?ind rdf:type uni:Authentic_Hadith.'.
+                              ' ?ind uni:Arabic_Hadeeth ?text_ar.'.
+                          ' ?ind uni:desrcirption_of_Hadeeth ?text.'.
+            '?treatment uni:Arabic_Name ?treatment_ar.'.
+                          ' ?ind rdfs:seeAlso ?h_link.'.
+                          ' ?s ?t ?ind '
+                     . '}'.
                 '}'
          );
      return $result;
 }
 
-function getIllnessMaterial($sparql, $illness, $modernOrProphet){
+function getIllnessTreatmentSearch($sparql, $illness, $modernOrProphet){
+    global $is_strongly_verified,$is_weakly_verified;
+    $result = $sparql->query(
+            ##gentamicin SubClassOf treat some plague_Infection
+           ' SELECT distinct * '.
+             "WHERE { ?class rdfs:subClassOf ?x.".
+                 '?x owl:onProperty uni:hasBeenTreated.'.
+                 "?treatment rdfs:subClassOf* uni:$modernOrProphet .".
+                 ' ?x ?y ?treatment .'.
+            "FILTER (contains(LCASE(str(?class)) ,'$illness') )".
+                 "  optional { "
+                        . "  ?treatment rdfs:subClassOf ?s. ".
+                          "?s owl:onProperty uni:$is_strongly_verified.".
+//                             "?s owl:onProperty uni:$is_weakly_verified .".//                         ' ?ind rdf:type uni:Authentic_Hadith.'.
+                              ' ?ind uni:Arabic_Hadeeth ?text_ar.'.
+                              '?treatment uni:Arabic_Name ?treatment_ar.'.
+            ' ?ind uni:desrcirption_of_Hadeeth ?text.'.
+            ' ?ind rdfs:seeAlso ?h_link.'.
+                          ' ?s ?t ?ind '
+                     . '}'.
+                '}'
+         );
+     return $result;
+}
+
+
+function getIllnessMaterialByClassName($sparql, $illness, $modernOrProphet){
+    global $is_strongly_verified,$is_weakly_verified;
       $result = $sparql->query(
             ##gentamicin SubClassOf treat some plague_Infection
-           ' SELECT distinct ?x ?y ?treatment '.
+           ' SELECT distinct *'.
              "WHERE { uni:$illness rdfs:subClassOf ?x.".
                  '?x owl:onProperty uni:hasBeenTreated.'.
                  "?treatment rdfs:subClassOf* uni:$modernOrProphet .".
-                 ' ?x ?y ?treatment'.
+                 ' ?x ?y ?treatment .'.
+//              "FILTER (contains(LCASE(str(?class)) ,'$illness') )".
+               "  optional { "
+                        . "  ?treatment rdfs:subClassOf ?s. ".
+                          "?s owl:onProperty uni:$is_strongly_verified.".
+//                             "?s owl:onProperty uni:$is_weakly_verified .".//                         ' ?ind rdf:type uni:Authentic_Hadith.'.
+                         ' ?ind uni:Arabic_Hadeeth ?text_ar.'.
+                          ' ?ind uni:desrcirption_of_Hadeeth ?text.'.
+              '?treatment uni:Arabic_Name ?treatment_ar.'.
+                            ' ?ind rdfs:seeAlso ?h_link.'.
+                          ' ?s ?t ?ind '
+                     . '}'.
+                '}'
+         );
+     return $result;
+}
+
+function getIllnessMaterialSearch($sparql, $illness, $modernOrProphet){
+    global $is_strongly_verified,$is_weakly_verified;
+      $result = $sparql->query(
+            ##gentamicin SubClassOf treat some plague_Infection
+           ' SELECT distinct *'.
+             "WHERE { ?class rdfs:subClassOf ?x.".
+                 '?x owl:onProperty uni:hasBeenTreated.'.
+                 "?treatment rdfs:subClassOf* uni:$modernOrProphet .".
+                 ' ?x ?y ?treatment .  '
+              . ' ?class uni:Arabic_Name ?ar_name '. 
+              "FILTER (contains(LCASE(str(?class)) ,'$illness') ||  "
+              . "  contains(str(?ar_name) ,'$illness') ) ". 
+               "  optional { "
+                        . "  ?treatment rdfs:subClassOf ?s. ".
+                          "?s owl:onProperty uni:$is_strongly_verified.".
+//                             "?s owl:onProperty uni:$is_weakly_verified .".             
+//                         ' ?ind rdf:type uni:Authentic_Hadith.'.
+                              ' ?ind uni:Arabic_Hadeeth ?text_ar.'.
+              ' ?ind uni:desrcirption_of_Hadeeth ?text.'.
+              '?treatment uni:Arabic_Name ?treatment_ar.'.
+              ' ?ind rdfs:seeAlso ?h_link.'.
+                          ' ?s ?t ?ind '
+                     . '}'.
                 '}'
          );
      return $result;
@@ -147,7 +230,7 @@ function getRelatedHadeeth($sparql, $class){
                 'where {'.
                 " uni:$class rdfs:subClassOf ?s . ".
                 "?s owl:onProperty uni:$is_strongly_verified .".
-                ' ?ind a uni:Authentic_Hadeeth.'.
+                ' ?ind a uni:Authentic_Hadith.'.
                 ' ?ind uni:Arabic_Hadeeth ?text.'.
                 ' ?s ?y ?ind'.
                 '}'

@@ -1755,4 +1755,32 @@ function getSearchType($isPhraseSearch,$isQuestion,$isColumnSearch,$isConceptSea
 	}
 }
 
+function getModelFromCache($modelKey){
+    $model = apc_fetch($modelKey);
+    return $model;   
+}
+
+function getOntology(){
+    global $apcMemoryOntologyKey;
+    echoN(apc_exists($apcMemoryOntologyKey));
+    $ontology = getModelFromCache($apcMemoryOntologyKey);
+    return $ontology;
+}
+
+function getIllnessTreatmentFromCache( $illness, $modernOrProphet){
+    $ontology = getOntology();
+    
+}
+
+function getIllnessMaterialFromCache( $illness, $modernOrProphet){
+     $ontology = getOntology();
+    
+}
+
+function getAllIllnessesFromCache(){
+    
+     $ontology = getOntology();
+//      print_r($ontology->{'owl_data'}{'annotations'});
+     return $ontology;
+}
 ?>

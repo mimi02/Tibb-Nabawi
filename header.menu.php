@@ -30,14 +30,14 @@ if ( !empty($_GET['logo']) )
 	$logo = $_GET['logo'];
 }
 ?>
-<a href='/'><img id='main-logo' src="http://localhost/teb/images/<?=$logo ?>" title='Teb.com Logo' alt='Teb.com Logo'/></a>
+<a href='/'><img id='main-logo' src="/images/<?=$logo ?>" title='Teb.com Logo' alt='Teb.com Logo'/></a>
 <div id='main-sections'>
 			
  			<div id='section-item-search' class='section-item' >
-  				<a href='http://localhost/teb/'>Search</a>
+  				<a href='/teb'>Search</a>
   			</div>
   			<div id='section-item-explore' class='section-item'>
-  				<a href='http://localhost/teb/explore/'>Explore</a>
+  				<a href='/teb/explore?lang=EN'>Explore</a>
   			</div>
 <!--  			<div id='section-item-analysis' class='section-item'>
   				<a href='http://localhost/teb/analysis/'>Analyze</a>

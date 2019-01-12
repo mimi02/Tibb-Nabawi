@@ -24,6 +24,7 @@
 #
 #  ====================================================================
 -->
+<link rel="stylesheet" href="<?=$QE_STYLE_PATH."?bv=".$BUILD_VERSION?>" />
 <p class='info-page-text'>
 
 	<h1 class='info-page-section-title'>Source Code and Data files</h1> 
@@ -31,7 +32,7 @@
 	The following GitHub repository contains the source code of the whole website + all data files used 
 	<br>
 	<br>
-	<a target="_blank" href="https://github.com/karimouda/qurananalysis">https://github.com/karimouda/qurananalysis</a>
+	<a target="_blank" href="https://github.com/mimi02/Tibb-Nabawi">Tibb-Nabawi repository</a>
 	<br>
 	<br>
 	<b>Examples</b>

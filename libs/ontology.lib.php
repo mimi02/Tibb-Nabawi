@@ -1092,10 +1092,11 @@ function writeLineByLineToFile($lines, $fileName, $mode){
         echoN("Cannot open file");
         return ;
     }
+//    utf8_string_array_encode($lines);
     foreach($lines as $line){
-//        echoN($line);
+//        echoN("++++++++".$line);
         if($line !='')
-         fwrite($file, $line.PHP_EOL);
+            fwrite($file, $line.PHP_EOL);
     }
     fclose($file);
 }
@@ -1112,8 +1113,14 @@ function readLineByLineFromFile($fileName){
     foreach(file($fileName) as $line){
         $lines[] = $line;
     }
+    utf8_string_array_encode($lines);
     return $lines;
 }
+
+
+    
+
+
 
 function getWordStemAr($concept){
     $concepts = explode(" ", $concept);
@@ -1121,27 +1128,17 @@ function getWordStemAr($concept){
         $concepts[] = $concept;
     }
 //    print_r($concepts);
-//    echoN("");echoN("");echoN("");
-    writeLineByLineToFile($concepts, "farasa_tmp_in", "w");
+//    echoN(count($concepts));
+    writeLineByLineToFile($concepts, dirname(__FILE__)."/farasa_tmp_in", "w");
 
-//    $command = "java -jar farasa/Farasa.jar"
-//            . " -l true"
-//            . " -i farasa_tmp_in"
-//            . " -o farasa_tmp_out"
-//            ;
-    
-    $command = "java -jar /home/sarah/Downloads/FarasaSegmenter/FarasaSegmenterJar.jar -l true "
-            . "-i /home/sarah/php_dir/teb/farasa_tmp_in -o /home/sarah/php_dir/teb/farasa_tmp_out";
-    
-    executeCommand($command);
-    $stems = readLineByLineFromFile("farasa_tmp_out");
-    
-//    print_r($stems);
-//    foreach($stems as $tok)
-//        echo($tok . " ---- Ar stem of: ". $concept);
+ $command = "java -jar ". dirname(__FILE__)."/farasa/Farasa.jar"
+            ." -l true"
+            ." -i ".dirname(__FILE__)."/farasa_tmp_in"
+//            ." -o /home/sarah/php_dir/teb/farasa_tmp_out"
+            ;
+    $stems = executeCommand($command);
     return $stems;
 }
-    
 
 /***
  * add stem for each concept {ar, en} in the ontology
@@ -1168,11 +1165,11 @@ function addStemToOntology(&$ontology){
         $name_Ar = findConceptAnnotaionValue($ontology, $class, $annotation_key);
         $stem_Ar = getWordStemAr($name_Ar);
         addAnnotationValueToClass($ontology, $class, $label_key_Ar, $stem_Ar);
-        
+
     }
-    
+  
 //    print_r($ontology->{'owl_data'}{'annotations'});
- 
+
 }
 
 ?>

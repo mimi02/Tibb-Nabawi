@@ -843,7 +843,7 @@
 	{
 		$apcMemoryEntryKey = "$lang/$model/$modelKey/$entryKey";
 		
-		$res = apc_store($apcMemoryEntryKey, $entryValue);
+//		$res = apc_store($apcMemoryEntryKey, $entryValue);
 		
 		if ( $res===false)
 		{
@@ -855,7 +855,7 @@
 	
 	function updateModelData($key,$valueOrValueArr)
 	{
-		$res = apc_store($key,$valueOrValueArr);
+//		$res = apc_store($key,$valueOrValueArr);
 		
 	
 		
@@ -874,7 +874,7 @@
 		
 		//echon($apcMemoryEntryKey);
 		
-		return  apc_fetch($apcMemoryEntryKey);
+//		return  apc_fetch($apcMemoryEntryKey);
 	
 	
 	}
@@ -884,7 +884,7 @@
 	
 		$apcMemoryEntryKey = "$lang/$model/$modelKey/$entryKey";
 	
-		return  apc_exists($apcMemoryEntryKey);
+//		return  apc_exists($apcMemoryEntryKey);
 	
 	
 	}
@@ -893,12 +893,12 @@
 	{
 		$apcMemoryEntryKey = "$lang/$model/$modelKey/$entryKey";
 		
-		if (apc_exists($apcMemoryEntryKey))
+//		if (apc_exists($apcMemoryEntryKey))
 		{
-			$entryArr = apc_fetch($apcMemoryEntryKey);
-			//$entryArr = array();
+//			$entryArr = apc_fetch($apcMemoryEntryKey);
+			$entryArr = array();
 		}
-		else
+//		else
 		{
 			$entryArr = array();
 		}
@@ -906,12 +906,12 @@
 		$entryArr[] = $entryValue;
 		
 	
-		$res = apc_store($apcMemoryEntryKey, $entryArr);
-	
-		if ( $res===false)
-		{
-			throw new Exception("Can't add Cache Entry to Memory !");
-		}
+//		$res = apc_store($apcMemoryEntryKey, $entryArr);
+//	
+//		if ( $res===false)
+//		{
+//			throw new Exception("Can't add Cache Entry to Memory !");
+//		}
 	
 	
 	}
@@ -920,7 +920,7 @@
 	{
 
 	
-		$resArr = apc_add($entryKeysValuesArr);
+//		$resArr = apc_add($entryKeysValuesArr);
 	
 		if ($resArr===FALSE)
 		{
@@ -1174,7 +1174,7 @@
 	
 	function loadUthmaniDataModel()
 	{
-		return  apc_fetch("MODEL_CORE[AR_UTH]");
+//		return  apc_fetch("MODEL_CORE[AR_UTH]");
 	}
 	
 	
@@ -1183,12 +1183,12 @@
 	
 	function loadUthmaniToSimpleMappingTable()
 	{
-		return apc_fetch("UTHMANI_TO_SIMPLE_WORD_MAP");
+//		return apc_fetch("UTHMANI_TO_SIMPLE_WORD_MAP");
 	}
 	
 	function loadLemmaToSimpleMappingTable()
 	{
-		return apc_fetch("LEMMA_TO_SIMPLE_WORD_MAP");
+//		return apc_fetch("LEMMA_TO_SIMPLE_WORD_MAP");
 	}	
 
 	
@@ -2667,8 +2667,12 @@
 	}
         
         function executeCommand($command){
-            $output = exec($command);
-            return $output;
+              $locale='en_US.UTF-8';
+                setlocale(LC_ALL,$locale);
+                putenv('LC_ALL='.$locale);
+//                echo exec('locale charmap');
+            exec($command, $out);
+            return $out;
         }
         /**
          * write data to file line by line 
@@ -2694,5 +2698,21 @@ function explodeCamelCase($concept){
 //            $i + 1, $count, $a[$i]);
 //    }
     return $a;
+}
+
+function utf8_string_array_encode(&$array){
+    $func = function(&$value){
+        if(is_string($value)){
+            $value = utf8_encode($value);
+        } 
+//        if(is_string($key)){
+//            $key = utf8_encode($key);
+//        }
+//        if(is_array($value)){
+//            utf8_string_array_encode($value);
+//        }
+    };
+    array_walk($array,$func);
+    return $array;
 }
 ?>

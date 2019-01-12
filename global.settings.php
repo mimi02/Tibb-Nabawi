@@ -24,38 +24,37 @@
 #
 #  ====================================================================
 $MAIN_ROOT_PATH = dirname(__FILE__)."/";
+//apc_cache_clear();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 
 $BUILD_VERSION = "0.1.1";
+$HOME_PATH="teb/";
+
+$SERVER_NAME = "http://localhost/teb";// "http://localhost/teb";//"http://3.122.133.65";
+
+$MAIN_JS_PATH = $SERVER_NAME."/libs/js/main.js?bv=$BUILD_VERSION";
 
 
+$JQUERY_PATH = $SERVER_NAME."/libs/js/jquery/jquery-2.1.1.min.js";
 
+$D3_PATH = $SERVER_NAME."/libs/js/d3/d3.js";
 
-
-$MAIN_JS_PATH = "http://localhost/teb/libs/js/main.js?bv=$BUILD_VERSION";
-
-
-$JQUERY_PATH = "http://localhost/teb/libs/js/jquery/jquery-2.1.1.min.js";
-
-$D3_PATH = "http://localhost/teb/libs/js/d3/d3.js";
-
-$JQUERY_TAGCLOUD_PATH ="http://localhost/teb/libs/js/jquery.tagcloud.js";
-
-
-$TINYSORT_PATH = "http://localhost/teb/libs/js/tinysort/tinysort.min.js";
-$TINYSORT_JQ_PATH = "http://localhost/teb/libs/js/tinysort/jquery.tinysort.min.js";
+$JQUERY_TAGCLOUD_PATH = $SERVER_NAME."/libs/js/jquery.tagcloud.js";
+$QE_STYLE_PATH = $SERVER_NAME."/qe.style.css";
+$TINYSORT_PATH = $SERVER_NAME."/libs/js/tinysort/tinysort.min.js";
+$TINYSORT_JQ_PATH = $SERVER_NAME."/libs/js/tinysort/jquery.tinysort.min.js";
 
 
 mb_regex_encoding('UTF-8');
 mb_internal_encoding("UTF-8");
 
 
-$qaOntologyFile =  $MAIN_ROOT_PATH."data/ontology/Tibb_rdf.owl";
+$qaOntologyFile =  $MAIN_ROOT_PATH."data/ontology/Tibb_Nabawi_09_10_rdf.owl";
 $qaOntologyNamespace ="http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15#";
 // "http://qurananalysis.com/data/ontology/qa.ontology.v1.owl#";
-$illness_class_name = "illness";
+$illness_class_name = "medical_condition";
 $treatment_class_name="Treatment";
 $material_class_name="material";
 $modern_treatment_class_name="ModernMedicicalTreatment";
@@ -63,9 +62,12 @@ $modern_material_class_name="modern_time_material";
 $prophet_treatment_class_name="Prophet_timeTreatment";
 $prophet_material_class_name="prophet_time_material";
 $is_strongly_verified = "isStronglyVerifiedBy";
+$is_weakly_verified="isWeaklyVerifiedBy";
 //$englishResourceFile = dirname(__FILE__)."/data/resources.en";
 //$arabicResourceFile = dirname(__FILE__)."/data/resources.ar";
-$sparql_endpoint='http://localhost:3030/tibb_9/sparql';
+$sparql_endpoint=/*$SERVER_NAME.*/'http://localhost:3030/tibb_10/sparql';
+
+$apcMemoryOntologyKey = "MODEL_TEBB_ONTOLOGY";
 
 $modelSources = array();
 $supportedLanguages = array("EN","AR");
@@ -136,3 +138,7 @@ if ( isDevEnviroment() )
 	register_shutdown_function('shutdown');
 }
 ?>
+
+<script type="text/javascript">
+    var SERVER_NAME = '<?php echo $SERVER_NAME ?>' ;    
+</script>

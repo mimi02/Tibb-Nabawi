@@ -27,36 +27,49 @@ require_once("../global.settings.php");
 require_once("../libs/sparql.queries.lib.php");
 require_once("../libs/search.lib.php");
 require_once("../libs/core.lib.php");
+require_once("../libs/ontology.lib.php");
 $time1 = time();
 $query = $_GET['q'];
 
-//LOAD ONTOLOGY FROM CACHE
-$MODEL_TEBB_ONTOLOGY =  apc_fetch("MODEL_TEBB_ONTOLOGY");
-$sparql = getSPARQLEngine();// apc_fetch("sparql");
+?>
+<?php header('Access-Control-Allow-Origin: *'); ?>
 
-function searchConcepts($sparql, $keyword){
-    global $modern_treatment_class_name, $prophet_treatment_class_name;
-    
-    //search keyword accross illnesses
-    $isIllness = searchIllnesses($sparql, $keyword);
-    //echo('keyword is illness: '.$isIllness);
-    foreach($isIllness as $illness){
-        $label = extractClassName($illness->class);//cleanQuery
-           ?>
-        <div class='result-aya-container'> 
-            <div class='result-aya' >
+<div id='result-aya-container'> 
+</div>
+
+<script type="text/javascript">
+    var word = "<?=$query?>" ;
+   showResultsForQueryInSpecificDiv(word, word,"false", "result-aya-container");
+ </script>
+
+    <?php
+        //LOAD ONTOLOGY FROM CACHE
+//$MODEL_TEBB_ONTOLOGY =  apc_fetch("MODEL_TEBB_ONTOLOGY");
+//$sparql = getSPARQLEngine();// apc_fetch("sparql");
+//
+//function searchConcepts($sparql, $keyword){
+//    global $modern_treatment_class_name, $prophet_treatment_class_name;
+//    
+//    //search keyword accross illnesses
+//    $isIllness = searchIllnesses($sparql, $keyword);
+//    //echo('keyword is illness: '.$isIllness);
+//    foreach($isIllness as $illness){
+//        $label = stripOntologyNamespace($illness->class);//cleanQuery
+//           ?>
+<!--        <div class='result-aya-container'> 
+            <div class='result-aya' >-->
       <?php  // echo(' '. $label."\n<br>"); ?>
-          </div>
-        </div>
+<!--          </div>
+        </div>-->
          <?php
-        
-         $mtreats = getIllnessTreatment($sparql, $label, $modern_treatment_class_name);
-         $ptreats = getIllnessTreatment($sparql, $label, $prophet_treatment_class_name);
-        // echo "$treats";
-        
-            
-             ?>
-             <div class='result-aya-info'  > 
+//        
+//         $mtreats = getIllnessTreatment($sparql, $label, $modern_treatment_class_name);
+//         $ptreats = getIllnessTreatment($sparql, $label, $prophet_treatment_class_name);
+//        // echo "$treats";
+//        
+//            
+//             ?>
+<!--             <div class='result-aya-info'  > 
                  <table class='result-table'>
               <tr>
                   <th> </th>
@@ -66,10 +79,10 @@ function searchConcepts($sparql, $keyword){
                      
               <tr>
                   <th>Treatment </th>
-                   <td> <?php foreach($ptreats as $treat){
-                  $t = extractClassName ($treat->treatment); echo $t ." <br>"; } ?></td> <!-- prophet treatment -->
-                  <td> <?php   foreach($mtreats as $treat){
-                  $t = extractClassName($treat->treatment); echo $t ." <br>"; } ?> </td> <!-- modern treatment -->
+                   <td> <?php //foreach($ptreats as $treat){
+//                  $t = extractClassName ($treat->treatment); echo $t ." <br>"; } ?></td>  prophet treatment 
+                  <td> <?php   //foreach($mtreats as $treat){
+//                  $t = extractClassName($treat->treatment); echo $t ." <br>"; } ?> </td>  modern treatment 
                  
              </tr>
              <tr>
@@ -79,10 +92,10 @@ function searchConcepts($sparql, $keyword){
                  
              </tr>
              </table>
-             </div>
+             </div>-->
              <?php
-         
-    }
+//         
+//    }
     //search keyword accross treatments
 /**    $isTreatment = searchTreatments($sparql, $keyword);
     foreach($isTreatment as $material){
@@ -129,33 +142,28 @@ function searchConcepts($sparql, $keyword){
    <?php
          }
     }*/
-}
+//}
 
-cleanQuery($query);
-searchConcepts($sparql, $query);
-
-function cleanQuery($query){
-    if ( preg_match("/\?|؟/", $query)>0  ){
-            $query = preg_replace("/\?|؟/", "", $query);
-    }
-    
-    if ( !isSimpleQuranWord($query)){
-      $query = convertUthamniQueryToSimple($query);
-    }
-    
-    $query = cleanAndTrim($query);
-    return $query;
-}
-
-function nWordSearch($sparql, $query){
-    $tok = strtok($string, " ");
-    while ($tok !== false) {
-         $tok = strtok(" ");
-         
-    }
-}
-
-
-
-?>
-
+//cleanQuery($query);
+//searchConcepts($sparql, $query);
+//
+//function cleanQuery($query){
+//    if ( preg_match("/\?|؟/", $query)>0  ){
+//            $query = preg_replace("/\?|؟/", "", $query);
+//    }
+//    
+//    if ( !isSimpleQuranWord($query)){
+//      $query = convertUthamniQueryToSimple($query);
+//    }
+//    
+//    $query = cleanAndTrim($query);
+//    return $query;
+//}
+//
+//function nWordSearch($sparql, $query){
+//    $tok = strtok($string, " ");
+//    while ($tok !== false) {
+//         $tok = strtok(" ");
+//         
+//    }
+//}

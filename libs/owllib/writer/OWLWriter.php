@@ -29,7 +29,6 @@ class OWLWriter
   	$this->ontology =& $ontology;
   	$this->base = preg_replace("/#$/", "", $this->ontology->getNamespace());
   	$this->namespace = $this->ontology->getNamespace();
-  	
   	$this->handle = fopen($file_name, "w");
 		$this->write("<?xml version=\"1.0\" ?>\n");
 		$this->write("<rdf:RDF\n");
@@ -46,8 +45,6 @@ class OWLWriter
 		$this->write($header);
 		$this->write("\n");
 		///////////////////////////////////
-		
-		
 		$this->write("\n");
 
 		$this->writeProperties();
@@ -60,9 +57,6 @@ class OWLWriter
 		$this->writeClasses();
 		$this->write("\n");
 
-		
-
-		
 		$this->writeInstances();
 		$this->write("\n");
 		
@@ -78,15 +72,37 @@ class OWLWriter
 	function writeNamespaces()
   {
   	$namespace = $this->ontology->getNamespace();
+        /**
+         
+   
+     xmlns:protege=""
+     xmlns:xsd="#"
+     xmlns:rdfs=""
+     xmlns:dcTermntax-ns#"=""
+     xmlns:rdf=""
+     xmlns:xml=""
+     xmlns:obo="h"
+     xmlns:foaf=""
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:TibbNabawi-ontology-15="http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15#"
+         */
   	$base = $this->base;
 		$this->write("  xmlns:rdf = \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n");
 		$this->write("  xmlns:rdfs = \"http://www.w3.org/2000/01/rdf-schema#\"\n");
 		$this->write("  xmlns:owl = \"http://www.w3.org/2002/07/owl#\"\n");
 		$this->write("  xmlns:xsd = \"http://www.w3.org/2001/XMLSchema#\"\n");
 		$this->write("  xmlns = \"$namespace\"\n");
-		$this->write("  xml:base = \"$base\"\n");
+		$this->write("  xml:base = \"http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15\"\n");
 		$this->write("  xmlns:{$this->objectPropPrefix} = \"$base/objectproperties#\"\n");
 		$this->write("  xmlns:{$this->annotatioPrefix} = \"$base/annotations#\"\n");
+                $this->write("  xmlns:oboInOwl = \"http://www.geneontology.org/formats/oboInOwl#\"\n");
+                $this->write("  xmlns:protege = \"http://protege.stanford.edu/plugins/owl/protege#\"\n");
+                $this->write("  xmlns:dcTermntax-ns# = \"http://purl.org/dc/terms/\"\n");
+                $this->write("  xmlns:xml = \"http://www.w3.org/XML/1998/namespace\"\n");
+                $this->write("  xmlns:obo = \"http://purl.obolibrary.org/obo#\"\n");
+                $this->write("  xmlns:foaf = \"http://xmlns.com/foaf/0.1/\"\n");
+                $this->write("  xmlns:dc = \"http://purl.org/dc/elements/1.1/\"\n");
+                $this->write("  xmlns:TibbNabawi-ontology-15 = \"http://www.semanticweb.org/muna/ontologies/2018/6/TibbNabawi-ontology-15#\"\n");
 
   }
 
@@ -117,13 +133,13 @@ class OWLWriter
   	$classes = $this->ontology->getAllClasses();
   	foreach($classes as $class)
   	{
-			$id = $this->removeNamespace($class->getID());
+			$id = $this->removeNamespace($class->getID()); //$class->getID(); //
 			$this->write("<owl:Class rdf:ID=\"$id\">\n");
 			$this->writeLabels($class->getAllLabels());
 			$superclasses = $class->getSuperclasses();
 			foreach($superclasses as $parent){
 				if($parent->getID() != "http://www.w3.org/2002/07/owl#Thing"){
-					$id = $this->removeBase($parent->getID(), false); 
+					$id = $this->removeBase($parent->getID(), false);  //$parent->getID(); // 
 					$this->write("  <rdfs:subClassOf rdf:resource=\"$id\"/>\n");
 				}
 			}
@@ -186,14 +202,14 @@ class OWLWriter
 			// domain
 			$domain = $property->getDomain();
 			if(count($domain) == 1){
-				$id = $this->removeBase($domain[0]->getID(), false);
+				$id = $this->removeBase($domain[0]->getID(), false); //$domain[0]->getID() ; //
 				$this->write("  <rdfs:domain rdf:resource=\"$id\"/>\n");
 			}
 				
 			// range
 			$range = $property->getRange();
 			if(count($range) == 1){
-				$id = $this->removeBase($range[0]->getID(), false);
+				$id = $range[0]->getID() ; //$this->removeBase($range[0]->getID(), false);
 				$this->write("  <rdfs:range rdf:resource=\"$id\"/>\n");
 			}
 				
@@ -234,9 +250,9 @@ class OWLWriter
    	foreach($instances as $instance)
    	{
    		 
-   		$id = $this->removeNamespace($instance->getID(), true);
+   		$id = $this->removeNamespace($instance->getID(), true); //$instance->getID(); //
    		$class = $instance->getClass();
-   		$class_id = $this->removeNamespace($class->getID(), true);
+   		$class_id = $this->removeNamespace($class->getID(), true); //$class->getID(); //
    
    		//echoN(">>$class_id|".$type."|$action|CONTINUE");
    		if ( $type!="ALL" && !empty($type))

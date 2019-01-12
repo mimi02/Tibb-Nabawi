@@ -4,19 +4,19 @@ require_once("global.settings.php");
 require_once(dirname(__FILE__)."/libs/core.lib.php");
 require_once(dirname(__FILE__)."/libs/owllib/OWLLib.php");
 require_once(dirname(__FILE__)."/libs/owllib/reader/OWLReader.php");
+require_once(dirname(__FILE__)."/libs/owllib/writer/OWLWriter.php");
 require_once(dirname(__FILE__)."/libs/owllib/memory/OWLMemoryOntology.php");
 require_once(dirname(__FILE__)."/libs/ontology.lib.php");
 
 
-ini_set('display_errors', '0');
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-function loadModels($lang)
+function loadOntology()
 {
-    
+    echoN("in loadOntology");
     gc_enable();
     if (!function_exists("apc_exists"))
 	{
@@ -41,11 +41,33 @@ function loadModels($lang)
     $classes = $ontology->{'owl_data'}['classes'];
     $subclasses = $ontology->{'owl_data'}['subclasses'];
     $labels = $ontology->{'owl_data'}['labels'];
-
+ echoN("end loadOntology");
     // add concept stems to structure 
     //writeLineByLineToFile(getClassesNames($classes), "concept_names.txt");
-    addStemToOntology($ontology);
+   return $ontology;
 
-}	
+}
 
-loadModels($lang);
+function saveNewOntology($ontology){
+    global $apcMemoryOntologyKey;
+     echoN("in saveOntology");
+    $outputFileName = "newOntology.owl"; $title="";$version="";
+    
+    $writer = new OWLWriter();
+    $writer->writeToFile($outputFileName, $ontology, $title, $version);
+     
+    $res = apc_store($apcMemoryOntologyKey,$ontology);
+    if($res == false)
+        echoN ("Cant cache model");
+    
+}
+
+function loadModels($lang){
+     echoN("in loadModel");
+   $ontology = loadOntology();
+   addStemToOntology($ontology);
+   
+   saveNewOntology($ontology);
+}
+
+//loadModels($lang);
